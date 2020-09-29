@@ -9,14 +9,14 @@ Created on Thu Sep 24 22:11:47 2020
 import tello_controller
 import tello_video
 # import cv2 as cv
-import marker_detecter
+# import marker_detecter
 import threading
 import time
 import numpy as np
 import logging
 
 
-def process_frame(_video, _marker_detecter):
+'''def process_frame(_video, _marker_detecter):
     global pose
     log = './log_pose/pose.log'
     logging.basicConfig(filename=log,
@@ -40,7 +40,7 @@ def process_frame(_video, _marker_detecter):
                 pose = _marker_detecter.estimate_pose(point_world)
                 print("Pose in the world is {}\n".format(pose))
                 logging.info("\nPose in the world is {}\n".format(pose))
-        time.sleep(0.075)
+        time.sleep(0.075)'''
 
 '''def go_rectangle(pose):
     path = np.array([[0, 0, 1.5],
@@ -51,16 +51,13 @@ def process_frame(_video, _marker_detecter):
 
 
 controller = tello_controller.Tell_Controller()
-marker_detecter = marker_detecter.Marker_Manager()
+# marker_detecter = marker_detecter.Marker_Manager()
 frame = None
 pose = np.array([])
 
 try:
     controller.scan(1)
     video = tello_video.Tello_Video(controller.tello_list)
-    thread_process_frame = threading.Thread(target=process_frame,
-                                            args=(video, marker_detecter,))
-    thread_process_frame.start()
     controller.command("battery_check 20")
     controller.command("correct_ip")
     for i in range(len(controller.sn_list)):

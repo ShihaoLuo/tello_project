@@ -10,7 +10,7 @@ import numpy as np
 import cv2 as cv
 import matplotlib.pyplot as plt
 import json
-
+import set_world_point
 
 def save_2_jason(_file, arr):
     data = {}
@@ -50,46 +50,50 @@ def read_from_npy(_file):
 MIN_MATH_COUNT = 25
 
 img_test = cv.imread('./test_pic/0_1.7_250_0.jpg', 0)
-img_query_1 = cv.imread('./env_pics/0_3_270_1.jpg', 0)
+img_query = cv.imread('./env_pics/0_3_270_1.jpg', 0)
 
-sift_para = dict(nfeatures=0,
+'''sift_para = dict(nfeatures=0,
                  nOctaveLayers=3,
                  contrastThreshold=0.05,
-                 edgeThreshold=5,
-                 sigma=1.6)
-
-sift = cv.xfeatures2d.SIFT_create(**sift_para)
-# kp_query, des_query = sift.detectAndCompute(img_query_1, None)
-# save_2_jason('data.jason', kp_query)
-# save_2_npy('data_des.npy', des_query)
-kp_test, des_test = sift.detectAndCompute(img_test, None)
-kp_query_1 = read_from_jason('kp_goodm.jason')
-des_query_1 = read_from_npy('des_goodm.npy')
+                 edgeThreshold=10,
+                 sigma=1.3)'''
+surf_paras = dict(hessianThreshold=100,
+                  nOctaves=10,
+                  nOctaveLayers=2,
+                  extended=0,
+                  upright=1)
+surf = cv.xfeatures2d.SURF_create(**surf_paras)
+kp_query, des_query = surf.detectAndCompute(img_query, None)
+save_2_jason('data.jason', kp_query)
+save_2_npy('data_des.npy', des_query)
+kp_test, des_test = surf.detectAndCompute(img_test, None)
+#kp_query_1 = read_from_jason('kp_goodm.jason')
+#des_query_1 = read_from_npy('des_goodm.npy')
 FLANN_INDEX_KDTREE = 1
 index_params = dict(algorithm=FLANN_INDEX_KDTREE, trees=5)
 search_params = dict(checks=50)
 
 flann = cv.FlannBasedMatcher(index_params, search_params)
 
-matches = flann.knnMatch(des_query_1, des_test, k=2)
-print('the num of finding featurs of query is {}\n'.format(len(des_query_1)))
-print('the num of finding featurs of test is {}\n'.format(len(des_test)))
-print('the num of finding matches is {}\n'.format(len(matches)))
+matches = flann.knnMatch(des_query, des_test, k=2)
 
 good = []
 kp_good_match_query = []
 des_good_match_query = []
 for m, n in matches:
-    if m.distance < 0.5*n.distance:
+    if m.distance < 0.75*n.distance:
         good.append(m)
         print('--------------------\n')
         print('m.imgIdx: {}\n'.format(m.imgIdx))
         print('m.queryIdx: {}\n'.format(m.queryIdx))
         print('m.trainIdx: {}\n'.format(m.trainIdx))
-        print('kp_query: {}\n'.format(kp_query_1[m.queryIdx].pt))
+        print('kp_query: {}\n'.format(kp_query[m.queryIdx].pt))
         print('kp_test: {}\n'.format(kp_test[m.trainIdx].pt))
-        kp_good_match_query.append(kp_query_1[m.queryIdx])
-        des_good_match_query.append(des_query_1[m.queryIdx])
+        kp_good_match_query.append(kp_query[m.queryIdx])
+        des_good_match_query.append(des_query[m.queryIdx])
+print('the num of finding featurs of query is {}\n'.format(len(des_query)))
+print('the num of finding featurs of test is {}\n'.format(len(des_test)))
+print('the num of finding matches is {}\n'.format(len(matches)))
 print("the len of good match is {}\n".format(len(good)))
 # save_2_jason('kp_goodm.jason',kp_good_match_query)
 # save_2_npy('des_goodm.npy',des_good_match_query)
@@ -102,7 +106,7 @@ if len(good)>MIN_MATH_COUNT:
     M, mask = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
     matchesMask = mask.ravel().tolist()
 
-    h,w = img_query_1.shape
+    h,w = img_query.shape
     d = 1
     pts = np.float32([ [0,0],[0,h-1],[w-1,h-1],[w-1,0] ]).reshape(-1,1,2)
     dst = cv.perspectiveTransform(pts,M)
@@ -115,39 +119,43 @@ draw_params = dict(matchColor = (0,255,0),
                    singlePointColor = None,
                    matchesMask = matchesMask,
                    flags = 2)
-img = cv.drawMatches(img_query_1,kp_query_1,img_test,kp_test,good,None,**draw_params)
+img = cv.drawMatches(img_query,kp_query,img_test,kp_test,good,None,**draw_params)
 
-cv.imshow(' ',img)
+cv.imshow(' ', img)
 
-img = cv.drawKeypoints(img_query_1, kp_query_1, None)
+img_gkp = cv.drawKeypoints(img_query, kp_good_match_query, None)
+plt.imshow(img_gkp)
+
+wps = [[None, None, None]]*len(kp_good_match_query)
+# pixelpts = [[541.0, 318.5], [625.0, 268.5], [445.0, 301.0], [433.0, 315.6], [413.0, 338.0], [450.0, 440.0], [479.0, 335.5], [482.0, 314.0], [486.0, 305.0]]
+# worldpts = [[-35.0,81.0, 22.0], [-73.0, 60.0, 21.0], [9.0, 67.0, 41.4], [14.2, 76.9, 41.4], [23.0, 86.5,41.4],[-5.0, 88.0, 41.4],[-12.5, 85.5, 41.4],[-14.0, 77.0, 41.4],[-15.5, 72.0, 41.4]]
+#for i in range(len(pixelpts)):
+  #  set_world_point.setworldpoint(wps, kp_good_match_query, pixelpts[i], 5, worldpts[i])
+'''
+img = cv.drawKeypoints(img_query, kp_query, None)
+img2 = cv.drawKeypoints(img_test, kp_test, None)
+fig = plt.figure(figsize=(22, 10))
+plt.subplot(1, 2, 1)
+plt.subplot(1, 2, 1).axis("off")
 plt.imshow(img)
-
-rvec = np.array([[0],
-         [3.14],
-         [0]])
-tvec = np.array([[0.0],
-         [0.0],
-         [300.0]])
-
-point_world = np.array([[62.5, 85, 63],
-                        [8.5, 40, 40],
-                        [18.5, 79, 41.5],
-                        [-83, 47, 0],
-                        [0, 168.5, 0]])
-point_pixel = np.array([[315.800537109375, 349.0028381347656],
-                        [446.271240234375, 259.53466796875],
-                        [431.7677917480469, 317.7646179199219],
-                        [649.1941528320312, 231.0972137451172],
-                        [477.6302490234375, 481.7046203613281]])
+plt.subplot(1, 2, 2)
+plt.subplot(1, 2, 2).axis("off")
+plt.imshow(img2)
+plt.show()
+'''
+pixelpts = [[536.0,256.0],[650.5, 254.4],[650.3,320.7],[536.8,323.6]]
+worldpts = [[51.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 30.0, 0.0], [51.0, 30.0, 0.0]]
+pixelpts1 = [[90.9, 244.9], [215.56, 243.5], [219.1, 314.1], [95.75, 314.8]]
+worldpts1 = [[54.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 30.0, 0.0], [54.0, 30.0, 0.0]]
+point_world = np.array(worldpts1)
+point_pixel = np.array(pixelpts1)
 camera_matrix = np.load('camera_matrix_tello.npy')
 distor_matrix = np.load('distor_matrix_tello.npy')
 pnppara = dict(objectPoints=point_world,
                imagePoints=point_pixel,
                cameraMatrix=camera_matrix,
                distCoeffs=distor_matrix,
-               #rvec=rvec,
-               #tvec=tvec,
-               #useExtrinsicGuess=True,
+               useExtrinsicGuess=0,
                flags=cv.SOLVEPNP_ITERATIVE)
 _, rvec, tvec = cv.solvePnP(**pnppara)
 rotM = np.matrix(cv.Rodrigues(rvec)[0])
