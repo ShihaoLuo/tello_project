@@ -80,8 +80,8 @@ def run():
     # ret, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
     thresh = cv.Canny(image, 128, 256)
 
-    thresh, contours, hierarchy = cv.findContours(thresh, cv.RETR_EXTERNAL, 
-                                                   cv.CHAIN_APPROX_SIMPLE)
+    thresh, contours, hierarchy = cv.findContours(thresh, cv.RETR_EXTERNAL,
+                                                  cv.CHAIN_APPROX_SIMPLE)
     # print(hierarchy, ":hierarchy")
     """
     [[[-1 -1 -1 -1]]] :hierarchy  # cv2.Canny()
