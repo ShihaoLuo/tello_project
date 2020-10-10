@@ -1,0 +1,130 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-10-10 14:16:10.238569
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-10 14:16:11.241244
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-10 14:16:12.243364
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-10 14:16:13.245617
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-10 14:16:14.247942
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-10 14:16:15.257512
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-10 14:16:16.259754
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-10 14:16:17.262122
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-10 14:16:18.264849
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-10 14:16:19.267394
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-10 14:16:20.269489
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-10 14:16:21.271593
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-10 14:16:22.276808
+end_time: None
+duration: None
+
+id: 13
+command: command
+response: None
+start time: 2020-10-10 14:16:23.279228
+end_time: None
+duration: None
+
+id: 14
+command: command
+response: ok
+start time: 2020-10-10 14:16:24.291177
+end_time: 2020-10-10 14:16:24.349352
+duration: 0.058175
+
+id: 15
+command: battery?
+response: 66
+
+start time: 2020-10-10 14:16:24.391934
+end_time: 2020-10-10 14:16:24.451026
+duration: 0.059092
+
+id: 16
+command: sn?
+response: 0TQDF8UEDBZW5C
+start time: 2020-10-10 14:16:26.895625
+end_time: 2020-10-10 14:16:27.053040
+duration: 0.157415
+
+id: 17
+command: streamon
+response: ok
+start time: 2020-10-10 14:16:30.414764
+end_time: 2020-10-10 14:16:30.474715
+duration: 0.059951
+

@@ -1,0 +1,32 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-10 14:31:38.174181
+end_time: 2020-10-10 14:31:38.362794
+duration: 0.188613
+
+id: 1
+command: battery?
+response: 93
+
+start time: 2020-10-10 14:31:38.375101
+end_time: 2020-10-10 14:31:38.451022
+duration: 0.075921
+
+id: 2
+command: sn?
+response: 0TQDF8UEDBZW5C
+start time: 2020-10-10 14:31:40.878324
+end_time: 2020-10-10 14:31:41.016377
+duration: 0.138053
+
+id: 3
+command: streamon
+response: ok
+start time: 2020-10-10 14:31:43.886765
+end_time: 2020-10-10 14:31:44.141764
+duration: 0.254999
+
