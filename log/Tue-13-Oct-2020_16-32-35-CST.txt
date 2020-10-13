@@ -1,0 +1,116 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-13 16:32:35.091279
+end_time: 2020-10-13 16:32:35.225402
+duration: 0.134123
+
+id: 1
+command: battery?
+response: 66
+
+start time: 2020-10-13 16:32:35.324768
+end_time: 2020-10-13 16:32:35.469534
+duration: 0.144766
+
+id: 2
+command: sn?
+response: 0TQDF8UEDBZW5C
+start time: 2020-10-13 16:32:37.827196
+end_time: 2020-10-13 16:32:37.961231
+duration: 0.134035
+
+id: 3
+command: streamon
+response: ok
+start time: 2020-10-13 16:32:41.330455
+end_time: 2020-10-13 16:32:41.573316
+duration: 0.242861
+
+id: 4
+command: takeoff
+response: error
+start time: 2020-10-13 16:32:42.331934
+end_time: 2020-10-13 16:32:42.365908
+duration: 0.033974
+
+id: 5
+command: up 20
+response: error Motor stop
+start time: 2020-10-13 16:32:43.832958
+end_time: 2020-10-13 16:32:43.901806
+duration: 0.068848
+
+id: 6
+command: command
+response: ok
+start time: 2020-10-13 16:32:45.334969
+end_time: 2020-10-13 16:32:45.379261
+duration: 0.044292
+
+id: 7
+command: command
+response: ok
+start time: 2020-10-13 16:32:45.835514
+end_time: 2020-10-13 16:32:45.902231
+duration: 0.066717
+
+id: 8
+command: command
+response: ok
+start time: 2020-10-13 16:32:46.336096
+end_time: 2020-10-13 16:32:46.351661
+duration: 0.015565
+
+id: 9
+command: command
+response: ok
+start time: 2020-10-13 16:32:46.836787
+end_time: 2020-10-13 16:32:46.858915
+duration: 0.022128
+
+id: 10
+command: command
+response: ok
+start time: 2020-10-13 16:32:47.337314
+end_time: 2020-10-13 16:32:47.366838
+duration: 0.029524
+
+id: 11
+command: command
+response: ok
+start time: 2020-10-13 16:32:47.837809
+end_time: 2020-10-13 16:32:47.889147
+duration: 0.051338
+
+id: 12
+command: command
+response: ok
+start time: 2020-10-13 16:32:48.338262
+end_time: 2020-10-13 16:32:48.386509
+duration: 0.048247
+
+id: 13
+command: command
+response: ok
+start time: 2020-10-13 16:32:48.838865
+end_time: 2020-10-13 16:32:48.907912
+duration: 0.069047
+
+id: 14
+command: command
+response: None
+start time: 2020-10-13 16:32:49.339573
+end_time: None
+duration: None
+
+id: 15
+command: command
+response: None
+start time: 2020-10-13 16:32:58.339698
+end_time: None
+duration: None
+
