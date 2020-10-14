@@ -182,7 +182,7 @@ class Tell_Controller:
                 while(time.time() - start < wait_time):
                     for Queue in self.execution_pools:
                         Queue.put('command')
-                        time.sleep(0.5)
+                        time.sleep(1)
         # wait till all commands are executed
         while not self.all_queue_empty(self.execution_pools):
             time.sleep(0.5)

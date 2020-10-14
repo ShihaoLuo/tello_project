@@ -29,7 +29,7 @@ def process_frame(_video, _pose_estimater):
             if pose is not None:
                 print("Pose in the world is {}\n".format(pose))
                 logging.info("\nPose in the world is {}\n".format(pose))
-        time.sleep(0.075)
+        #time.sleep(0.025)
 
 controller = tello_controller.Tell_Controller()
 # marker_detecter = marker_detecter.Marker_Manager()
@@ -46,13 +46,17 @@ try:
     controller.command("correct_ip")
     for i in range(len(controller.sn_list)):
         controller.command(str(i + 1) + "=" + controller.sn_list[i])
+    controller.command('*>setfps middle')
+    controller.command('*>setresolution low')
+    controller.command('setbitrate 5')
     controller.command("*>streamon")
-    controller.command("*>takeoff")
+    controller.command("wait 50")
+    '''controller.command("*>takeoff")
     controller.command("*>up 20")
     controller.command("wait 5")
     controller.command("*>back 100")
     controller.command("wait 5")
-    '''controller.command("*>left 100")
+    controller.command("*>left 100")
     controller.command("wait 5")
     controller.command("*>forward 100")
     controller.command("wait 5")

@@ -1,0 +1,200 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-14 17:07:40.594314
+end_time: 2020-10-14 17:07:40.648876
+duration: 0.054562
+
+id: 1
+command: battery?
+response: 61
+
+start time: 2020-10-14 17:07:42.610509
+end_time: 2020-10-14 17:07:42.681283
+duration: 0.070774
+
+id: 2
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-14 17:07:45.113746
+end_time: 2020-10-14 17:07:45.155259
+duration: 0.041513
+
+id: 3
+command: setfps low
+response: ok
+start time: 2020-10-14 17:07:48.117675
+end_time: 2020-10-14 17:07:48.163976
+duration: 0.046301
+
+id: 4
+command: setresolution low
+response: ok
+start time: 2020-10-14 17:07:49.165042
+end_time: 2020-10-14 17:07:49.188782
+duration: 0.02374
+
+id: 5
+command: streamon
+response: ok
+start time: 2020-10-14 17:07:50.667533
+end_time: 2020-10-14 17:07:50.714069
+duration: 0.046536
+
+id: 6
+command: command
+response: ok
+start time: 2020-10-14 17:07:52.169468
+end_time: 2020-10-14 17:07:52.194383
+duration: 0.024915
+
+id: 7
+command: command
+response: ok
+start time: 2020-10-14 17:07:52.670212
+end_time: 2020-10-14 17:07:52.704447
+duration: 0.034235
+
+id: 8
+command: command
+response: ok
+start time: 2020-10-14 17:07:53.170533
+end_time: 2020-10-14 17:07:53.215344
+duration: 0.044811
+
+id: 9
+command: command
+response: ok
+start time: 2020-10-14 17:07:53.671137
+end_time: 2020-10-14 17:07:53.729988
+duration: 0.058851
+
+id: 10
+command: command
+response: ok
+start time: 2020-10-14 17:07:54.171821
+end_time: 2020-10-14 17:07:54.194530
+duration: 0.022709
+
+id: 11
+command: command
+response: ok
+start time: 2020-10-14 17:07:54.672162
+end_time: 2020-10-14 17:07:54.743697
+duration: 0.071535
+
+id: 12
+command: command
+response: ok
+start time: 2020-10-14 17:07:55.172883
+end_time: 2020-10-14 17:07:55.205174
+duration: 0.032291
+
+id: 13
+command: command
+response: ok
+start time: 2020-10-14 17:07:55.673347
+end_time: 2020-10-14 17:07:55.713418
+duration: 0.040071
+
+id: 14
+command: command
+response: ok
+start time: 2020-10-14 17:07:56.173966
+end_time: 2020-10-14 17:07:56.229027
+duration: 0.055061
+
+id: 15
+command: command
+response: ok
+start time: 2020-10-14 17:07:56.674526
+end_time: 2020-10-14 17:07:56.702696
+duration: 0.02817
+
+id: 16
+command: command
+response: ok
+start time: 2020-10-14 17:07:57.175104
+end_time: 2020-10-14 17:07:57.199219
+duration: 0.024115
+
+id: 17
+command: command
+response: ok
+start time: 2020-10-14 17:07:57.675704
+end_time: 2020-10-14 17:07:57.709424
+duration: 0.03372
+
+id: 18
+command: command
+response: ok
+start time: 2020-10-14 17:07:58.176245
+end_time: 2020-10-14 17:07:58.236088
+duration: 0.059843
+
+id: 19
+command: command
+response: ok
+start time: 2020-10-14 17:07:58.676852
+end_time: 2020-10-14 17:07:58.723730
+duration: 0.046878
+
+id: 20
+command: command
+response: ok
+start time: 2020-10-14 17:07:59.177443
+end_time: 2020-10-14 17:07:59.202192
+duration: 0.024749
+
+id: 21
+command: command
+response: ok
+start time: 2020-10-14 17:07:59.683659
+end_time: 2020-10-14 17:07:59.702350
+duration: 0.018691
+
+id: 22
+command: command
+response: ok
+start time: 2020-10-14 17:08:00.184248
+end_time: 2020-10-14 17:08:00.202616
+duration: 0.018368
+
+id: 23
+command: command
+response: ok
+start time: 2020-10-14 17:08:00.684381
+end_time: 2020-10-14 17:08:00.713191
+duration: 0.02881
+
+id: 24
+command: command
+response: ok
+start time: 2020-10-14 17:08:01.184953
+end_time: 2020-10-14 17:08:01.225478
+duration: 0.040525
+
+id: 25
+command: command
+response: ok
+start time: 2020-10-14 17:08:01.685524
+end_time: 2020-10-14 17:08:01.749341
+duration: 0.063817
+
+id: 26
+command: land
+response: error
+start time: 2020-10-14 17:08:03.186844
+end_time: 2020-10-14 17:08:03.214436
+duration: 0.027592
+
+id: 27
+command: streamoff
+response: ok
+start time: 2020-10-14 17:08:04.688798
+end_time: 2020-10-14 17:08:04.692184
+duration: 0.003386
+

@@ -102,10 +102,10 @@ class PoseEstimater():
                     print('kp_test: {}\n'.format(kp_test[m.trainIdx].pt))'''
                     kp_good_match_query.append(kp_query[m.queryIdx])
                     des_good_match_query.append(des_query[m.queryIdx])
-            print('the num of finding featurs of query is {}\n'.format(len(des_query)))
+            '''print('the num of finding featurs of query is {}\n'.format(len(des_query)))
             print('the num of finding featurs of test is {}\n'.format(len(des_test)))
             print('the num of finding matches is {}\n'.format(len(matches)))
-            print("the len of good match is {}\n".format(len(good)))
+            print("the len of good match is {}\n".format(len(good)))'''
             if len(good) > self.min_match:
                 src_pts = np.float32([kp_good_match_query[i].pt for i in range(len(kp_good_match_query))]).reshape(-1, 1, 2)
                 dst_pts = np.float32([kp_test[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)

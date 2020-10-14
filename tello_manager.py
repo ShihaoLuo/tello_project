@@ -65,17 +65,17 @@ class Tello_Manager:
         """
         print '[Start_Searching]Searching for %s available Tello...\n' % num
         local_ip = self.get_host_ip()
-        #subnets, address = self.get_subnets()
+        subnets, address = self.get_subnets()
         possible_addr = []
 
-        #for subnet, netmask in subnets:
-         #   for ip in IPNetwork('%s/%s' % (subnet, netmask)):
-          #      # skip local and broadcast
-           #     if str(ip).split('.')[3] == '0' or str(ip).split('.')[3] == '255':
-            #        continue
-             #   possible_addr.append(str(ip))
-        for i in range(2, 100, 1):
-            possible_addr.append('192.168.50.'+str(i))
+        for subnet, netmask in subnets:
+            for ip in IPNetwork('%s/%s' % (subnet, netmask)):
+                # skip local and broadcast
+                if str(ip).split('.')[3] == '0' or str(ip).split('.')[3] == '255':
+                    continue
+                possible_addr.append(str(ip))
+        #for i in range(2, 100, 1):
+         #   possible_addr.append('192.168.50.'+str(i))
         while len(self.tello_ip_list) < num:
             print '[Still_Searching]Trying to find Tello in subnets...\n'
 
@@ -85,15 +85,15 @@ class Tello_Manager:
                     possible_addr.remove(tello_ip)
             # skip server itself
             for ip in possible_addr:
-                #if ip in address:
-                 #   continue
+                if ip in address:
+                    continue
                 # record this command
                 if ip == local_ip:
                     continue
                 self.log[ip].append(Stats('command', len(self.log[ip])))
-                self.socket.sendto(b'command', (ip, 8889))
-                #print('send to {}'.format(ip))
-                time.sleep(0.1)
+                self.socket.sendto('command'.encode('utf-8'), (ip, 8889))
+                print('send to {}'.format(ip))
+            time.sleep(2)
 
         # filter out non-tello addresses in log
         temp = defaultdict(list)

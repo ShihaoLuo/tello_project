@@ -1,0 +1,9118 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128319
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131971
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136570
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138884
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143870
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149401
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154908
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159833
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163277
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166511
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169746
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171817
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176602
+end_time: None
+duration: None
+
+------
+Drone: 2
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128346
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131992
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136604
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138890
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143920
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149421
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154950
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159857
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163295
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166516
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169764
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171824
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176635
+end_time: None
+duration: None
+
+------
+Drone: 3
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128213
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131930
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136497
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138872
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143806
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149343
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154829
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159794
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163249
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166500
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169707
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171806
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176529
+end_time: None
+duration: None
+
+------
+Drone: 4
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128279
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131951
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136536
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138877
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143838
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149379
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154867
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159814
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163263
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166505
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169725
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171811
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176568
+end_time: None
+duration: None
+
+------
+Drone: 5
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128138
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131887
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136426
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138858
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143709
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149303
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154737
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159751
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163222
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166487
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169673
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171790
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176455
+end_time: None
+duration: None
+
+------
+Drone: 6
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128178
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131909
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136464
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138866
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143768
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149323
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154774
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159770
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163236
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166493
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169689
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171799
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176495
+end_time: None
+duration: None
+
+------
+Drone: 7
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128067
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131840
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136337
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138845
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143602
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149261
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154656
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159712
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163188
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166476
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169632
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171778
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176376
+end_time: None
+duration: None
+
+------
+Drone: 8
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128104
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131861
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136374
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138852
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143668
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149283
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154690
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159731
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163201
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166482
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169654
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171784
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176412
+end_time: None
+duration: None
+
+------
+Drone: 9
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128375
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132013
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136636
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138897
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143966
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149442
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154984
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159877
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163311
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166522
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169782
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171831
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176672
+end_time: None
+duration: None
+
+------
+Drone: 10
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128407
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132035
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136669
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138903
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144016
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149462
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155017
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159897
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163330
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166530
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169800
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171837
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176705
+end_time: None
+duration: None
+
+------
+Drone: 11
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128590
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132140
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136836
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138927
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144166
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149556
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155180
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159980
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163389
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166553
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169874
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171863
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176855
+end_time: None
+duration: None
+
+------
+Drone: 12
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128545
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132103
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136803
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138921
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144125
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149536
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155120
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159961
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163375
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166547
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169856
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171857
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176820
+end_time: None
+duration: None
+
+------
+Drone: 13
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128514
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132082
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136767
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138916
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144090
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149516
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155083
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159941
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163358
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166542
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169838
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171851
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176780
+end_time: None
+duration: None
+
+------
+Drone: 14
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128445
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132061
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136716
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138909
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144051
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149495
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155050
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159922
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163344
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166536
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169820
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171843
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176738
+end_time: None
+duration: None
+
+------
+Drone: 15
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128726
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132239
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136974
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138955
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144328
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149661
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155325
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160077
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163449
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166584
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169943
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171908
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176999
+end_time: None
+duration: None
+
+------
+Drone: 16
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128666
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132206
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136940
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138945
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144294
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149628
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155287
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160049
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163432
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166575
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169925
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171891
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176966
+end_time: None
+duration: None
+
+------
+Drone: 17
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128641
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132184
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136901
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138938
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144246
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149602
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155251
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160029
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163417
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166570
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169905
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171878
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176924
+end_time: None
+duration: None
+
+------
+Drone: 18
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128612
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132162
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136869
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138932
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144200
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149581
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155218
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159999
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163403
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166563
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169891
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171870
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176890
+end_time: None
+duration: None
+
+------
+Drone: 19
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128776
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132293
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137048
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138968
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144407
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149772
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155419
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160118
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163478
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166598
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169975
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171925
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177066
+end_time: None
+duration: None
+
+------
+Drone: 20
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128752
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132262
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137006
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138962
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144368
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149688
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155384
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160099
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163464
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166590
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169958
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171915
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177033
+end_time: None
+duration: None
+
+------
+Drone: 21
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129079
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132559
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137349
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139020
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144730
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150036
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155769
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160317
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163627
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166664
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170135
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172015
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177397
+end_time: None
+duration: None
+
+------
+Drone: 22
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129115
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132580
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137381
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139026
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144769
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150056
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155801
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160337
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163641
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166671
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170154
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172028
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177430
+end_time: None
+duration: None
+
+------
+Drone: 23
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128946
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132473
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137218
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138997
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144592
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149946
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155631
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160231
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163563
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166639
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170064
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171975
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177244
+end_time: None
+duration: None
+
+------
+Drone: 24
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128972
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132495
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137251
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139002
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144627
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149966
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155663
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160256
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163583
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166646
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170078
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171987
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177278
+end_time: None
+duration: None
+
+------
+Drone: 25
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129002
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132517
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137284
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139008
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144662
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149993
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155696
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160276
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163597
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166653
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170098
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171997
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177328
+end_time: None
+duration: None
+
+------
+Drone: 26
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129033
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132537
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137316
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139015
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144697
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150015
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155729
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160295
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163611
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166659
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170118
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172006
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177363
+end_time: None
+duration: None
+
+------
+Drone: 27
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128801
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132331
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137081
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138973
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144442
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149819
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155460
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160148
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163492
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166603
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169992
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171935
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177104
+end_time: None
+duration: None
+
+------
+Drone: 28
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128826
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132364
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137113
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138979
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144476
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149874
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155494
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160172
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163506
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166609
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170009
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171944
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177145
+end_time: None
+duration: None
+
+------
+Drone: 29
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128854
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132399
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137146
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138986
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144510
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149903
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155546
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160193
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163531
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166615
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170027
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171955
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177179
+end_time: None
+duration: None
+
+------
+Drone: 30
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.128888
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132442
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137179
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138991
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144551
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149925
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155596
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160212
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163549
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166632
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170044
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171965
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177211
+end_time: None
+duration: None
+
+------
+Drone: 31
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129218
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132620
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137458
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139038
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144853
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150103
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155885
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160382
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163669
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166684
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170192
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172048
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177503
+end_time: None
+duration: None
+
+------
+Drone: 32
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129185
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132600
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137425
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139031
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144803
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150076
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155834
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160357
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163655
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166678
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170177
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172038
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177463
+end_time: None
+duration: None
+
+------
+Drone: 33
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129278
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132661
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137523
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139049
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144922
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150150
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155948
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160420
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163700
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166695
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170230
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172070
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177575
+end_time: None
+duration: None
+
+------
+Drone: 34
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129250
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132641
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137491
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139044
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144890
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150124
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155936
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160401
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163683
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166690
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170213
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172060
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177542
+end_time: None
+duration: None
+
+------
+Drone: 35
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129326
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132702
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137616
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139060
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144990
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150192
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155990
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160464
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163730
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166708
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170262
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172117
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177648
+end_time: None
+duration: None
+
+------
+Drone: 36
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129307
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132682
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137555
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139055
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.144958
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150172
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.155977
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160440
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163715
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166701
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170246
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172101
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177608
+end_time: None
+duration: None
+
+------
+Drone: 37
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129401
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132743
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137690
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139074
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145050
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150240
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156015
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160510
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163761
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166721
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170300
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172137
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177728
+end_time: None
+duration: None
+
+------
+Drone: 38
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129361
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132723
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137656
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139067
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145020
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150213
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156002
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160491
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163747
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166714
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170280
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172131
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177683
+end_time: None
+duration: None
+
+------
+Drone: 39
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129454
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132791
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137762
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139085
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145139
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150283
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156034
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160548
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163794
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166746
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170337
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172152
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177804
+end_time: None
+duration: None
+
+------
+Drone: 40
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129420
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132769
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137723
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139080
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145081
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150261
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156023
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160529
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163779
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166740
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170317
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172144
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177764
+end_time: None
+duration: None
+
+------
+Drone: 41
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126956
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131008
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135293
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138622
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142244
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148400
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153536
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158899
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162768
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166174
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169143
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171295
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175269
+end_time: None
+duration: None
+
+------
+Drone: 42
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126981
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131042
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135318
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138630
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142272
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148435
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153560
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158935
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162780
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166182
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169152
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171309
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175300
+end_time: None
+duration: None
+
+------
+Drone: 43
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126752
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130810
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135108
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138567
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142055
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148175
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153336
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158710
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162704
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166122
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169075
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171184
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175106
+end_time: None
+duration: None
+
+------
+Drone: 44
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126772
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130844
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135141
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138576
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142088
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148222
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153403
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158740
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162714
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166130
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169092
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171197
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175143
+end_time: None
+duration: None
+
+------
+Drone: 45
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126708
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130736
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135036
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138548
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.141957
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148088
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153290
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158641
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162685
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166103
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169056
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171154
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175058
+end_time: None
+duration: None
+
+------
+Drone: 46
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126730
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130776
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135070
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138558
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142009
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148126
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153313
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158674
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162694
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166113
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169066
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171170
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175082
+end_time: None
+duration: None
+
+------
+Drone: 47
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126907
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130942
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135220
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138603
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142188
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148326
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153490
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158835
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162749
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166157
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169119
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171263
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175214
+end_time: None
+duration: None
+
+------
+Drone: 48
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126932
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130976
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135241
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138612
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142213
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148359
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153513
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158869
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162759
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166165
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169131
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171278
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175239
+end_time: None
+duration: None
+
+------
+Drone: 49
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126814
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130876
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135174
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138585
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142120
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148258
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153430
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158774
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162726
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166138
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169101
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171218
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175167
+end_time: None
+duration: None
+
+------
+Drone: 50
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126842
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130909
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135199
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138595
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142156
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148292
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153461
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158805
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162739
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166146
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169110
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171239
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175190
+end_time: None
+duration: None
+
+------
+Drone: 51
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129497
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132854
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137871
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139106
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145242
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150377
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156059
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160615
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163839
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166768
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170400
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172173
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177920
+end_time: None
+duration: None
+
+------
+Drone: 52
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129513
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132875
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137904
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139112
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145275
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150402
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156067
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160634
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163856
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166774
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170421
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172179
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177956
+end_time: None
+duration: None
+
+------
+Drone: 53
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129468
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132812
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137804
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139091
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145173
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150304
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156043
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160568
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163808
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166754
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170363
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172160
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177845
+end_time: None
+duration: None
+
+------
+Drone: 54
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129483
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132833
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137838
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139096
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145204
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150325
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156051
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160595
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163825
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166760
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170382
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172167
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177880
+end_time: None
+duration: None
+
+------
+Drone: 55
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129604
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132936
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.138015
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139129
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145385
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150464
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156093
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160696
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163898
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166793
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170471
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172199
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.178059
+end_time: None
+duration: None
+
+------
+Drone: 56
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129624
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132957
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.138047
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139135
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145418
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150496
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156101
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160715
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163912
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166799
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170488
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172206
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.178099
+end_time: None
+duration: None
+
+------
+Drone: 57
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129552
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132895
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137943
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139117
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145308
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150422
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156077
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160653
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163870
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166780
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170439
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172185
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.177994
+end_time: None
+duration: None
+
+------
+Drone: 58
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129585
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132916
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.137982
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139124
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145347
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150443
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156085
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160672
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163884
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166786
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170453
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172193
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.178027
+end_time: None
+duration: None
+
+------
+Drone: 59
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129638
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.132978
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.138081
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139143
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145449
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150517
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156110
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160734
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163926
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166805
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170506
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172212
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.178134
+end_time: None
+duration: None
+
+------
+Drone: 60
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.129652
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.133000
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.138121
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.139149
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.145481
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.150538
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.156121
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.160758
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163943
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166811
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.170526
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.172218
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.178168
+end_time: None
+duration: None
+
+------
+Drone: 61
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127246
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131310
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135516
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138702
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142561
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148719
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153761
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159184
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162864
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166252
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169241
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171435
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175501
+end_time: None
+duration: None
+
+------
+Drone: 62
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127207
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131277
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135495
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138693
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142530
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148685
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153733
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159147
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162855
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166243
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169232
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171415
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175477
+end_time: None
+duration: None
+
+------
+Drone: 63
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127178
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131244
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135474
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138684
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142491
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148646
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153709
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159119
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162846
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166234
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169223
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171398
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175454
+end_time: None
+duration: None
+
+------
+Drone: 64
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127148
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131211
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135453
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138675
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142452
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148612
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153681
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159090
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162836
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166225
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169214
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171384
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175431
+end_time: None
+duration: None
+
+------
+Drone: 65
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127087
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131178
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135430
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138664
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142422
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148577
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153659
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159060
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162824
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166217
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169188
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171369
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175407
+end_time: None
+duration: None
+
+------
+Drone: 66
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127056
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131144
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135394
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138656
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142389
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148536
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153636
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159030
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162814
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166209
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169180
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171355
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175378
+end_time: None
+duration: None
+
+------
+Drone: 67
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127031
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131110
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135361
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138647
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142337
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148502
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153613
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158995
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162802
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166200
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169171
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171341
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175355
+end_time: None
+duration: None
+
+------
+Drone: 68
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127006
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131075
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135340
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138639
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142299
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148468
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153589
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158967
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162792
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166190
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169161
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171324
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175325
+end_time: None
+duration: None
+
+------
+Drone: 69
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127296
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131377
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135558
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138721
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142621
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148794
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153809
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159254
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162886
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166269
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169265
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171471
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175557
+end_time: None
+duration: None
+
+------
+Drone: 70
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127273
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131344
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135537
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138710
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142588
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148760
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153786
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159221
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162874
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166261
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169253
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171454
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175530
+end_time: None
+duration: None
+
+------
+Drone: 71
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127321
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131409
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135579
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138731
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142649
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148827
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153842
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159283
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162897
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166279
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169274
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171514
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175580
+end_time: None
+duration: None
+
+------
+Drone: 72
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127422
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131452
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135616
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138737
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142705
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148851
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153898
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159305
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162911
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166286
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169290
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171531
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175613
+end_time: None
+duration: None
+
+------
+Drone: 73
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127460
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131475
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135658
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138743
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142749
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148871
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153960
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159326
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162925
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166293
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169329
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171543
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175646
+end_time: None
+duration: None
+
+------
+Drone: 74
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127495
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131496
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135693
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138749
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142795
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148898
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154011
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159365
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162940
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166302
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169346
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171558
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175692
+end_time: None
+duration: None
+
+------
+Drone: 75
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127524
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131517
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135725
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138756
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142843
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148920
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154047
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159388
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162955
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166308
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169367
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171569
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175744
+end_time: None
+duration: None
+
+------
+Drone: 76
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127576
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131538
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135758
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138762
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.142957
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148941
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154080
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159407
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162971
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166314
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169381
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171579
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175789
+end_time: None
+duration: None
+
+------
+Drone: 77
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127617
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131559
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135790
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138768
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143011
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148961
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154121
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159427
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162985
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166320
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169399
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171607
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175823
+end_time: None
+duration: None
+
+------
+Drone: 78
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127647
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131580
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135822
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138773
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143049
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148981
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154156
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159447
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162999
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166327
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169418
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171617
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175857
+end_time: None
+duration: None
+
+------
+Drone: 79
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127678
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131600
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135855
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138781
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143103
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149015
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154190
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159477
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163013
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166332
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169433
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171626
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175891
+end_time: None
+duration: None
+
+------
+Drone: 80
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127698
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131623
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135889
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138788
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143145
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149037
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154223
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159496
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163027
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166338
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169454
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171637
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175933
+end_time: None
+duration: None
+
+------
+Drone: 81
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127855
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131728
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136050
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138818
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143379
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149153
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154436
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159603
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163105
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166413
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169540
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171721
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176113
+end_time: None
+duration: None
+
+------
+Drone: 82
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127921
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131778
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136121
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138829
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143490
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149194
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154536
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159647
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163147
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166454
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169583
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171741
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176207
+end_time: None
+duration: None
+
+------
+Drone: 83
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127886
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131755
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136083
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138824
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143442
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149174
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154472
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159627
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163133
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166432
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169564
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171732
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176151
+end_time: None
+duration: None
+
+------
+Drone: 84
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127739
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131665
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135953
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138799
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143221
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149086
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154301
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159534
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163059
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166373
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169491
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171661
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176003
+end_time: None
+duration: None
+
+------
+Drone: 85
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127720
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131644
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135921
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138793
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143178
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149065
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154256
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159515
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163044
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166348
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169472
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171646
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175967
+end_time: None
+duration: None
+
+------
+Drone: 86
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127816
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131707
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136018
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138809
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143321
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149127
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154401
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159583
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163090
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166406
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169523
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171691
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176071
+end_time: None
+duration: None
+
+------
+Drone: 87
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127760
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131686
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135985
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138804
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143273
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149107
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154336
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159558
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163073
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166400
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169508
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171681
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176037
+end_time: None
+duration: None
+
+------
+Drone: 88
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127996
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131819
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136297
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138840
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143566
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149235
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154622
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159692
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163174
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166470
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169615
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171755
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176330
+end_time: None
+duration: None
+
+------
+Drone: 89
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.127957
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.131798
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.136156
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138834
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.143533
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.149214
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.154587
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.159668
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.163161
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166461
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169597
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171749
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.176271
+end_time: None
+duration: None
+
+------
+Drone: 90
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126020
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130447
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.134637
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138411
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.141351
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.147773
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.152864
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158314
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162493
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166004
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.168880
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.170926
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.174622
+end_time: None
+duration: None
+
+------
+Drone: 91
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126270
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130540
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.134776
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138484
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.141505
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.147873
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153003
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158440
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162574
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166042
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.168954
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171033
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.174781
+end_time: None
+duration: None
+
+------
+Drone: 92
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126329
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130570
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.134840
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138492
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.141563
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.147902
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153067
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158471
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162595
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166050
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.168973
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171055
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.174828
+end_time: None
+duration: None
+
+------
+Drone: 93
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126475
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130594
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.134879
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138499
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.141652
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.147925
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153108
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158493
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162611
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166056
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.168987
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171085
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.174879
+end_time: None
+duration: None
+
+------
+Drone: 94
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126527
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130616
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.134913
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138504
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.141713
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.147946
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153143
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158529
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162626
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166064
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169002
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171095
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.174920
+end_time: None
+duration: None
+
+------
+Drone: 95
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126588
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130637
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.134946
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138511
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.141774
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.147984
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153180
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158551
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162640
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166072
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169016
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171104
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.174962
+end_time: None
+duration: None
+
+------
+Drone: 96
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126623
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130658
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.134979
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138518
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.141832
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148007
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153217
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158571
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162654
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166078
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169032
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171113
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.174997
+end_time: None
+duration: None
+
+------
+Drone: 97
+
+id: 0
+command: command
+response: None
+start time: 2020-10-14 15:52:28.126683
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-14 15:52:30.130678
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-14 15:52:32.135011
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-14 15:52:34.138524
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-14 15:52:36.141894
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-14 15:52:38.148028
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-14 15:52:40.153262
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-14 15:52:42.158591
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-14 15:52:44.162673
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-14 15:52:46.166084
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-14 15:52:48.169045
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-14 15:52:50.171122
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-14 15:52:52.175032
+end_time: None
+duration: None
+
