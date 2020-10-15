@@ -17,10 +17,10 @@ controller.command("battery_check 20")
 controller.command("correct_ip")
 video = tello_video.Tello_Video(controller.tello_list)
 
-name = 'toolholder'
+name = 'showcan'
 num = 50
 
-pic_folder = './dataset/toolholder/images_low/'
+pic_folder = './dataset/'+name+'/images/'
 if not os.path.exists(pic_folder):
     os.mkdir(pic_folder)
 

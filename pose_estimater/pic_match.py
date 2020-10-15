@@ -13,7 +13,7 @@ import json
 import multiprocessing
 #import set_world_point
 
-object_name = 'toolholder'
+object_name = 'showcan'
 
 def save_2_jason(_file, arr):
     data = {}
@@ -59,28 +59,32 @@ def get_ROI(_img):
     return dst
 
 
-MIN_MATH_COUNT = 30
+MIN_MATH_COUNT = 20
 
-img_test = cv.imread('./dataset/toolholder/images_low/toolholder44.jpg', 0)
-img_query = cv.imread('./dataset/toolholder/images_low/toolholder.jpg', 0)
-#img_query = get_ROI(img_query)
+img_test = cv.imread('./dataset/'+object_name+'/images/'+object_name+'28.jpg', 0)
+img_query = cv.imread('./dataset/'+object_name+'/images/'+object_name+'11.jpg', 0)
+img_query = get_ROI(img_query)
 img_test = get_ROI(img_test)
-'''sift_para = dict(nfeatures=0,
+sift_paras = dict(nfeatures=0,
                  nOctaveLayers=3,
                  contrastThreshold=0.05,
                  edgeThreshold=10,
-                 sigma=1.3)'''
-#cv.imwrite('./dataset/'+object_name+'/images_low/'+object_name+'.jpg',img_query)
-surf_paras = dict(hessianThreshold=100,
+                 sigma=0.8)
+cv.imwrite('./dataset/'+object_name+'/images/'+object_name+'.jpg',img_query)
+'''surf_paras = dict(hessianThreshold=100,
                   nOctaves=10,
                   nOctaveLayers=2,
                   extended=1,
                   upright=0)
-surf = cv.xfeatures2d.SURF_create(**surf_paras)
-kp_query, des_query = surf.detectAndCompute(img_query, None)
+surf = cv.xfeatures2d.SURF_create(**surf_paras)'''
+sift = cv.xfeatures2d.SIFT_create(**sift_paras)
+kp_query, des_query = sift.detectAndCompute(img_query, None)
+save_2_jason('dataset/'+object_name+'/kp.json',kp_query)
+save_2_npy('dataset/'+object_name+'/des.npy',des_query)
+
 #save_2_jason('kp_query.jason', kp_query)
 #save_2_npy('des_query.npy', des_query)
-kp_test, des_test = surf.detectAndCompute(img_test, None)
+kp_test, des_test = sift.detectAndCompute(img_test, None)
 #kp_query_1 = read_from_jason('kp_goodm.jason')
 #des_query_1 = read_from_npy('des_goodm.npy')
 FLANN_INDEX_KDTREE = 1
@@ -109,8 +113,8 @@ print('the num of finding featurs of query is {}\n'.format(len(des_query)))
 print('the num of finding featurs of test is {}\n'.format(len(des_test)))
 print('the num of finding matches is {}\n'.format(len(matches)))
 print("the len of good match is {}\n".format(len(good)))
-save_2_jason('dataset/'+object_name+'/kp.json',kp_good_match_query)
-save_2_npy('dataset/'+object_name+'/des.npy',des_good_match_query)
+#save_2_jason('dataset/'+object_name+'/kp.json',kp_good_match_query)
+#save_2_npy('dataset/'+object_name+'/des.npy',des_good_match_query)
 if len(good)>=MIN_MATH_COUNT:
     src_pts = np.float32([kp_good_match_query[i].pt for i in range(len(kp_good_match_query))]).reshape(-1,1,2)
     #src_pts = np.float32([kp_query_1[m.queryIdx].pt for m in good]).reshape(-1,1,2)

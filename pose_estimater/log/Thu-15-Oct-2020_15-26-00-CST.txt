@@ -1,0 +1,151 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-10-15 15:26:00.353029
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-15 15:26:02.357249
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-15 15:26:04.363807
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-15 15:26:06.369323
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-10-15 15:26:08.373503
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-10-15 15:26:10.378103
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-10-15 15:26:12.383237
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-10-15 15:26:14.388455
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-10-15 15:26:16.394939
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-10-15 15:26:18.400344
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-10-15 15:26:20.406062
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-10-15 15:26:22.411238
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: None
+start time: 2020-10-15 15:26:24.417726
+end_time: None
+duration: None
+
+id: 13
+command: command
+response: None
+start time: 2020-10-15 15:26:26.421857
+end_time: None
+duration: None
+
+id: 14
+command: command
+response: None
+start time: 2020-10-15 15:26:28.427832
+end_time: None
+duration: None
+
+id: 15
+command: command
+response: None
+start time: 2020-10-15 15:26:30.433209
+end_time: None
+duration: None
+
+id: 16
+command: command
+response: None
+start time: 2020-10-15 15:26:32.438195
+end_time: None
+duration: None
+
+id: 17
+command: command
+response: None
+start time: 2020-10-15 15:26:34.441715
+end_time: None
+duration: None
+
+id: 18
+command: command
+response: ok
+start time: 2020-10-15 15:26:36.446136
+end_time: 2020-10-15 15:26:36.494000
+duration: 0.047864
+
+id: 19
+command: battery?
+response: 79
+
+start time: 2020-10-15 15:26:38.449040
+end_time: 2020-10-15 15:26:38.472304
+duration: 0.023264
+
+id: 20
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-15 15:26:40.951934
+end_time: 2020-10-15 15:26:40.974091
+duration: 0.022157
+

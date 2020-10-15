@@ -6,16 +6,16 @@ import matplotlib.pyplot as plt
 import multiprocessing
 
 class PoseEstimater():
-    def __init__(self, min_match):
+    def __init__(self, _algorithm, min_match):
         self.camera_matrix = None
         self.distor_matrix = None
         self.min_match = min_match
+        self.algorithm = _algorithm
         self.dataset = {}
-        self.surf = cv.xfeatures2d.SURF_create(hessianThreshold=100,
-                                          nOctaves=10,
-                                          nOctaveLayers=2,
-                                          extended=1,
-                                          upright=0)
+        if _algorithm == 'SURF':
+            self.detecter = cv.xfeatures2d.SURF_create(hessianThreshold=100, nOctaves=10, nOctaveLayers=2, extended=1, upright=0)
+        elif _algorithm == 'SIFT':
+            self.detecter = cv.xfeatures2d.SIFT_create(nfeatures=0, nOctaveLayers=3, contrastThreshold=0.05, edgeThreshold=10, sigma=0.8)
         self.queue = multiprocessing.Queue()
         self.show_match = multiprocessing.Process(target=self.show_match)
         self.show_match.start()
@@ -84,7 +84,7 @@ class PoseEstimater():
     def pic_match(self, _img_query, _img, flag):
         img_test = _img
         img_query = _img_query
-        kp_test, des_test = self.surf.detectAndCompute(img_test, None)
+        kp_test, des_test = self.detecter.detectAndCompute(img_test, None)
         FLANN_INDEX_KDTREE = 1
         index_params = dict(algorithm=FLANN_INDEX_KDTREE, trees=5)
         search_params = dict(checks=50)
@@ -97,7 +97,7 @@ class PoseEstimater():
             kp_good_match_query = []
             des_good_match_query = []
             for m, n in matches:
-                if m.distance < 0.8 * n.distance:
+                if m.distance < 0.56 * n.distance:
                     good.append(m)
                     '''print('--------------------\n')
                     print('m.imgIdx: {}\n'.format(m.imgIdx))
@@ -115,7 +115,7 @@ class PoseEstimater():
                 src_pts = np.float32([kp_good_match_query[i].pt for i in range(len(kp_good_match_query))]).reshape(-1, 1, 2)
                 dst_pts = np.float32([kp_test[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)
                 M, mask = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
-                if flag == 1:
+                if flag == 1 and M is not None and mask is not None:
                     h, w = img_query.shape
                     matchesMask = mask.ravel().tolist()
                     d = 1

@@ -9,7 +9,6 @@ Created on Thu Sep 24 22:11:47 2020
 import tello_controller
 import tello_video
 import multiprocessing
-import time
 import numpy as np
 import logging
 from pose_estimater import  pose_estimater
@@ -30,9 +29,9 @@ def process_frame(_video, _pose_estimater):
             if pose is not None:
                 print("Pose in the world is {}".format(pose))
                 logging.info("\n{}".format(pose))
-                
+
 controller = tello_controller.Tell_Controller()
-pose_estimater = pose_estimater.PoseEstimater(26)
+pose_estimater = pose_estimater.PoseEstimater('SIFT', 15)
 pose_estimater.loaddata('pose_estimater/dataset/')
 frame = None
 pose = np.array([])
