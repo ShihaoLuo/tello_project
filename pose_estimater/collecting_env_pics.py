@@ -17,16 +17,16 @@ controller.command("battery_check 20")
 controller.command("correct_ip")
 video = tello_video.Tello_Video(controller.tello_list)
 
-name = 'showcan'
-num = 50
+name = 'toolholder'
+num = 2
 
 pic_folder = './dataset/'+name+'/images/'
 if not os.path.exists(pic_folder):
     os.mkdir(pic_folder)
 
 
-init_command = ['setfps high', 'setresolution low', 'setbitrate 5', 'streamon']
-move_command = ['right 100']*8
+init_command = ['setfps high', 'setresolution low', 'setbitrate 5', 'streamon', 'takeoff', 'up 70']
+move_command = ['right 100', 'left 100']
 
 try:
     for i in range(len(controller.sn_list)):
@@ -35,8 +35,11 @@ try:
         controller.command('*>'+init_c)
     time.sleep(2)
     for i in range(num):
-        video.take_pic(pic_folder+name+str(i)+'.jpg')
+        controller.command('*>'+move_command[i%2])
+        time.sleep(3)
+        video.take_pic(pic_folder+name+str(i+100)+'.jpg')
         time.sleep(1)
+    controller.command('*>land')
     controller.save_log(controller.manager)
     controller.manager.close()
     video.close()
