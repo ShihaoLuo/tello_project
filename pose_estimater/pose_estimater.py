@@ -3,18 +3,22 @@ import cv2 as cv
 import json
 import os
 import matplotlib.pyplot as plt
+import multiprocessing
 
 class PoseEstimater():
-    def __init__(self):
+    def __init__(self, min_match):
         self.camera_matrix = None
         self.distor_matrix = None
-        self.min_match = 30
+        self.min_match = min_match
         self.dataset = {}
         self.surf = cv.xfeatures2d.SURF_create(hessianThreshold=100,
                                           nOctaves=10,
                                           nOctaveLayers=2,
-                                          extended=0,
-                                          upright=1)
+                                          extended=1,
+                                          upright=0)
+        self.queue = multiprocessing.Queue()
+        self.show_match = multiprocessing.Process(target=self.show_match)
+        self.show_match.start()
 
     def loaddata(self, _dataset_path):
         self.camera_matrix = np.load(_dataset_path+'camera_matrix_tello.npy')
@@ -77,8 +81,9 @@ class PoseEstimater():
     def read_from_npy(self, _file):
         return np.load(_file)
 
-    def pic_match(self, _img):
+    def pic_match(self, _img_query, _img, flag):
         img_test = _img
+        img_query = _img_query
         kp_test, des_test = self.surf.detectAndCompute(img_test, None)
         FLANN_INDEX_KDTREE = 1
         index_params = dict(algorithm=FLANN_INDEX_KDTREE, trees=5)
@@ -104,17 +109,30 @@ class PoseEstimater():
                     des_good_match_query.append(des_query[m.queryIdx])
             '''print('the num of finding featurs of query is {}\n'.format(len(des_query)))
             print('the num of finding featurs of test is {}\n'.format(len(des_test)))
-            print('the num of finding matches is {}\n'.format(len(matches)))
-            print("the len of good match is {}\n".format(len(good)))'''
+            print('the num of finding matches is {}\n'.format(len(matches)))'''
+            print("good mathch: {}".format(len(good)))
             if len(good) > self.min_match:
                 src_pts = np.float32([kp_good_match_query[i].pt for i in range(len(kp_good_match_query))]).reshape(-1, 1, 2)
                 dst_pts = np.float32([kp_test[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)
-                M, _ = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
+                M, mask = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
+                if flag == 1:
+                    h, w = img_query.shape
+                    matchesMask = mask.ravel().tolist()
+                    d = 1
+                    pts = np.float32([[0, 0], [0, h - 1], [w - 1, h - 1], [w - 1, 0]]).reshape(-1, 1, 2)
+                    dst = cv.perspectiveTransform(pts, M)
+                    img_test = cv.polylines(img_test, [np.int32(dst)], True, 255, 1, cv.LINE_AA)
+                    draw_params = dict(matchColor=(0, 255, 0),
+                                       singlePointColor=None,
+                                       matchesMask=matchesMask,
+                                       flags=2)
+                    mimg = cv.drawMatches(img_query, kp_query, img_test, kp_test, good, None, **draw_params)
+                    self.queue.put(mimg)
                 return obj, M
         return None, None
 
-    def estimate_pose(self, _img):
-        obj, M = self.pic_match(_img)
+    def estimate_pose(self, _img_query, _img, flag):
+        obj, M = self.pic_match(_img_query, _img, flag)
         if obj is not None and M is not None:
             wpxel = self.dataset[obj]['wpixel'].reshape(-1,2)
             wpxel = np.insert(wpxel, 2, 1, axis=1)
@@ -130,6 +148,7 @@ class PoseEstimater():
             _, rvec, tvec = cv.solvePnP(**pnppara)
             rotM = np.array(cv.Rodrigues(rvec)[0])
             pose = np.dot(-rotM.T, tvec)
+            pose = pose/2
             return pose
         else:
             return None
@@ -144,6 +163,16 @@ class PoseEstimater():
         for i in self.dataset.keys():
             print(self.dataset[i])
 
+    def show_match(self):
+        print('in the show thread.')
+        while True:
+            if not self.queue.empty():
+                f = self.queue.get()
+                cv.imshow('match_img', f)
+            a = cv.waitKey(100)
+            if a == ord('q'):
+                cv.destroyAllWindows()
+                break
 '''OBJ = pose_estimater()
 img_test = cv.imread('./dataset/toolholder/images/toolholder9.jpg', 0)
 imagelist = os.listdir('dataset/toolholder/images')

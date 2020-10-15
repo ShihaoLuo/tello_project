@@ -1,9 +1,10 @@
-import socket
+from pose_estimater import pose_estimater
+import cv2 as cv
 
-my_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # socket for sending cmd
-my_socket.bind(('', 8889))
-cmd_str = 'setresolution low'
-print ('sending command %s' % cmd_str)
-my_socket.sendto(cmd_str.encode('utf-8'), ('192.168.50.99', 8889))
-response, ip = my_socket.recvfrom(100)
-print('from %s: %s' % (ip, response))
+
+img = cv.imread('pose_estimater/dataset/toolholder/images_low/toolholder30.jpg', 0)
+img_query = cv.imread('pose_estimater/dataset/toolholder/images_low/toolholder.jpg', 0)
+obj = pose_estimater.PoseEstimater(15)
+obj.loaddata('pose_estimater/dataset/')
+pose = obj.estimate_pose(img_query, img, 1)
+print(pose)

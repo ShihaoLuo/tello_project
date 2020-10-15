@@ -178,11 +178,24 @@ class Tell_Controller:
                            'Timeout exceeded, continue...\n')
             elif 'wait' in _command:
                 wait_time = float(_command.partition('wait')[2])
-                start = time.time()
+                '''start = time.time()
                 while(time.time() - start < wait_time):
                     for Queue in self.execution_pools:
                         Queue.put('command')
-                        time.sleep(1)
+                        time.sleep(1)'''
+                while True:
+                    cnt = wait_time - 5
+                    if cnt > 0:
+                        for Queue in self.execution_pools:
+                            Queue.put('command')
+                            time.sleep(5)
+                    else:
+                        for Queue in self.execution_pools:
+                            Queue.put('command')
+                            time.sleep(wait_time)
+                        break
+                    wait_time = cnt
+
         # wait till all commands are executed
         while not self.all_queue_empty(self.execution_pools):
             time.sleep(0.5)

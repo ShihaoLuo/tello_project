@@ -1,0 +1,116 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-15 12:54:38.272386
+end_time: 2020-10-15 12:54:38.323016
+duration: 0.05063
+
+id: 1
+command: battery?
+response: 66
+
+start time: 2020-10-15 12:54:40.283167
+end_time: 2020-10-15 12:54:40.361188
+duration: 0.078021
+
+id: 2
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-15 12:54:42.786205
+end_time: 2020-10-15 12:54:42.849761
+duration: 0.063556
+
+id: 3
+command: setfps high
+response: ok
+start time: 2020-10-15 12:54:45.789434
+end_time: 2020-10-15 12:54:45.795809
+duration: 0.006375
+
+id: 4
+command: setresolution low
+response: ok
+start time: 2020-10-15 12:54:46.790815
+end_time: 2020-10-15 12:54:46.829298
+duration: 0.038483
+
+id: 5
+command: streamon
+response: ok
+start time: 2020-10-15 12:54:49.294455
+end_time: 2020-10-15 12:54:49.311076
+duration: 0.016621
+
+id: 6
+command: takeoff
+response: ok
+start time: 2020-10-15 12:54:50.795644
+end_time: 2020-10-15 12:54:55.239638
+duration: 4.443994
+
+id: 7
+command: command
+response: ok
+start time: 2020-10-15 12:54:55.335975
+end_time: 2020-10-15 12:54:55.383525
+duration: 0.04755
+
+id: 8
+command: back 100
+response: ok
+start time: 2020-10-15 12:55:01.354710
+end_time: 2020-10-15 12:55:04.209252
+duration: 2.854542
+
+id: 9
+command: command
+response: ok
+start time: 2020-10-15 12:55:04.358227
+end_time: 2020-10-15 12:55:04.410354
+duration: 0.052127
+
+id: 10
+command: command
+response: ok
+start time: 2020-10-15 12:55:10.363863
+end_time: 2020-10-15 12:55:10.384265
+duration: 0.020402
+
+id: 11
+command: command
+response: ok
+start time: 2020-10-15 12:55:15.366616
+end_time: 2020-10-15 12:55:15.376115
+duration: 0.009499
+
+id: 12
+command: command
+response: ok
+start time: 2020-10-15 12:55:20.374148
+end_time: 2020-10-15 12:55:20.434573
+duration: 0.060425
+
+id: 13
+command: command
+response: ok
+start time: 2020-10-15 12:55:25.378549
+end_time: 2020-10-15 12:55:25.427394
+duration: 0.048845
+
+id: 14
+command: land
+response: ok
+start time: 2020-10-15 12:55:31.383871
+end_time: 2020-10-15 12:55:36.136108
+duration: 4.752237
+
+id: 15
+command: streamoff
+response: ok
+start time: 2020-10-15 12:55:36.411418
+end_time: 2020-10-15 12:55:36.441799
+duration: 0.030381
+

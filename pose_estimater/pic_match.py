@@ -59,22 +59,23 @@ def get_ROI(_img):
     return dst
 
 
-MIN_MATH_COUNT = 25
+MIN_MATH_COUNT = 30
 
-img_test = cv.imread('./dataset/toolholder/images/toolholder14.jpg', 0)
-img_query = cv.imread('./dataset/toolholder/images/toolholder.jpg', 0)
+img_test = cv.imread('./dataset/toolholder/images_low/toolholder44.jpg', 0)
+img_query = cv.imread('./dataset/toolholder/images_low/toolholder.jpg', 0)
 #img_query = get_ROI(img_query)
+img_test = get_ROI(img_test)
 '''sift_para = dict(nfeatures=0,
                  nOctaveLayers=3,
                  contrastThreshold=0.05,
                  edgeThreshold=10,
                  sigma=1.3)'''
-cv.imwrite('./dataset/'+object_name+'/images/'+object_name+'.jpg',img_query)
+#cv.imwrite('./dataset/'+object_name+'/images_low/'+object_name+'.jpg',img_query)
 surf_paras = dict(hessianThreshold=100,
                   nOctaves=10,
                   nOctaveLayers=2,
-                  extended=0,
-                  upright=1)
+                  extended=1,
+                  upright=0)
 surf = cv.xfeatures2d.SURF_create(**surf_paras)
 kp_query, des_query = surf.detectAndCompute(img_query, None)
 #save_2_jason('kp_query.jason', kp_query)
@@ -94,7 +95,7 @@ good = []
 kp_good_match_query = []
 des_good_match_query = []
 for m, n in matches:
-    if m.distance < 0.6*n.distance:
+    if m.distance < 0.9*n.distance:
         good.append(m)
         print('--------------------\n')
         print('m.imgIdx: {}\n'.format(m.imgIdx))
@@ -110,19 +111,18 @@ print('the num of finding matches is {}\n'.format(len(matches)))
 print("the len of good match is {}\n".format(len(good)))
 save_2_jason('dataset/'+object_name+'/kp.json',kp_good_match_query)
 save_2_npy('dataset/'+object_name+'/des.npy',des_good_match_query)
-if len(good)>MIN_MATH_COUNT:
+if len(good)>=MIN_MATH_COUNT:
     src_pts = np.float32([kp_good_match_query[i].pt for i in range(len(kp_good_match_query))]).reshape(-1,1,2)
     #src_pts = np.float32([kp_query_1[m.queryIdx].pt for m in good]).reshape(-1,1,2)
     dst_pts = np.float32([kp_test[m.trainIdx].pt for m in good]).reshape(-1,1,2)
 
     M, mask = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
     matchesMask = mask.ravel().tolist()
-    print(M)
     h,w = img_query.shape
     d = 1
     pts = np.float32([ [0,0],[0,h-1],[w-1,h-1],[w-1,0] ]).reshape(-1,1,2)
     dst = cv.perspectiveTransform(pts,M)
-    img_test = cv.polylines(img_test,[np.int32(dst)],True,255,3,cv.LINE_AA)
+    img_test = cv.polylines(img_test,[np.int32(dst)],True,255,1,cv.LINE_AA)
 
 else:
     print("Not enough matchs are found - {}/{}".format(len(good),MIN_MATH_COUNT))

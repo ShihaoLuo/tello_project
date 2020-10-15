@@ -1,0 +1,46 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-15 10:29:49.651484
+end_time: 2020-10-15 10:29:49.701665
+duration: 0.050181
+
+id: 1
+command: battery?
+response: 43
+
+start time: 2020-10-15 10:29:51.658211
+end_time: 2020-10-15 10:29:51.706098
+duration: 0.047887
+
+id: 2
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-15 10:29:54.161018
+end_time: 2020-10-15 10:29:54.362958
+duration: 0.20194
+
+id: 3
+command: streamon
+response: ok
+start time: 2020-10-15 10:29:57.171136
+end_time: 2020-10-15 10:29:57.181709
+duration: 0.010573
+
+id: 4
+command: setfps high
+response: ok
+start time: 2020-10-15 10:29:58.673654
+end_time: 2020-10-15 10:29:58.712504
+duration: 0.03885
+
+id: 5
+command: setresolution low
+response: ok
+start time: 2020-10-15 10:29:59.674736
+end_time: 2020-10-15 10:29:59.681478
+duration: 0.006742
+

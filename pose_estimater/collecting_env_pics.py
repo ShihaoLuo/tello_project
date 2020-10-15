@@ -18,14 +18,14 @@ controller.command("correct_ip")
 video = tello_video.Tello_Video(controller.tello_list)
 
 name = 'toolholder'
-num = 25
+num = 50
 
-pic_folder = './dataset/toolholder/images/'
-if not os.path.exists('dataset/toolholder/images'):
-    os.mkdir('dataset/toolholder/images')
+pic_folder = './dataset/toolholder/images_low/'
+if not os.path.exists(pic_folder):
+    os.mkdir(pic_folder)
 
 
-init_command = ['streamon']
+init_command = ['setfps high', 'setresolution low', 'setbitrate 5', 'streamon']
 move_command = ['right 100']*8
 
 try:
@@ -33,11 +33,10 @@ try:
         controller.command(str(i + 1) + "=" + controller.sn_list[i])
     for init_c in init_command:
         controller.command('*>'+init_c)
-
-    time.sleep(10)
+    time.sleep(2)
     for i in range(num):
-        video.take_pic(pic_folder+name+str(i+19)+'.jpg')
-        time.sleep(2)
+        video.take_pic(pic_folder+name+str(i)+'.jpg')
+        time.sleep(1)
     controller.save_log(controller.manager)
     controller.manager.close()
     video.close()

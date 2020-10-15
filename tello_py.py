@@ -13,10 +13,11 @@ import time
 import numpy as np
 import logging
 from pose_estimater import  pose_estimater
-
+import cv2 as cv
 
 def process_frame(_video, _pose_estimater):
     global pose
+    img_query = cv.imread('pose_estimater/dataset/toolholder/images_low/toolholder.jpg', 0)
     log = './log_pose/pose.log'
     logging.basicConfig(filename=log,
                         level=logging.DEBUG,
@@ -25,15 +26,13 @@ def process_frame(_video, _pose_estimater):
     while True:
         _frame = _video.get_frame()
         if _frame is not None:
-            pose = _pose_estimater.estimate_pose(_frame)
+            pose = _pose_estimater.estimate_pose(img_query, _frame, 1)
             if pose is not None:
-                print("Pose in the world is {}\n".format(pose))
-                logging.info("\nPose in the world is {}\n".format(pose))
-        #time.sleep(0.025)
-
+                print("Pose in the world is {}".format(pose))
+                logging.info("\n{}".format(pose))
+                
 controller = tello_controller.Tell_Controller()
-# marker_detecter = marker_detecter.Marker_Manager()
-pose_estimater = pose_estimater.PoseEstimater()
+pose_estimater = pose_estimater.PoseEstimater(26)
 pose_estimater.loaddata('pose_estimater/dataset/')
 frame = None
 pose = np.array([])
@@ -46,11 +45,12 @@ try:
     controller.command("correct_ip")
     for i in range(len(controller.sn_list)):
         controller.command(str(i + 1) + "=" + controller.sn_list[i])
-    controller.command('*>setfps middle')
+    controller.command('*>setfps high')
     controller.command('*>setresolution low')
     controller.command('setbitrate 5')
     controller.command("*>streamon")
-    controller.command("wait 50")
+    controller.command("*>takeoff")
+    controller.command("wait 20")
     '''controller.command("*>takeoff")
     controller.command("*>up 20")
     controller.command("wait 5")
