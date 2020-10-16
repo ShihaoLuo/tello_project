@@ -13,7 +13,7 @@ import json
 import multiprocessing
 #import set_world_point
 
-object_name = 'showcan'
+object_name = 'toolholder'
 
 def save_2_jason(_file, arr):
     data = {}
@@ -60,17 +60,23 @@ def get_ROI(_img):
 
 
 MIN_MATH_COUNT = 20
+kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
 
-img_test = cv.imread('./dataset/'+object_name+'/images/'+object_name+'28.jpg', 0)
-img_query = cv.imread('./dataset/'+object_name+'/images/'+object_name+'11.jpg', 0)
+img_test = cv.imread('./dataset/'+object_name+'/images/'+object_name+'45.jpg', 0)
+img_query = cv.imread('./dataset/'+object_name+'/images/'+object_name+'18.jpg', 0)
+img_test = cv.resize(img_test, (648*2, 478*2), cv.INTER_CUBIC)
+img_query = cv.resize(img_query, (648*2, 478*2), cv.INTER_CUBIC)
+img_test = cv.filter2D(img_test, -1, kernel)
+img_query = cv.filter2D(img_query, -1, kernel)
 img_query = get_ROI(img_query)
-img_test = get_ROI(img_test)
+#img_test = get_ROI(img_test)
+
 sift_paras = dict(nfeatures=0,
                  nOctaveLayers=3,
                  contrastThreshold=0.05,
                  edgeThreshold=10,
                  sigma=0.8)
-cv.imwrite('./dataset/'+object_name+'/images/'+object_name+'.jpg',img_query)
+cv.imwrite('./dataset/'+object_name+'/images/'+object_name+'.jpg', img_query)
 '''surf_paras = dict(hessianThreshold=100,
                   nOctaves=10,
                   nOctaveLayers=2,
