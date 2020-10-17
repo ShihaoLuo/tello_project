@@ -1,0 +1,60 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-16 12:23:03.173379
+end_time: 2020-10-16 12:23:03.210262
+duration: 0.036883
+
+id: 1
+command: battery?
+response: 76
+
+start time: 2020-10-16 12:23:05.183138
+end_time: 2020-10-16 12:23:05.193050
+duration: 0.009912
+
+id: 2
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-16 12:23:07.686031
+end_time: 2020-10-16 12:23:07.695302
+duration: 0.009271
+
+id: 3
+command: setfps high
+response: ok
+start time: 2020-10-16 12:23:10.689380
+end_time: 2020-10-16 12:23:10.702908
+duration: 0.013528
+
+id: 4
+command: setresolution low
+response: ok
+start time: 2020-10-16 12:23:12.190844
+end_time: 2020-10-16 12:23:12.238376
+duration: 0.047532
+
+id: 5
+command: streamon
+response: ok
+start time: 2020-10-16 12:23:14.694038
+end_time: 2020-10-16 12:23:14.729802
+duration: 0.035764
+
+id: 6
+command: takeoff
+response: error, high temp
+start time: 2020-10-16 12:23:16.195919
+end_time: 2020-10-16 12:23:16.210751
+duration: 0.014832
+
+id: 7
+command: command
+response: ok
+start time: 2020-10-16 12:23:17.698364
+end_time: 2020-10-16 12:23:17.743671
+duration: 0.045307
+

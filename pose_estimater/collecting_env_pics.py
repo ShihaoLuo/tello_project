@@ -18,14 +18,14 @@ controller.command("correct_ip")
 video = tello_video.Tello_Video(controller.tello_list)
 
 name = 'toolholder'
-num = 2
+num = 1
 
 pic_folder = './dataset/'+name+'/images/'
 if not os.path.exists(pic_folder):
     os.mkdir(pic_folder)
 
 
-init_command = ['setfps high', 'setresolution low', 'setbitrate 5', 'streamon', 'takeoff', 'up 70']
+init_command = ['setfps low', 'setresolution low', 'setbitrate 5', 'streamon', 'takeoff', 'up 130']
 move_command = ['right 100', 'left 100']
 
 try:
@@ -33,11 +33,21 @@ try:
         controller.command(str(i + 1) + "=" + controller.sn_list[i])
     for init_c in init_command:
         controller.command('*>'+init_c)
-    time.sleep(2)
+    time.sleep(3)
+    video.take_pic(pic_folder + name + str(100) + '.jpg')
+    time.sleep(1)
+    video.take_pic(pic_folder + name + str(101) + '.jpg')
+    time.sleep(1)
+    video.take_pic(pic_folder + name + str(102) + '.jpg')
+    time.sleep(1)
     for i in range(num):
         controller.command('*>'+move_command[i%2])
         time.sleep(3)
-        video.take_pic(pic_folder+name+str(i+100)+'.jpg')
+        video.take_pic(pic_folder + name + str(103) + '.jpg')
+        time.sleep(1)
+        video.take_pic(pic_folder + name + str(104) + '.jpg')
+        time.sleep(1)
+        video.take_pic(pic_folder + name + str(105) + '.jpg')
         time.sleep(1)
     controller.command('*>land')
     controller.save_log(controller.manager)
@@ -48,8 +58,8 @@ except KeyboardInterrupt:
            Sending land to all drones...\n')
     for ip in controller.manager.tello_ip_list:
         controller.manager.socket.sendto('streamoff'.encode('utf-8'),
-                                         (ip, 9001))
-        controller.manager.socket.sendto('land'.encode('utf-8'), (ip, 9001))
+                                         (ip, 8889))
+        controller.manager.socket.sendto('land'.encode('utf-8'), (ip, 8889))
     controller.save_log(controller.manager)
     controller.manager.close()
     video.close()

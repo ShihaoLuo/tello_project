@@ -16,7 +16,7 @@ import cv2 as cv
 
 def process_frame(_video, _pose_estimater):
     global pose
-    img_query = cv.imread('pose_estimater/dataset/toolholder/images_low/toolholder.jpg', 0)
+    img_query = cv.imread('pose_estimater/dataset/toolholder/images/toolholder.jpg', 0)
     log = './log_pose/pose.log'
     logging.basicConfig(filename=log,
                         level=logging.DEBUG,
@@ -25,13 +25,14 @@ def process_frame(_video, _pose_estimater):
     while True:
         _frame = _video.get_frame()
         if _frame is not None:
-            pose = _pose_estimater.estimate_pose(img_query, _frame, 1)
+            pose = _pose_estimater.estimate_pose(img_query, _frame)
             if pose is not None:
                 print("Pose in the world is {}".format(pose))
                 logging.info("\n{}".format(pose))
 
 controller = tello_controller.Tell_Controller()
-pose_estimater = pose_estimater.PoseEstimater('SIFT', 15)
+pose_estimater = pose_estimater.PoseEstimater('SIFT', 10)
+pose_estimater.show_match_start()
 pose_estimater.loaddata('pose_estimater/dataset/')
 frame = None
 pose = np.array([])
@@ -49,6 +50,7 @@ try:
     controller.command('setbitrate 5')
     controller.command("*>streamon")
     controller.command("*>takeoff")
+    controller.command('*>up 30')
     controller.command("wait 20")
     '''controller.command("*>takeoff")
     controller.command("*>up 20")

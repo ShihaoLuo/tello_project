@@ -11,14 +11,15 @@ class PoseEstimater():
         self.distor_matrix = None
         self.min_match = min_match
         self.algorithm = _algorithm
+        self.kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
         self.dataset = {}
+        self.showmatchflag = 0
         if _algorithm == 'SURF':
             self.detecter = cv.xfeatures2d.SURF_create(hessianThreshold=100, nOctaves=10, nOctaveLayers=2, extended=1, upright=0)
         elif _algorithm == 'SIFT':
             self.detecter = cv.xfeatures2d.SIFT_create(nfeatures=0, nOctaveLayers=3, contrastThreshold=0.05, edgeThreshold=10, sigma=0.8)
         self.queue = multiprocessing.Queue()
         self.show_match = multiprocessing.Process(target=self.show_match)
-        self.show_match.start()
 
     def loaddata(self, _dataset_path):
         self.camera_matrix = np.load(_dataset_path+'camera_matrix_tello.npy')
@@ -81,8 +82,9 @@ class PoseEstimater():
     def read_from_npy(self, _file):
         return np.load(_file)
 
-    def pic_match(self, _img_query, _img, flag):
+    def pic_match(self, _img_query, _img):
         img_test = _img
+        #img_test = cv.filter2D(img_test, -1, self.kernel)
         img_query = _img_query
         kp_test, des_test = self.detecter.detectAndCompute(img_test, None)
         FLANN_INDEX_KDTREE = 1
@@ -97,7 +99,7 @@ class PoseEstimater():
             kp_good_match_query = []
             des_good_match_query = []
             for m, n in matches:
-                if m.distance < 0.56 * n.distance:
+                if m.distance < 0.54 * n.distance:
                     good.append(m)
                     '''print('--------------------\n')
                     print('m.imgIdx: {}\n'.format(m.imgIdx))
@@ -115,7 +117,7 @@ class PoseEstimater():
                 src_pts = np.float32([kp_good_match_query[i].pt for i in range(len(kp_good_match_query))]).reshape(-1, 1, 2)
                 dst_pts = np.float32([kp_test[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)
                 M, mask = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
-                if flag == 1 and M is not None and mask is not None:
+                if self.showmatchflag == 1 and M is not None and mask is not None:
                     h, w = img_query.shape
                     matchesMask = mask.ravel().tolist()
                     d = 1
@@ -131,8 +133,8 @@ class PoseEstimater():
                 return obj, M
         return None, None
 
-    def estimate_pose(self, _img_query, _img, flag):
-        obj, M = self.pic_match(_img_query, _img, flag)
+    def estimate_pose(self, _img_query, _img):
+        obj, M = self.pic_match(_img_query, _img)
         if obj is not None and M is not None:
             wpxel = self.dataset[obj]['wpixel'].reshape(-1,2)
             wpxel = np.insert(wpxel, 2, 1, axis=1)
@@ -148,10 +150,13 @@ class PoseEstimater():
             _, rvec, tvec = cv.solvePnP(**pnppara)
             rotM = np.array(cv.Rodrigues(rvec)[0])
             pose = np.dot(-rotM.T, tvec)
-            pose = pose/2
-            return pose
+            return pose/2
         else:
             return None
+
+    def show_match_start(self):
+        self.showmatchflag = 1
+        self.show_match.start()
 
     def show_pic(self, _img):
         fig = plt.figure(figsize=(12, 10))
@@ -164,7 +169,6 @@ class PoseEstimater():
             print(self.dataset[i])
 
     def show_match(self):
-        print('in the show thread.')
         while True:
             if not self.queue.empty():
                 f = self.queue.get()

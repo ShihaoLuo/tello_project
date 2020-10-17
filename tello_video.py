@@ -148,10 +148,10 @@ class Tello_Video:
                     cv2.imshow(tello.tello_ip, f[tello.tello_ip])
             flag = []'''
             for tello in self.tello_list:
-                if not self.queue[tello.tello_ip].empty():
+                if self.queue[tello.tello_ip].qsize() > 1:
                     f = self.queue[tello.tello_ip].get()
                     cv2.imshow(tello.tello_ip, f)
-                time.sleep(0.033)
+                time.sleep(0.05)
 
     def take_pic(self, pic_name):
         mat = None

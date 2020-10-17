@@ -13,7 +13,7 @@ import json
 import multiprocessing
 #import set_world_point
 
-object_name = 'toolholder'
+object_name = 'whiteboard'
 
 def save_2_jason(_file, arr):
     data = {}
@@ -62,12 +62,10 @@ def get_ROI(_img):
 MIN_MATH_COUNT = 20
 kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
 
-img_test = cv.imread('./dataset/'+object_name+'/images/'+object_name+'45.jpg', 0)
-img_query = cv.imread('./dataset/'+object_name+'/images/'+object_name+'18.jpg', 0)
-img_test = cv.resize(img_test, (648*2, 478*2), cv.INTER_CUBIC)
-img_query = cv.resize(img_query, (648*2, 478*2), cv.INTER_CUBIC)
-img_test = cv.filter2D(img_test, -1, kernel)
-img_query = cv.filter2D(img_query, -1, kernel)
+img_test = cv.imread('./dataset/'+object_name+'/images/'+object_name+'31.jpg', 0)
+img_query = cv.imread('./dataset/'+object_name+'/images/'+object_name+'22.jpg', 0)
+#img_test = cv.filter2D(img_test, -1, kernel)
+#img_query = cv.filter2D(img_query, -1, kernel)
 img_query = get_ROI(img_query)
 #img_test = get_ROI(img_test)
 
@@ -105,7 +103,7 @@ good = []
 kp_good_match_query = []
 des_good_match_query = []
 for m, n in matches:
-    if m.distance < 0.9*n.distance:
+    if m.distance < 0.8*n.distance:
         good.append(m)
         print('--------------------\n')
         print('m.imgIdx: {}\n'.format(m.imgIdx))
