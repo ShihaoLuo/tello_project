@@ -1,0 +1,109 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-20 12:10:28.799088
+end_time: 2020-10-20 12:10:28.847119
+duration: 0.048031
+
+id: 1
+command: battery?
+response: 68
+
+start time: 2020-10-20 12:10:30.812272
+end_time: 2020-10-20 12:10:30.844426
+duration: 0.032154
+
+id: 2
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-20 12:10:33.314472
+end_time: 2020-10-20 12:10:33.335025
+duration: 0.020553
+
+id: 3
+command: setfps high
+response: ok
+start time: 2020-10-20 12:10:36.820469
+end_time: 2020-10-20 12:10:36.860780
+duration: 0.040311
+
+id: 4
+command: setresolution low
+response: ok
+start time: 2020-10-20 12:10:38.321116
+end_time: 2020-10-20 12:10:38.333431
+duration: 0.012315
+
+id: 5
+command: streamon
+response: ok
+start time: 2020-10-20 12:10:40.323948
+end_time: 2020-10-20 12:10:40.374494
+duration: 0.050546
+
+id: 6
+command: takeoff
+response: ok
+start time: 2020-10-20 12:10:41.825763
+end_time: 2020-10-20 12:10:50.431377
+duration: 8.605614
+
+id: 7
+command: up 170
+response: ok
+start time: 2020-10-20 12:10:50.846093
+end_time: 2020-10-20 12:10:54.300653
+duration: 3.45456
+
+id: 8
+command: command
+response: ok
+start time: 2020-10-20 12:10:54.354924
+end_time: 2020-10-20 12:10:54.405514
+duration: 0.05059
+
+id: 9
+command: command
+response: ok
+start time: 2020-10-20 12:11:00.357854
+end_time: 2020-10-20 12:11:00.370904
+duration: 0.01305
+
+id: 10
+command: command
+response: ok
+start time: 2020-10-20 12:11:05.360165
+end_time: 2020-10-20 12:11:05.369880
+duration: 0.009715
+
+id: 11
+command: command
+response: ok
+start time: 2020-10-20 12:11:10.365489
+end_time: 2020-10-20 12:11:10.423158
+duration: 0.057669
+
+id: 12
+command: command
+response: ok
+start time: 2020-10-20 12:11:15.368368
+end_time: 2020-10-20 12:11:15.472949
+duration: 0.104581
+
+id: 13
+command: land
+response: ok
+start time: 2020-10-20 12:11:21.375949
+end_time: 2020-10-20 12:11:27.045975
+duration: 5.670026
+
+id: 14
+command: streamoff
+response: ok
+start time: 2020-10-20 12:11:27.382722
+end_time: 2020-10-20 12:11:27.414376
+duration: 0.031654
+

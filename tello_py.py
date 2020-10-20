@@ -37,7 +37,7 @@ pose_estimater.show_match_start()
 pose_estimater.loaddata('pose_estimater/dataset/')
 frame = None
 pose = np.array([])
-move_command = ['forward 100', 'right 100', 'left 100', 'back 100', 'right 100', 'left 100']
+move_command = ['forward 100', 'left 100', 'right 100', 'back 100', 'left 100', 'right 100']
 
 try:
     controller.scan(1)
@@ -84,8 +84,8 @@ except KeyboardInterrupt:
            Sending land to all drones...\n')
     for ip in controller.manager.tello_ip_list:
         controller.manager.socket.sendto('streamoff'.encode('utf-8'),
-                                         (ip, 9001))
-        controller.manager.socket.sendto('land'.encode('utf-8'), (ip, 9001))
+                                         (ip, 8889))
+        controller.manager.socket.sendto('land'.encode('utf-8'), (ip, 8889))
     controller.save_log(controller.manager)
     controller.manager.close()
     video.close()

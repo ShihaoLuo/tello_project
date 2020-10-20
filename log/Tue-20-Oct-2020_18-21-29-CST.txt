@@ -1,0 +1,109 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-10-20 18:21:29.066420
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-20 18:21:31.068725
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-20 18:21:33.072164
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-10-20 18:21:35.075103
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: ok
+start time: 2020-10-20 18:21:37.077018
+end_time: 2020-10-20 18:21:37.090471
+duration: 0.013453
+
+id: 5
+command: battery?
+response: 100
+
+start time: 2020-10-20 18:21:39.087146
+end_time: 2020-10-20 18:21:39.129810
+duration: 0.042664
+
+id: 6
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-20 18:21:41.589412
+end_time: 2020-10-20 18:21:41.626901
+duration: 0.037489
+
+id: 7
+command: setfps high
+response: ok
+start time: 2020-10-20 18:21:45.093585
+end_time: 2020-10-20 18:21:45.155570
+duration: 0.061985
+
+id: 8
+command: setresolution low
+response: ok
+start time: 2020-10-20 18:21:46.594993
+end_time: 2020-10-20 18:21:46.627856
+duration: 0.032863
+
+id: 9
+command: streamon
+response: ok
+start time: 2020-10-20 18:21:49.097444
+end_time: 2020-10-20 18:21:49.128538
+duration: 0.031094
+
+id: 10
+command: takeoff
+response: ok
+start time: 2020-10-20 18:21:50.097961
+end_time: 2020-10-20 18:21:58.731409
+duration: 8.633448
+
+id: 11
+command: up 170
+response: ok
+start time: 2020-10-20 18:21:59.115835
+end_time: 2020-10-20 18:22:02.127984
+duration: 3.012149
+
+id: 12
+command: command
+response: ok
+start time: 2020-10-20 18:22:02.619608
+end_time: 2020-10-20 18:22:02.637110
+duration: 0.017502
+
+id: 13
+command: command
+response: ok
+start time: 2020-10-20 18:22:08.625308
+end_time: 2020-10-20 18:22:08.654238
+duration: 0.02893
+
+id: 14
+command: command
+response: ok
+start time: 2020-10-20 18:22:13.628221
+end_time: 2020-10-20 18:22:13.657234
+duration: 0.029013
+

@@ -4,6 +4,8 @@ import json
 import os
 import matplotlib.pyplot as plt
 import multiprocessing
+import scipy.linalg as linalg
+import math
 
 class PoseEstimater():
     def __init__(self, _algorithm='SIFT', min_match=30):
@@ -14,12 +16,14 @@ class PoseEstimater():
         self.kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
         self.dataset = {}
         self.showmatchflag = 0
+        self.transformpxel = None
         if _algorithm == 'SURF':
             self.detecter = cv.xfeatures2d.SURF_create(hessianThreshold=100, nOctaves=10, nOctaveLayers=2, extended=1, upright=0)
         elif _algorithm == 'SIFT':
             self.detecter = cv.xfeatures2d.SIFT_create(nfeatures=0, nOctaveLayers=3, contrastThreshold=0.05, edgeThreshold=10, sigma=0.8)
         self.queue = multiprocessing.Queue()
         self.show_match = multiprocessing.Process(target=self.show_match)
+
 
     def loaddata(self, _dataset_path):
         self.camera_matrix = np.load(_dataset_path+'camera_matrix_tello.npy')
@@ -117,39 +121,71 @@ class PoseEstimater():
                 src_pts = np.float32([kp_good_match_query[i].pt for i in range(len(kp_good_match_query))]).reshape(-1, 1, 2)
                 dst_pts = np.float32([kp_test[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)
                 M, mask = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
+                matchesMask = mask.ravel().tolist()
                 if self.showmatchflag == 1 and M is not None and mask is not None:
                     h, w = img_query.shape
-                    matchesMask = mask.ravel().tolist()
                     d = 1
                     pts = np.float32([[0, 0], [0, h - 1], [w - 1, h - 1], [w - 1, 0]]).reshape(-1, 1, 2)
                     dst = cv.perspectiveTransform(pts, M)
+                    pxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
+                    pxel = cv.perspectiveTransform(pxel, M)
+                    #print('sss {}'.format(wpxel))
                     img_test = cv.polylines(img_test, [np.int32(dst)], True, 255, 1, cv.LINE_AA)
                     draw_params = dict(matchColor=(0, 255, 0),
                                        singlePointColor=None,
                                        matchesMask=matchesMask,
                                        flags=2)
                     mimg = cv.drawMatches(img_query, kp_query, img_test, kp_test, good, None, **draw_params)
-                    self.queue.put(mimg)
-                return obj, M
+                    tmppoint = pxel.reshape(-1, 1)
+                    point = []
+                    for i in range(0, len(tmppoint), 2):
+                        point.append((int(tmppoint[i]+_img_query.shape[1]), int(tmppoint[i + 1])))
+                    img = mimg
+                    for p in point:
+                        img = cv.circle(img, p, 4, (255, 0, 0), -1)
+                    self.queue.put(img)
+                return obj, pxel
         return None, None
 
     def estimate_pose(self, _img_query, _img):
-        obj, M = self.pic_match(_img_query, _img)
-        if obj is not None and M is not None:
-            wpxel = self.dataset[obj]['wpixel'].reshape(-1,2)
-            wpxel = np.insert(wpxel, 2, 1, axis=1)
-            wpt = self.dataset[obj]['wpoint'].reshape(-1,3)
-            wpxel = np.dot(M, wpxel.T).T
-            wpxel = np.delete(wpxel, 2, axis=1)
+        obj, _wpxel = self.pic_match(_img_query, _img)
+        if obj is not None and _wpxel is not None:
+            wpt = self.dataset[obj]['wpoint'].reshape(-1, 1, 3)
+            _wpxel = _wpxel.reshape(-1, 1, 2)
+            self.transformpxel = _wpxel
+            #wpxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
+            #print('transformed wpxl: \n{}'.format(wpxel))
             pnppara = dict(objectPoints=wpt,
-                           imagePoints=wpxel,
+                           imagePoints=_wpxel,
                            cameraMatrix=self.camera_matrix,
                            distCoeffs=self.distor_matrix,
                            useExtrinsicGuess=0,
                            flags=cv.SOLVEPNP_ITERATIVE)
-            _, rvec, tvec = cv.solvePnP(**pnppara)
+            _, rvec, tvec, inliers = cv.solvePnPRansac(**pnppara)
+            #print(rvec)
+            #print('tvec/n{}'.format(tvec/2))
+            R = np.zeros((3, 3), dtype=np.float64)
+            cv.Rodrigues(rvec, R)
+            sy = math.sqrt(R[0, 0] * R[0, 0] + R[1, 0] * R[1, 0])
+            singular = sy < 1e-6
+            if not singular:
+                x = math.atan2(R[2, 1], R[2, 2])*180.0/3.1415926
+                y = math.atan2(-R[2, 0], sy)*180.0/3.1415926
+                z = math.atan2(R[1, 0], R[0, 0])*180.0/3.1415926
+            else:
+                x = math.atan2(-R[1, 2], R[1, 1])
+                y = math.atan2(-R[2, 0], sy)
+                z = 0
+            #print('dst:', R)
+            print('x: {}\ny: {}\nz: {}'.format(x, y, z))
             rotM = np.array(cv.Rodrigues(rvec)[0])
-            pose = np.dot(-rotM.T, tvec)
+            print('rotM {}\n)'.format(rotM))
+            #print(-np.linalg.inv(rotM))
+            pose = np.dot(-np.linalg.inv(rotM), tvec)
+            R = np.zeros((3, 3), dtype=np.float64)
+            R[0, 1]=-1
+            R[1, 0]=1
+            R[2,2]=1
             return pose/2
         else:
             return None
@@ -164,9 +200,17 @@ class PoseEstimater():
         plt.imshow(_img)
         plt.show()
 
-    def showdataset(self):
-        for i in self.dataset.keys():
-            print(self.dataset[i])
+    def showdataset(self, _obj='all'):
+        obj = _obj
+        if _obj=='all':
+            for i in self.dataset.keys():
+                print('-----------dataset-----------\n')
+                print('----------{}----------\n'.format(i))
+                print(self.dataset[i])
+        else:
+            print('-----------dataset-----------\n')
+            print('----------{}----------\n'.format(_obj))
+            print(self.dataset[_obj])
 
     def show_match(self):
         while True:
@@ -177,6 +221,20 @@ class PoseEstimater():
             if a == ord('q'):
                 cv.destroyAllWindows()
                 break
+
+    def show_transedpxel(self, _img_test):
+        if self.transformpxel is not None:
+            tmppoint = self.transformpxel.reshape(-1)
+            point = []
+            for i in range(0, len(tmppoint), 2):
+                point.append((int(tmppoint[i]), int(tmppoint[i+1])))
+            img = _img_test
+            for p in point:
+                img = cv.circle(img, p, 2, (255, 0, 0), -1)
+            plt.imshow(img)
+            plt.show()
+
+
 '''OBJ = pose_estimater()
 img_test = cv.imread('./dataset/toolholder/images/toolholder9.jpg', 0)
 imagelist = os.listdir('dataset/toolholder/images')
