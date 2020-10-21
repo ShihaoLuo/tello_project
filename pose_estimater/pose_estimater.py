@@ -154,15 +154,19 @@ class PoseEstimater():
             _wpxel = _wpxel.reshape(-1, 1, 2)
             self.transformpxel = _wpxel
             #wpxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
-            #print('transformed wpxl: \n{}'.format(wpxel))
+            #print(self.camera_matrix)
+            #print(self.distor_matrix)
+            #print('transformed wpxl: \n{}'.format(_wpxel))
             pnppara = dict(objectPoints=wpt,
                            imagePoints=_wpxel,
                            cameraMatrix=self.camera_matrix,
                            distCoeffs=self.distor_matrix,
                            useExtrinsicGuess=0,
                            flags=cv.SOLVEPNP_ITERATIVE)
-            _, rvec, tvec, inliers = cv.solvePnPRansac(**pnppara)
+            RR, rvec, tvec, inliers = cv.solvePnPRansac(**pnppara)
             #print(rvec)
+            #print(RR)
+            #print(inliers)
             #print('tvec/n{}'.format(tvec/2))
             R = np.zeros((3, 3), dtype=np.float64)
             cv.Rodrigues(rvec, R)
@@ -177,16 +181,22 @@ class PoseEstimater():
                 y = math.atan2(-R[2, 0], sy)
                 z = 0
             #print('dst:', R)
-            print('x: {}\ny: {}\nz: {}'.format(x, y, z))
+            #print('x: {}\ny: {}\nz: {}'.format(x, y, z))
+            #print('rvec:{}\n'.format(rvec))
+            #print('tvec:{}\n'.format(tvec))
             rotM = np.array(cv.Rodrigues(rvec)[0])
-            print('rotM {}\n)'.format(rotM))
+            #print('rotM {}\n)'.format(rotM))
             #print(-np.linalg.inv(rotM))
-            pose = np.dot(-np.linalg.inv(rotM), tvec)
+            pose = np.dot(np.linalg.inv(-rotM), tvec)
             R = np.zeros((3, 3), dtype=np.float64)
             R[0, 1]=-1
             R[1, 0]=1
             R[2,2]=1
-            return pose/2
+            if RR is True and len(inliers)>=6:
+                #print(inliers)
+                return pose
+            else:
+                return None
         else:
             return None
 

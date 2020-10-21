@@ -1,0 +1,109 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-21 19:36:52.422320
+end_time: 2020-10-21 19:36:52.505376
+duration: 0.083056
+
+id: 1
+command: battery?
+response: 100
+
+start time: 2020-10-21 19:36:54.433487
+end_time: 2020-10-21 19:36:54.474721
+duration: 0.041234
+
+id: 2
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-21 19:36:56.935537
+end_time: 2020-10-21 19:36:56.968488
+duration: 0.032951
+
+id: 3
+command: setfps high
+response: ok
+start time: 2020-10-21 19:37:00.438672
+end_time: 2020-10-21 19:37:00.501322
+duration: 0.06265
+
+id: 4
+command: setresolution high
+response: ok
+start time: 2020-10-21 19:37:01.940564
+end_time: 2020-10-21 19:37:01.961664
+duration: 0.0211
+
+id: 5
+command: streamon
+response: ok
+start time: 2020-10-21 19:37:04.442916
+end_time: 2020-10-21 19:37:04.459615
+duration: 0.016699
+
+id: 6
+command: takeoff
+response: ok
+start time: 2020-10-21 19:37:05.944814
+end_time: 2020-10-21 19:37:14.565140
+duration: 8.620326
+
+id: 7
+command: up 170
+response: ok
+start time: 2020-10-21 19:37:14.959758
+end_time: 2020-10-21 19:37:18.033291
+duration: 3.073533
+
+id: 8
+command: command
+response: ok
+start time: 2020-10-21 19:37:18.468146
+end_time: 2020-10-21 19:37:18.497474
+duration: 0.029328
+
+id: 9
+command: command
+response: ok
+start time: 2020-10-21 19:37:23.471040
+end_time: 2020-10-21 19:37:23.492337
+duration: 0.021297
+
+id: 10
+command: forward 100
+response: ok
+start time: 2020-10-21 19:37:29.476239
+end_time: 2020-10-21 19:37:31.962614
+duration: 2.486375
+
+id: 11
+command: command
+response: ok
+start time: 2020-10-21 19:37:31.981290
+end_time: 2020-10-21 19:37:32.009418
+duration: 0.028128
+
+id: 12
+command: left 100
+response: ok
+start time: 2020-10-21 19:37:37.983896
+end_time: 2020-10-21 19:37:40.695076
+duration: 2.71118
+
+id: 13
+command: command
+response: ok
+start time: 2020-10-21 19:37:40.987758
+end_time: 2020-10-21 19:37:41.037391
+duration: 0.049633
+
+id: 14
+command: right 100
+response: None
+start time: 2020-10-21 19:37:46.991980
+end_time: None
+duration: None
+

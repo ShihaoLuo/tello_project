@@ -61,8 +61,8 @@ def get_ROI(_img):
 MIN_MATH_COUNT = 20
 kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
 
-img_test = cv.imread('./dataset/'+object_name+'/images/'+object_name+'24.jpg')
-img_query = cv.imread('./dataset/'+object_name+'/images/'+object_name+'7.jpg')
+img_test = cv.imread('./dataset/'+object_name+'/images/'+object_name+'5.jpg')
+img_query = cv.imread('./dataset/'+object_name+'/images/'+object_name+'1.jpg')
 #img_test = cv.filter2D(img_test, -1, kernel)
 #img_query = cv.filter2D(img_query, -1, kernel)
 img_query = get_ROI(img_query)
@@ -73,7 +73,7 @@ sift_paras = dict(nfeatures=0,
                  contrastThreshold=0.05,
                  edgeThreshold=10,
                  sigma=0.8)
-cv.imwrite('./dataset/'+object_name+'/images/'+object_name+'.jpg', img_query)
+#cv.imwrite('./dataset/'+object_name+'/images/'+object_name+'.jpg', img_query)
 '''surf_paras = dict(hessianThreshold=100,
                   nOctaves=10,
                   nOctaveLayers=2,
@@ -82,8 +82,8 @@ cv.imwrite('./dataset/'+object_name+'/images/'+object_name+'.jpg', img_query)
 surf = cv.xfeatures2d.SURF_create(**surf_paras)'''
 sift = cv.xfeatures2d.SIFT_create(**sift_paras)
 kp_query, des_query = sift.detectAndCompute(img_query, None)
-save_2_jason('dataset/'+object_name+'/kp.json',kp_query)
-save_2_npy('dataset/'+object_name+'/des.npy',des_query)
+#save_2_jason('dataset/'+object_name+'/kp.json',kp_query)
+#save_2_npy('dataset/'+object_name+'/des.npy',des_query)
 
 #save_2_jason('kp_query.jason', kp_query)
 #save_2_npy('des_query.npy', des_query)
@@ -153,7 +153,7 @@ thread = multiprocessing.Process(target=show_pic, args=(img, img_query,))
 thread.start()
 wpixel = np.array([])
 wpoint = np.array([])
-for i in range(4):
+for i in range(8):
     wpxlx = input('input the x of No.{} wpixel:'.format(i+1))
     wpxly = input('input the y of No.{} wpixel:'.format(i+1))
     wptx = input('input the x of No.{} wpoint:'.format(i+1))

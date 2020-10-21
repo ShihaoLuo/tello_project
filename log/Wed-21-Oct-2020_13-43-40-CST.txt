@@ -1,0 +1,74 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-21 13:43:40.114118
+end_time: 2020-10-21 13:43:40.130298
+duration: 0.01618
+
+id: 1
+command: battery?
+response: 89
+
+start time: 2020-10-21 13:43:42.124177
+end_time: 2020-10-21 13:43:42.164390
+duration: 0.040213
+
+id: 2
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-21 13:43:44.626692
+end_time: 2020-10-21 13:43:44.664050
+duration: 0.037358
+
+id: 3
+command: setfps high
+response: ok
+start time: 2020-10-21 13:43:48.130887
+end_time: 2020-10-21 13:43:48.182182
+duration: 0.051295
+
+id: 4
+command: setresolution low
+response: ok
+start time: 2020-10-21 13:43:49.132268
+end_time: 2020-10-21 13:43:49.154919
+duration: 0.022651
+
+id: 5
+command: streamon
+response: ok
+start time: 2020-10-21 13:43:51.134763
+end_time: 2020-10-21 13:43:51.141145
+duration: 0.006382
+
+id: 6
+command: command
+response: ok
+start time: 2020-10-21 13:43:52.136572
+end_time: 2020-10-21 13:43:52.164389
+duration: 0.027817
+
+id: 7
+command: command
+response: ok
+start time: 2020-10-21 13:43:57.140840
+end_time: 2020-10-21 13:43:57.165213
+duration: 0.024373
+
+id: 8
+command: land
+response: error
+start time: 2020-10-21 13:44:03.145611
+end_time: 2020-10-21 13:44:03.187391
+duration: 0.04178
+
+id: 9
+command: streamoff
+response: ok
+start time: 2020-10-21 13:44:04.647575
+end_time: 2020-10-21 13:44:04.664138
+duration: 0.016563
+

@@ -1,0 +1,116 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-21 16:01:39.371164
+end_time: 2020-10-21 16:01:39.412847
+duration: 0.041683
+
+id: 1
+command: battery?
+response: 66
+
+start time: 2020-10-21 16:01:41.381684
+end_time: 2020-10-21 16:01:41.406363
+duration: 0.024679
+
+id: 2
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-21 16:01:43.884297
+end_time: 2020-10-21 16:01:43.902436
+duration: 0.018139
+
+id: 3
+command: setfps high
+response: ok
+start time: 2020-10-21 16:01:46.887912
+end_time: 2020-10-21 16:01:46.929184
+duration: 0.041272
+
+id: 4
+command: setresolution low
+response: ok
+start time: 2020-10-21 16:01:47.888581
+end_time: 2020-10-21 16:01:47.944881
+duration: 0.0563
+
+id: 5
+command: streamon
+response: ok
+start time: 2020-10-21 16:01:50.391872
+end_time: 2020-10-21 16:01:50.445404
+duration: 0.053532
+
+id: 6
+command: command
+response: ok
+start time: 2020-10-21 16:01:51.393274
+end_time: 2020-10-21 16:01:51.406700
+duration: 0.013426
+
+id: 7
+command: command
+response: ok
+start time: 2020-10-21 16:01:56.394603
+end_time: 2020-10-21 16:01:56.411908
+duration: 0.017305
+
+id: 8
+command: command
+response: ok
+start time: 2020-10-21 16:02:01.399209
+end_time: 2020-10-21 16:02:01.413552
+duration: 0.014343
+
+id: 9
+command: command
+response: ok
+start time: 2020-10-21 16:02:06.402517
+end_time: 2020-10-21 16:02:06.415857
+duration: 0.01334
+
+id: 10
+command: command
+response: ok
+start time: 2020-10-21 16:02:11.406798
+end_time: 2020-10-21 16:02:11.417570
+duration: 0.010772
+
+id: 11
+command: command
+response: ok
+start time: 2020-10-21 16:02:16.411147
+end_time: 2020-10-21 16:02:16.421074
+duration: 0.009927
+
+id: 12
+command: command
+response: ok
+start time: 2020-10-21 16:02:21.416064
+end_time: 2020-10-21 16:02:21.474238
+duration: 0.058174
+
+id: 13
+command: command
+response: ok
+start time: 2020-10-21 16:02:26.418509
+end_time: 2020-10-21 16:02:26.423145
+duration: 0.004636
+
+id: 14
+command: command
+response: ok
+start time: 2020-10-21 16:02:31.422504
+end_time: 2020-10-21 16:02:31.477377
+duration: 0.054873
+
+id: 15
+command: command
+response: ok
+start time: 2020-10-21 16:02:36.426638
+end_time: 2020-10-21 16:02:36.475317
+duration: 0.048679
+

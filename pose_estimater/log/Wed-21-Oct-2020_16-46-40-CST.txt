@@ -1,0 +1,158 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: ok
+start time: 2020-10-21 16:46:40.109608
+end_time: 2020-10-21 16:46:40.202992
+duration: 0.093384
+
+id: 1
+command: battery?
+response: 51
+
+start time: 2020-10-21 16:46:42.111700
+end_time: 2020-10-21 16:46:42.141622
+duration: 0.029922
+
+id: 2
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-21 16:46:44.613665
+end_time: 2020-10-21 16:46:44.642313
+duration: 0.028648
+
+id: 3
+command: setfps high
+response: ok
+start time: 2020-10-21 16:46:47.621564
+end_time: 2020-10-21 16:46:47.660299
+duration: 0.038735
+
+id: 4
+command: setresolution high
+response: ok
+start time: 2020-10-21 16:46:49.122762
+end_time: 2020-10-21 16:46:49.135790
+duration: 0.013028
+
+id: 5
+command: setbitrate 5
+response: ok
+start time: 2020-10-21 16:46:50.124362
+end_time: 2020-10-21 16:46:50.150077
+duration: 0.025715
+
+id: 6
+command: streamon
+response: ok
+start time: 2020-10-21 16:46:51.126700
+end_time: 2020-10-21 16:46:51.168839
+duration: 0.042139
+
+id: 7
+command: takeoff
+response: ok
+start time: 2020-10-21 16:46:52.628662
+end_time: 2020-10-21 16:46:58.875190
+duration: 6.246528
+
+id: 8
+command: up 170
+response: ok
+start time: 2020-10-21 16:46:59.148631
+end_time: 2020-10-21 16:47:02.249837
+duration: 3.101206
+
+id: 9
+command: forward 100
+response: ok
+start time: 2020-10-21 16:47:02.651940
+end_time: 2020-10-21 16:47:05.201624
+duration: 2.549684
+
+id: 10
+command: command
+response: ok
+start time: 2020-10-21 16:47:05.678881
+end_time: 2020-10-21 16:47:05.718316
+duration: 0.039435
+
+id: 11
+command: right 100
+response: ok
+start time: 2020-10-21 16:47:07.681365
+end_time: 2020-10-21 16:47:10.206189
+duration: 2.524824
+
+id: 12
+command: command
+response: ok
+start time: 2020-10-21 16:47:10.694969
+end_time: 2020-10-21 16:47:10.724089
+duration: 0.02912
+
+id: 13
+command: left 100
+response: ok
+start time: 2020-10-21 16:47:12.697653
+end_time: 2020-10-21 16:47:15.421325
+duration: 2.723672
+
+id: 14
+command: command
+response: ok
+start time: 2020-10-21 16:47:15.721804
+end_time: 2020-10-21 16:47:15.734005
+duration: 0.012201
+
+id: 15
+command: back 100
+response: ok
+start time: 2020-10-21 16:47:17.723978
+end_time: 2020-10-21 16:47:20.582532
+duration: 2.858554
+
+id: 16
+command: command
+response: ok
+start time: 2020-10-21 16:47:20.737684
+end_time: 2020-10-21 16:47:20.779314
+duration: 0.04163
+
+id: 17
+command: right 100
+response: ok
+start time: 2020-10-21 16:47:22.740020
+end_time: 2020-10-21 16:47:25.322405
+duration: 2.582385
+
+id: 18
+command: command
+response: ok
+start time: 2020-10-21 16:47:25.764862
+end_time: 2020-10-21 16:47:25.781692
+duration: 0.01683
+
+id: 19
+command: left 100
+response: ok
+start time: 2020-10-21 16:47:27.766920
+end_time: 2020-10-21 16:47:30.475927
+duration: 2.709007
+
+id: 20
+command: command
+response: ok
+start time: 2020-10-21 16:47:30.780371
+end_time: 2020-10-21 16:47:30.834586
+duration: 0.054215
+
+id: 21
+command: land
+response: ok
+start time: 2020-10-21 16:47:32.783423
+end_time: 2020-10-21 16:47:37.409744
+duration: 4.626321
+

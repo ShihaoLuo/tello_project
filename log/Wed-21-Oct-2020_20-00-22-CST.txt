@@ -1,0 +1,109 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-10-21 20:00:22.541426
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-10-21 20:00:24.543182
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-10-21 20:00:26.545588
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: ok
+start time: 2020-10-21 20:00:28.547188
+end_time: 2020-10-21 20:00:28.557363
+duration: 0.010175
+
+id: 4
+command: battery?
+response: 100
+
+start time: 2020-10-21 20:00:30.557856
+end_time: 2020-10-21 20:00:30.597527
+duration: 0.039671
+
+id: 5
+command: sn?
+response: 0TQDG43EDB8142
+start time: 2020-10-21 20:00:33.059952
+end_time: 2020-10-21 20:00:33.097146
+duration: 0.037194
+
+id: 6
+command: setfps high
+response: ok
+start time: 2020-10-21 20:00:36.563957
+end_time: 2020-10-21 20:00:36.615246
+duration: 0.051289
+
+id: 7
+command: setresolution high
+response: ok
+start time: 2020-10-21 20:00:38.065903
+end_time: 2020-10-21 20:00:38.094371
+duration: 0.028468
+
+id: 8
+command: streamon
+response: ok
+start time: 2020-10-21 20:00:40.068921
+end_time: 2020-10-21 20:00:40.104362
+duration: 0.035441
+
+id: 9
+command: takeoff
+response: ok
+start time: 2020-10-21 20:00:41.571094
+end_time: 2020-10-21 20:00:46.010427
+duration: 4.439333
+
+id: 10
+command: up 90
+response: ok
+start time: 2020-10-21 20:00:46.080831
+end_time: 2020-10-21 20:00:48.462567
+duration: 2.381736
+
+id: 11
+command: command
+response: ok
+start time: 2020-10-21 20:00:48.587303
+end_time: 2020-10-21 20:00:48.634200
+duration: 0.046897
+
+id: 12
+command: command
+response: ok
+start time: 2020-10-21 20:00:53.590538
+end_time: 2020-10-21 20:00:53.610357
+duration: 0.019819
+
+id: 13
+command: streamoff
+response: ok
+start time: 2020-10-21 20:00:59.595955
+end_time: 2020-10-21 20:00:59.629843
+duration: 0.033888
+
+id: 14
+command: land
+response: ok
+start time: 2020-10-21 20:01:00.597304
+end_time: 2020-10-21 20:01:03.612679
+duration: 3.015375
+
