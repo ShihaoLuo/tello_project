@@ -17,7 +17,6 @@ import os
 # import threading
 from threading import Thread
 
-
 class Tell_Controller:
     def __init__(self):
         self.manager = tello_manager.Tello_Manager()
@@ -30,6 +29,7 @@ class Tell_Controller:
         self.id_sn_dict = {}
         self.ip_fid_dict = {}
         self.sn_list = []
+        self.cmd = queue.Queue()
 
     def create_execution_pools(self, num):
         pools = []
@@ -217,3 +217,24 @@ class Tell_Controller:
             # str_cmd_index_dict_init_flag [x] = None
             t1.daemon = True
             t1.start()
+
+    def set_command(self):
+        while True:
+            command = input('command:')
+            if command == 'q':
+                break
+            else:
+                self.command.put(command)
+
+    def control_mode(self):
+        set_command_thread = Thread(target=self.set_command)
+        set_command_thread.start()
+        now = time.time()
+        while True:
+            if self.cmd is not None:
+                self.command('*>'+self.cmd.get())
+                now = time.time()
+            else:
+                if time.time() - now >= 5:
+                    self.command('*>command')
+                    now = time.time()

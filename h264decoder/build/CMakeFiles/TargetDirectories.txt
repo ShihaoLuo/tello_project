@@ -1,7 +1,0 @@
-/home/jakeluo/Documents/Tello/Multi_test_20200903/h264decoder/build/CMakeFiles/install/strip.dir
-/home/jakeluo/Documents/Tello/Multi_test_20200903/h264decoder/build/CMakeFiles/install/local.dir
-/home/jakeluo/Documents/Tello/Multi_test_20200903/h264decoder/build/CMakeFiles/install.dir
-/home/jakeluo/Documents/Tello/Multi_test_20200903/h264decoder/build/CMakeFiles/list_install_components.dir
-/home/jakeluo/Documents/Tello/Multi_test_20200903/h264decoder/build/CMakeFiles/rebuild_cache.dir
-/home/jakeluo/Documents/Tello/Multi_test_20200903/h264decoder/build/CMakeFiles/edit_cache.dir
-/home/jakeluo/Documents/Tello/Multi_test_20200903/h264decoder/build/CMakeFiles/h264decoder.dir

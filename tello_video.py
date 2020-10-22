@@ -8,7 +8,7 @@ Created on Thu Sep  3 18:16:23 2020
 import socket
 import multiprocessing
 import numpy as np
-import libh264decoder
+import h264decoder
 import cv2
 import time
 
@@ -43,7 +43,7 @@ class Tello_Video:
         self.lock = multiprocessing.Lock()
         for tello in tello_list:
             self.queue[tello.tello_ip] = multiprocessing.Queue(10)
-        self.h264decoder = libh264decoder.H264Decoder()
+        self.h264decoder = h264decoder.H264Decoder()
         # self.res_frame_list = []
 
         for tello in tello_list:
@@ -74,18 +74,18 @@ class Tello_Video:
         # self.stop_thread()
 
     def _receive_video_thread(self, tello_ip):
-        pack_data = ""
+        pack_data = ''
         print("receive video thread start....")
         while True:
             try:
                 # print("in the receive video thread while loop...")
                 res_string, ip = self.sock_video[tello_ip].recvfrom(2000)
-                pack_data += res_string
+                pack_data += res_string.hex()
                 if len(res_string) != 1460:
                     # print("The size of packet data is %d.\n" % len(pack_data))
-                    self._h264_decode(pack_data, tello_ip)
+                    self._h264_decode(bytes.fromhex(pack_data), tello_ip)
                     # self.Queue_res_buf.put(self.res_string)
-                    pack_data = ""
+                    pack_data = ''
             except socket.error as exc:
                 print("Caught exception socket.error(video_thread): %s" % exc)
 
@@ -103,7 +103,7 @@ class Tello_Video:
             if frame is not None:
                 # print ('frame size %i bytes, w %i, h %i, line_size %i' % (len(frame), w, h, ls))
                 frame = np.fromstring(frame, dtype=np.ubyte, count=len(frame), sep='')
-                frame = (frame.reshape((h, ls / 3, 3)))
+                frame = (frame.reshape((h, ls // 3, 3)))
                 frame = frame[:, :w, :]
                 self.queue[tello_ip].put(frame)
 

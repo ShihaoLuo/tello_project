@@ -54,7 +54,8 @@ try:
     controller.command("*>streamon")
     controller.command("*>takeoff")
     controller.command('*>up 170')
-    controller.command('wait 10')
+    controller.command("wait 10")
+    #controller.control_mode()
     #for i in range(12):
      #   controller.command('*>'+move_command[i%6])
       #  controller.command('wait 5')

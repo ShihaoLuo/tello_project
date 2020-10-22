@@ -60,7 +60,7 @@ class Tello_Manager:
         :param num: Number of Tello this method is expected to find
         :return: None
         """
-        print '[Start_Searching]Searching for %s available Tello...\n' % num
+        print('[Start_Searching]Searching for %s available Tello...\n' % num)
         local_ip = self.get_host_ip()
         #subnets, address = self.get_subnets()
         possible_addr = []
@@ -74,7 +74,7 @@ class Tello_Manager:
         for i in range(2, 100, 1):
             possible_addr.append('192.168.50.'+str(i))
         while len(self.tello_ip_list) < num:
-            print '[Still_Searching]Trying to find Tello in subnets...\n'
+            print('[Still_Searching]Trying to find Tello in subnets...\n')
 
             # delete already fond Tello
             for tello_ip in self.tello_ip_list:
@@ -206,11 +206,11 @@ class Tello_Manager:
                     if response_index != self.last_response_index[ip]:
                         # print '--------------------------response_index:%x %x'%(response_index,self.last_response_index)
                         print('[Multi_Response] ----Multi_Receive----IP:%s----Response:   %s ----\n' % (
-                            ip, self.response[7:]))
+                            ip, self.response[7:].decode('utf-8')))
                         self.log[ip][-1].add_response(self.response[7:], ip)
                     self.last_response_index[ip] = response_index
                 else:
-                    print('[Single_Response]----Single_Receive----IP:%s----Response:   %s ----\n' % (ip, self.response))
+                    print('[Single_Response]----Single_Receive----IP:%s----Response:   %s ----\n' % (ip, self.response.decode('utf-8')))
                     self.log[ip][-1].add_response(self.response, ip)
                 # print'[Response_WithIP]----Receive----IP:%s----Response:%s----\n' % (ip, self.response)
 
