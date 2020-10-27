@@ -10,7 +10,7 @@ import tello_controller
 import tello_video
 import multiprocessing
 import numpy as np
-import logging
+#import logging
 from pose_estimater import  pose_estimater
 import cv2 as cv
 
@@ -18,18 +18,15 @@ def process_frame(_video, _pose_estimater):
     global pose
     #img_query = cv.imread('pose_estimater/dataset/post/images/post.jpg', 0)
     img_query = cv.imread('pose_estimater/dataset/post/images/post.jpg', 0)
-    log = './log_pose/pose.log'
-    logging.basicConfig(filename=log,
-                        level=logging.DEBUG,
-                        format='%(asctime)s %(message)s',
-                        datefmt='%d/%m/%Y %H:%M:%S')
+    #log = './log_pose/pose.log'
+    #logging.basicConfig(filename=log, level=logging.DEBUG, format='%(asctime)s %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
     while True:
         _frame = _video.get_frame()
         if _frame is not None:
             pose = _pose_estimater.estimate_pose(img_query, _frame)
             if pose is not None:
                 print("Pose in the world is {}".format(pose))
-                logging.info("\n{}".format(pose))
+                #logging.info("\n{}".format(pose))
 
 controller = tello_controller.Tell_Controller()
 pose_estimater = pose_estimater.PoseEstimater('SIFT', 15)
