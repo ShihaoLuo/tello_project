@@ -1,0 +1,136 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: b'ok'
+start time: 2020-11-03 17:23:24.489015
+end_time: 2020-11-03 17:23:24.527992
+duration: 0.038977
+
+id: 1
+command: battery?
+response: b'100\r\n'
+start time: 2020-11-03 17:23:26.509023
+end_time: 2020-11-03 17:23:26.531866
+duration: 0.022843
+
+id: 2
+command: sn?
+response: b'0TQDG43EDB8142'
+start time: 2020-11-03 17:23:29.078066
+end_time: 2020-11-03 17:23:29.133547
+duration: 0.055481
+
+id: 3
+command: moff
+response: b'ok'
+start time: 2020-11-03 17:23:32.219236
+end_time: 2020-11-03 17:23:32.243660
+duration: 0.024424
+
+id: 4
+command: setfps high
+response: b'ok'
+start time: 2020-11-03 17:23:33.250972
+end_time: 2020-11-03 17:23:33.312102
+duration: 0.06113
+
+id: 5
+command: setresolution high
+response: b'ok'
+start time: 2020-11-03 17:23:34.793464
+end_time: 2020-11-03 17:23:34.844261
+duration: 0.050797
+
+id: 6
+command: takeoff
+response: b'ok'
+start time: 2020-11-03 17:23:36.861977
+end_time: 2020-11-03 17:23:45.447563
+duration: 8.585586
+
+id: 7
+command: command
+response: b'ok'
+start time: 2020-11-03 17:23:50.040268
+end_time: 2020-11-03 17:23:50.095589
+duration: 0.055321
+
+id: 8
+command: left 50
+response: b'ok'
+start time: 2020-11-03 17:23:51.611420
+end_time: 2020-11-03 17:23:54.125420
+duration: 2.514
+
+id: 9
+command: right 50
+response: b'ok'
+start time: 2020-11-03 17:23:55.023986
+end_time: 2020-11-03 17:23:57.030343
+duration: 2.006357
+
+id: 10
+command: command
+response: b'ok'
+start time: 2020-11-03 17:23:57.149218
+end_time: 2020-11-03 17:23:57.183282
+duration: 0.034064
+
+id: 11
+command: back 50
+response: b'ok'
+start time: 2020-11-03 17:24:00.079079
+end_time: 2020-11-03 17:24:02.489019
+duration: 2.40994
+
+id: 12
+command: forward 50
+response: b'ok'
+start time: 2020-11-03 17:24:02.661602
+end_time: 2020-11-03 17:24:04.687054
+duration: 2.025452
+
+id: 13
+command: right 50
+response: b'ok'
+start time: 2020-11-03 17:24:05.244884
+end_time: 2020-11-03 17:24:07.387734
+duration: 2.14285
+
+id: 14
+command: left 50
+response: b'ok'
+start time: 2020-11-03 17:24:07.825140
+end_time: 2020-11-03 17:24:09.936096
+duration: 2.110956
+
+id: 15
+command: back 50
+response: b'ok'
+start time: 2020-11-03 17:24:10.400121
+end_time: 2020-11-03 17:24:12.692825
+duration: 2.292704
+
+id: 16
+command: back 50
+response: b'ok'
+start time: 2020-11-03 17:24:12.985347
+end_time: 2020-11-03 17:24:15.290395
+duration: 2.305048
+
+id: 17
+command: land
+response: b'ok'
+start time: 2020-11-03 17:24:15.565439
+end_time: 2020-11-03 17:24:18.146502
+duration: 2.581063
+
+id: 18
+command: command
+response: b'ok'
+start time: 2020-11-03 17:24:18.702025
+end_time: 2020-11-03 17:24:18.754290
+duration: 0.052265
+

@@ -1,0 +1,73 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-11-03 16:11:33.395001
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-11-03 16:11:35.397348
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-11-03 16:11:37.399758
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-11-03 16:11:39.402099
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: b'ok'
+start time: 2020-11-03 16:11:41.404522
+end_time: 2020-11-03 16:11:41.428107
+duration: 0.023585
+
+id: 5
+command: battery?
+response: b'87\r\n'
+start time: 2020-11-03 16:11:43.425708
+end_time: 2020-11-03 16:11:43.486292
+duration: 0.060584
+
+id: 6
+command: sn?
+response: b'0TQDG43EDB8142'
+start time: 2020-11-03 16:11:45.478256
+end_time: 2020-11-03 16:11:45.512886
+duration: 0.03463
+
+id: 7
+command: moff
+response: b'ok'
+start time: 2020-11-03 16:11:49.068750
+end_time: 2020-11-03 16:11:49.133503
+duration: 0.064753
+
+id: 8
+command: setfps high
+response: b'ok'
+start time: 2020-11-03 16:11:50.105563
+end_time: 2020-11-03 16:11:50.153374
+duration: 0.047811
+
+id: 9
+command: setresolution high
+response: b'ok'
+start time: 2020-11-03 16:11:51.137331
+end_time: 2020-11-03 16:11:51.173442
+duration: 0.036111
+

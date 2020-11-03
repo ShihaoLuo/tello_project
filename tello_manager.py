@@ -8,6 +8,7 @@ from collections import defaultdict
 from stats import Stats
 import inspect
 import ctypes
+import queue
 
 # import binascii
 class Tello:
@@ -28,21 +29,49 @@ class Tello_Manager:
     def __init__(self):
         self.local_ip = ''
         self.local_port = 8889
+        self.state_port = 8890
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        #self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.socket_state = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.socket_state.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.socket.bind((self.local_ip, self.local_port))
+        self.socket_state.bind((self.local_ip, self.state_port))
         # thread for receiving cmd ack
         self.receive_thread = threading.Thread(target=self._receive_thread)
         self.receive_thread.setDaemon(True)
         self.tello_ip_list = []
         self.tello_list = []
         self.log = defaultdict(list)
-
         self.COMMAND_TIME_OUT = 9.0
-
         self.last_response_index = {}
         self.str_cmd_index = {}
         self.response = None
+        self.state_field_converters = {
+                # Tello EDU with mission pads enabled only
+                'mid': int,
+                'x': int,
+                'y': int,
+                'z': int,
+                # 'mpry': (custom format 'x,y,z')
+
+                # common entries
+                'pitch': int,
+                'roll': int,
+                'yaw': int,
+                'vgx': int,
+                'vgy': int,
+                'vgz': int,
+                'templ': int,
+                'temph': int,
+                'tof': int,
+                'h': int,
+                'bat': int,
+                'baro': float,
+                'time': int,
+                'agx': float,
+                'agy': float,
+                'agz': float,
+                }
 
     def get_host_ip(self):
         _s = None
@@ -178,6 +207,39 @@ class Tello_Manager:
                 print ('[Not_Get_Response]Max timeout exceeded...command: %s \n' % real_command)
                 return
 
+    def parse_state(self, state):
+        """Parse a state line to a dictionary
+        Internal method, you normally wouldn't call this yourself.
+        """
+        state = state.strip()
+        if state == 'ok':
+            return {}
+        state_dict = {}
+        for field in state.split(';'):
+            split = field.split(':')
+            if len(split) < 2:
+                continue
+            key = split[0]
+            value = split[1]
+            if key in self.state_field_converters:
+                value = self.state_field_converters[key](value)
+            state_dict[key] = value
+        return state_dict
+
+
+    def get_state(self, ip):
+        try:
+            data, address = self.socket_state.recvfrom(166)
+            address = address[0]
+            if address == ip:
+                data = data.decode('ASCII')
+                state = self.parse_state(data)
+                return state
+            else:
+                return None
+        except Exception as e:
+            print(e)
+
     def _receive_thread(self):
         """Listen to responses from the Tello.
 
@@ -226,6 +288,7 @@ class Tello_Manager:
 
     def thread_start(self):
         self.receive_thread.start()
+        #self.state_receive_thread.start()
 
     def _async_raise(self, tid, exctype):
         tid = ctypes.c_long(tid)
@@ -242,3 +305,4 @@ class Tello_Manager:
 
     def stop_thread(self):
         self._async_raise(self.receive_thread.ident, SystemExit)
+        #self._async_raise(self.state_receive_thread.ident, SystemExit)

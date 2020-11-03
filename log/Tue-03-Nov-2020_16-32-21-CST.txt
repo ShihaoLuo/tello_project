@@ -1,0 +1,45 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: b'ok'
+start time: 2020-11-03 16:32:21.805095
+end_time: 2020-11-03 16:32:21.812822
+duration: 0.007727
+
+id: 1
+command: battery?
+response: b'87\r\n'
+start time: 2020-11-03 16:32:23.821309
+end_time: 2020-11-03 16:32:23.866045
+duration: 0.044736
+
+id: 2
+command: sn?
+response: b'0TQDG43EDB8142'
+start time: 2020-11-03 16:32:25.879628
+end_time: 2020-11-03 16:32:25.905876
+duration: 0.026248
+
+id: 3
+command: moff
+response: b'ok'
+start time: 2020-11-03 16:32:28.963781
+end_time: 2020-11-03 16:32:29.017663
+duration: 0.053882
+
+id: 4
+command: setfps high
+response: b'ok'
+start time: 2020-11-03 16:32:30.005711
+end_time: 2020-11-03 16:32:30.040393
+duration: 0.034682
+
+id: 5
+command: setresolution high
+response: b'ok'
+start time: 2020-11-03 16:32:31.543009
+end_time: 2020-11-03 16:32:31.568440
+duration: 0.025431
+

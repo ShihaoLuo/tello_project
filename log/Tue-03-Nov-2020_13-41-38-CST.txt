@@ -1,0 +1,73 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-11-03 13:41:38.550961
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-11-03 13:41:40.552759
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-11-03 13:41:42.559334
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-11-03 13:41:44.561930
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-11-03 13:41:46.567766
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-11-03 13:41:48.572332
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-11-03 13:41:50.578320
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: b'ok'
+start time: 2020-11-03 13:41:52.583662
+end_time: 2020-11-03 13:41:52.640966
+duration: 0.057304
+
+id: 8
+command: battery?
+response: b'93\r\n'
+start time: 2020-11-03 13:41:54.621590
+end_time: 2020-11-03 13:41:54.671938
+duration: 0.050348
+
+id: 9
+command: sn?
+response: b'0TQDG43EDB8142'
+start time: 2020-11-03 13:41:57.185770
+end_time: 2020-11-03 13:41:57.229479
+duration: 0.043709
+

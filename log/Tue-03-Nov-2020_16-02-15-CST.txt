@@ -1,0 +1,129 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-11-03 16:02:15.267987
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-11-03 16:02:17.270329
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-11-03 16:02:19.271591
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-11-03 16:02:21.273960
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-11-03 16:02:23.276387
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-11-03 16:02:25.278694
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-11-03 16:02:27.281110
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-11-03 16:02:29.283467
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-11-03 16:02:31.285889
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-11-03 16:02:33.288222
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-11-03 16:02:35.290656
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: None
+start time: 2020-11-03 16:02:37.292992
+end_time: None
+duration: None
+
+id: 12
+command: command
+response: b'ok'
+start time: 2020-11-03 16:02:39.295402
+end_time: 2020-11-03 16:02:39.347023
+duration: 0.051621
+
+id: 13
+command: battery?
+response: b'89\r\n'
+start time: 2020-11-03 16:02:41.311773
+end_time: 2020-11-03 16:02:41.352032
+duration: 0.040259
+
+id: 14
+command: sn?
+response: b'0TQDG43EDB8142'
+start time: 2020-11-03 16:02:43.363302
+end_time: 2020-11-03 16:02:43.386285
+duration: 0.022983
+
+id: 15
+command: moff
+response: b'ok'
+start time: 2020-11-03 16:02:46.968076
+end_time: 2020-11-03 16:02:47.010331
+duration: 0.042255
+
+id: 16
+command: setfps high
+response: b'ok'
+start time: 2020-11-03 16:02:48.005155
+end_time: 2020-11-03 16:02:48.026859
+duration: 0.021704
+
+id: 17
+command: setresolution high
+response: b'ok'
+start time: 2020-11-03 16:02:49.041934
+end_time: 2020-11-03 16:02:49.097858
+duration: 0.055924
+

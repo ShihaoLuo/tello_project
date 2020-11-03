@@ -1,0 +1,115 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-11-03 14:12:28.587573
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-11-03 14:12:30.591251
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-11-03 14:12:32.595277
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-11-03 14:12:34.598916
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-11-03 14:12:36.602912
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-11-03 14:12:38.606566
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-11-03 14:12:40.610653
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-11-03 14:12:42.614317
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-11-03 14:12:44.618399
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-11-03 14:12:46.622031
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: b'ok'
+start time: 2020-11-03 14:12:48.626074
+end_time: 2020-11-03 14:12:48.709325
+duration: 0.083251
+
+id: 11
+command: battery?
+response: b'72\r\n'
+start time: 2020-11-03 14:12:50.653491
+end_time: 2020-11-03 14:12:50.704758
+duration: 0.051267
+
+id: 12
+command: sn?
+response: b'0TQDG43EDB8142'
+start time: 2020-11-03 14:12:53.207439
+end_time: 2020-11-03 14:12:53.253212
+duration: 0.045773
+
+id: 13
+command: setfps high
+response: b'ok'
+start time: 2020-11-03 14:12:56.297405
+end_time: 2020-11-03 14:12:56.317966
+duration: 0.020561
+
+id: 14
+command: setresolution high
+response: b'ok'
+start time: 2020-11-03 14:12:57.344431
+end_time: 2020-11-03 14:12:57.388847
+duration: 0.044416
+
+id: 15
+command: streamon
+response: b'ok'
+start time: 2020-11-03 14:12:59.918622
+end_time: 2020-11-03 14:12:59.995016
+duration: 0.076394
+

@@ -122,28 +122,29 @@ class PoseEstimater():
                 dst_pts = np.float32([kp_test[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)
                 M, mask = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
                 matchesMask = mask.ravel().tolist()
-                if self.showmatchflag == 1 and M is not None and mask is not None:
+                if M is not None and mask is not None:
                     h, w = img_query.shape
                     d = 1
                     pts = np.float32([[0, 0], [0, h - 1], [w - 1, h - 1], [w - 1, 0]]).reshape(-1, 1, 2)
                     dst = cv.perspectiveTransform(pts, M)
                     pxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
                     pxel = cv.perspectiveTransform(pxel, M)
-                    #print('sss {}'.format(wpxel))
-                    img_test = cv.polylines(img_test, [np.int32(dst)], True, 255, 1, cv.LINE_AA)
-                    draw_params = dict(matchColor=(0, 255, 0),
-                                       singlePointColor=None,
-                                       matchesMask=matchesMask,
-                                       flags=2)
-                    mimg = cv.drawMatches(img_query, kp_query, img_test, kp_test, good, None, **draw_params)
-                    tmppoint = pxel.reshape(-1, 1)
-                    point = []
-                    for i in range(0, len(tmppoint), 2):
-                        point.append((int(tmppoint[i]+_img_query.shape[1]), int(tmppoint[i + 1])))
-                    img = mimg
-                    for p in point:
-                        img = cv.circle(img, p, 4, (255, 0, 0), -1)
-                    self.queue.put(img)
+                    if self.showmatchflag == 1:
+                        #print('sss {}'.format(wpxel))
+                        img_test = cv.polylines(img_test, [np.int32(dst)], True, 255, 1, cv.LINE_AA)
+                        draw_params = dict(matchColor=(0, 255, 0),
+                                           singlePointColor=None,
+                                           matchesMask=matchesMask,
+                                           flags=2)
+                        mimg = cv.drawMatches(img_query, kp_query, img_test, kp_test, good, None, **draw_params)
+                        tmppoint = pxel.reshape(-1, 1)
+                        point = []
+                        for i in range(0, len(tmppoint), 2):
+                            point.append((int(tmppoint[i]+_img_query.shape[1]), int(tmppoint[i + 1])))
+                        img = mimg
+                        for p in point:
+                            img = cv.circle(img, p, 4, (255, 0, 0), -1)
+                        self.queue.put(img)
                 return obj, pxel
         return None, None
 

@@ -13,6 +13,8 @@ import numpy as np
 #import logging
 from pose_estimater import  pose_estimater
 import cv2 as cv
+from control_panel import control_panel
+import time
 
 def process_frame(_video, _pose_estimater):
     global pose
@@ -28,9 +30,10 @@ def process_frame(_video, _pose_estimater):
                 print("Pose in the world is {} {}".format(pose, yaw))
                 #logging.info("\n{}".format(pose))
 
+
 controller = tello_controller.Tell_Controller()
 pose_estimater = pose_estimater.PoseEstimater('SIFT', 15)
-pose_estimater.show_match_start()
+#pose_estimater.show_match_start()
 pose_estimater.loaddata('pose_estimater/dataset/')
 frame = None
 pose = np.array([])
@@ -39,19 +42,21 @@ move_command = ['forward 100', 'left 100', 'right 100', 'back 100', 'left 100', 
 try:
     controller.scan(1)
     video = tello_video.Tello_Video(controller.tello_list)
-    pose_thread = multiprocessing.Process(target=process_frame, args=(video,pose_estimater,))
+    pose_thread = multiprocessing.Process(target=process_frame, args=(video, pose_estimater,))
     pose_thread.start()
     controller.command("battery_check 20")
     controller.command("correct_ip")
     for i in range(len(controller.sn_list)):
         controller.command(str(i + 1) + "=" + controller.sn_list[i])
+    ctr = control_panel.CtrPanel(controller)
     controller.command('*>setfps high')
     controller.command('*>setresolution high')
     controller.command('setbitrate 5')
-    controller.command("*>streamon")
     controller.command("*>takeoff")
     controller.command('*>up 170')
-    controller.command("wait 10")
+    controller.command("*>streamon")
+    #controller.command("wait 10")
+    ctr.start()
     #controller.control_mode()
     #for i in range(12):
      #   controller.command('*>'+move_command[i%6])

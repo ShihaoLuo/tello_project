@@ -1,0 +1,122 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-11-03 14:01:33.345926
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-11-03 14:01:35.348811
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-11-03 14:01:37.352837
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-11-03 14:01:39.356545
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-11-03 14:01:41.360601
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-11-03 14:01:43.364286
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-11-03 14:01:45.368365
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-11-03 14:01:47.372056
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-11-03 14:01:49.376163
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-11-03 14:01:51.379831
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-11-03 14:01:53.383979
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: b'ok'
+start time: 2020-11-03 14:01:55.387659
+end_time: 2020-11-03 14:01:55.416958
+duration: 0.029299
+
+id: 12
+command: battery?
+response: b'79\r\n'
+start time: 2020-11-03 14:01:57.421774
+end_time: 2020-11-03 14:01:57.466594
+duration: 0.04482
+
+id: 13
+command: sn?
+response: b'0TQDG43EDB8142'
+start time: 2020-11-03 14:01:59.485263
+end_time: 2020-11-03 14:01:59.504629
+duration: 0.019366
+
+id: 14
+command: setfps high
+response: b'ok'
+start time: 2020-11-03 14:02:03.070718
+end_time: 2020-11-03 14:02:03.119234
+duration: 0.048516
+
+id: 15
+command: setresolution high
+response: b'ok'
+start time: 2020-11-03 14:02:04.608062
+end_time: 2020-11-03 14:02:04.654111
+duration: 0.046049
+
+id: 16
+command: streamon
+response: b'ok'
+start time: 2020-11-03 14:02:06.674982
+end_time: 2020-11-03 14:02:06.693649
+duration: 0.018667
+

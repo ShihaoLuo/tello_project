@@ -1,0 +1,101 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-11-03 13:55:47.780618
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-11-03 13:55:49.784225
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: None
+start time: 2020-11-03 13:55:51.788287
+end_time: None
+duration: None
+
+id: 3
+command: command
+response: None
+start time: 2020-11-03 13:55:53.791955
+end_time: None
+duration: None
+
+id: 4
+command: command
+response: None
+start time: 2020-11-03 13:55:55.795965
+end_time: None
+duration: None
+
+id: 5
+command: command
+response: None
+start time: 2020-11-03 13:55:57.799588
+end_time: None
+duration: None
+
+id: 6
+command: command
+response: None
+start time: 2020-11-03 13:55:59.803629
+end_time: None
+duration: None
+
+id: 7
+command: command
+response: None
+start time: 2020-11-03 13:56:01.807295
+end_time: None
+duration: None
+
+id: 8
+command: command
+response: None
+start time: 2020-11-03 13:56:03.811410
+end_time: None
+duration: None
+
+id: 9
+command: command
+response: None
+start time: 2020-11-03 13:56:05.815050
+end_time: None
+duration: None
+
+id: 10
+command: command
+response: None
+start time: 2020-11-03 13:56:07.819159
+end_time: None
+duration: None
+
+id: 11
+command: command
+response: b'ok'
+start time: 2020-11-03 13:56:09.822891
+end_time: 2020-11-03 13:56:09.844788
+duration: 0.021897
+
+id: 12
+command: battery?
+response: b'83\r\n'
+start time: 2020-11-03 13:56:11.844894
+end_time: 2020-11-03 13:56:11.886857
+duration: 0.041963
+
+id: 13
+command: sn?
+response: b'0TQDG43EDB8142'
+start time: 2020-11-03 13:56:14.409360
+end_time: 2020-11-03 13:56:14.441956
+duration: 0.032596
+

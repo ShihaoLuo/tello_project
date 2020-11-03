@@ -92,12 +92,15 @@ class Tell_Controller:
                 _id = _command.partition('>')[0]
                 if _id == '*':
                     for x in range(len(self.tello_list)):
-                        id_list.append(x)
+                        id_list.append(x+1)
                 else:
                     # index starbattery_checkt from 1
-                    id_list.append(int(_id) - 1)
+                    id_list.append(int(_id))
+                #rint(id_list)
                 action = str(_command.partition('>')[2])
                 for tello_id in id_list:
+                    #rint(tello_id)
+                    #rint(self.id_sn_dict)
                     tmp_sn = self.id_sn_dict[tello_id]
                     reflec_ip = self.sn_ip_dict[tmp_sn]
                     fid = self.ip_fid_dict[reflec_ip]
@@ -149,7 +152,7 @@ class Tell_Controller:
             elif '=' in _command:
                 drone_id = int(_command.partition('=')[0])
                 drone_sn = _command.partition('=')[2]
-                self.id_sn_dict[drone_id - 1] = drone_sn
+                self.id_sn_dict[drone_id] = drone_sn
                 print ('[IP_SN_FID]:Tello_IP:%s------Tello_SN:'
                        '%s------Tello_fid:%d\n'
                        % (self.sn_ip_dict[drone_sn], drone_sn, drone_id))
@@ -238,3 +241,8 @@ class Tell_Controller:
                 if time.time() - now >= 5:
                     self.command('*>command')
                     now = time.time()
+
+    def get_state(self, _id):
+        tmp_sn = self.id_sn_dict[_id]
+        ip = self.sn_ip_dict[tmp_sn]
+        return self.manager.get_state(ip)
