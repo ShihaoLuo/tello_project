@@ -21,7 +21,7 @@ class Tello:
     def __init__(self, tello_ip, video_port,_Tello_Manager):
         self.tello_ip = tello_ip
         self.Tello_Manager = _Tello_Manager
-        self.videoport = video_port
+        self.video_port = video_port
 
     def send_command(self, command):
         return self.Tello_Manager.send_command(command, self.tello_ip)
@@ -260,10 +260,10 @@ class Tello_Manager:
                     port = self.videoportbase + int(str(ip).split('.')[3])
                     self.socket.sendto(('port 8890 ' + str(port)).encode('utf-8'), (ip, 8889))
                     time.sleep(0.5)
-                    self.response, ip = self.socket.recvfrom(1024)
+                    self.response, _ = self.socket.recvfrom(1024)
                     if self.response.decode(encoding='utf-8',
                                             errors='ignore').upper() == 'OK':
-                        print('[Found_Tello]Found Tello.The Tello ip is:%s.Video port id:%d\n' % (ip, port))
+                        print('[Found_Tello]Found Tello.The Tello ip is:%s.Video port is:%d\n' % (ip, port))
                         self.tello_ip_list.append(ip)
                         self.last_response_index[ip] = 100
                         self.tello_list.append(Tello(ip, port, self))

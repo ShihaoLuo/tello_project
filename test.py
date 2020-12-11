@@ -109,23 +109,23 @@ try:
     controller.command("correct_ip")
     for i in range(len(controller.sn_list)):
         controller.command(str(i + 1) + "=" + controller.sn_list[i])
-    controller.command('*>setfps high')
-    controller.command('*>setresolution high')
+    controller.command('1>setfps high')
+    controller.command('1>setresolution high')
     controller.command('setbitrate 5')
-    controller.command("*>takeoff")
-    controller.command('*>up 170')
+    controller.command("1>takeoff")
+    controller.command('1>up 170')
     pose = updatepos('', pose, video, pose_estimater)
     print("Pose in the drone_world is {}".format(pose))
-    controller.command("*>streamon")
-    for i in range(3):
-        controller.command('*>battery?')
+    controller.command("1>streamon")
+    for i in range(1):
+        controller.command('1>battery?')
         for target in path:
             print("--------------------------")
             print("target:{}".format(target))
             theta = target[3] - pose[3]
             if abs(theta) > 30:
                 cmd = 'ccw ' + str(theta)
-                controller.command("*>"+cmd)
+                controller.command("1>"+cmd)
                 pose = updatepos(cmd, pose, video, pose_estimater)
                 print("Pose in the drone_world is {}".format(pose))
             if np.linalg.norm(target[0:3] - pose[0:3]) < 50:
@@ -144,12 +144,12 @@ try:
                 tmp = [int(i) for i in tmp]
                 tmp = [str(i) for i in tmp]
                 cmd = 'go ' + ' '.join(tmp)
-                controller.command('*>'+cmd)
+                controller.command('1>'+cmd)
                 pose = updatepos(cmd, pose, video, pose_estimater)
                 print("Pose in the drone_world is {}".format(pose))
     time.sleep(5)
-    controller.command("*>land")
-    controller.command("*>streamoff")
+    controller.command("1>land")
+    controller.command("1>streamoff")
     controller.save_log(controller.manager)
     controller.manager.close()
     video.close()

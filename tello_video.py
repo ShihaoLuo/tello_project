@@ -26,8 +26,7 @@ class Tello_Video:
         self.receive_video_thread = {}
         self.tello_ip = ''
         for tello in tello_list:
-            self.local_video_port[tello.tello_ip] = self.video_port_base + int(
-                str(tello.tello_ip).split('.')[3])
+            self.local_video_port[tello.tello_ip] = tello.video_port
         for tello in tello_list:
             self.sock_video[tello.tello_ip] = socket.socket(
                 socket.AF_INET, socket.SOCK_DGRAM)
@@ -36,7 +35,7 @@ class Tello_Video:
             self.sock_video[tello.tello_ip].setsockopt(
                 socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             self.sock_video[tello.tello_ip].bind(
-                (self.local_ip, 11111)) # self.local_video_port[tello.tello_ip]))
+                (self.local_ip, self.local_video_port[tello.tello_ip])) # self.local_video_port[tello.tello_ip]))
         self.tello_ip_list = []
         self.video_cur_ip = ''
         self.res_string = ""
