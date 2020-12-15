@@ -18,7 +18,7 @@ class Tello:
     Communication with Tello is handled by Tello_Manager
     """
 
-    def __init__(self, tello_ip, video_port,_Tello_Manager):
+    def __init__(self, tello_ip, video_port, _Tello_Manager):
         self.tello_ip = tello_ip
         self.Tello_Manager = _Tello_Manager
         self.video_port = video_port

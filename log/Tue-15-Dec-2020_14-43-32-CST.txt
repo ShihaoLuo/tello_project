@@ -1,0 +1,395 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: b'ok'
+start time: 2020-12-15 14:43:32.652855
+end_time: 2020-12-15 14:43:33.208862
+duration: 0.556007
+
+id: 1
+command: battery?
+response: b'47\r\n'
+start time: 2020-12-15 14:43:34.777335
+end_time: 2020-12-15 14:43:34.813200
+duration: 0.035865
+
+id: 2
+command: sn?
+response: b'0TQDG43EDB8YQ9'
+start time: 2020-12-15 14:43:37.335748
+end_time: 2020-12-15 14:43:37.351081
+duration: 0.015333
+
+id: 3
+command: setfps high
+response: b'ok'
+start time: 2020-12-15 14:43:40.602536
+end_time: 2020-12-15 14:43:40.669753
+duration: 0.067217
+
+id: 4
+command: setresolution high
+response: b'ok'
+start time: 2020-12-15 14:43:41.649385
+end_time: 2020-12-15 14:43:41.689631
+duration: 0.040246
+
+id: 5
+command: setbitrate 5
+response: b'ok'
+start time: 2020-12-15 14:43:42.696218
+end_time: 2020-12-15 14:43:42.760583
+duration: 0.064365
+
+id: 6
+command: streamon
+response: b'ok'
+start time: 2020-12-15 14:43:43.748155
+end_time: 2020-12-15 14:43:43.780748
+duration: 0.032593
+
+id: 7
+command: takeoff
+response: b'ok'
+start time: 2020-12-15 14:43:44.790082
+end_time: 2020-12-15 14:43:51.226344
+duration: 6.436262
+
+id: 8
+command: up 170
+response: b'ok'
+start time: 2020-12-15 14:43:51.262208
+end_time: 2020-12-15 14:43:54.341300
+duration: 3.079092
+
+id: 9
+command: go 165 -4 -22 100
+response: b'ok'
+start time: 2020-12-15 14:43:59.741373
+end_time: 2020-12-15 14:44:03.018623
+duration: 3.27725
+
+id: 10
+command: ccw 89
+response: b'ok'
+start time: 2020-12-15 14:44:05.904372
+end_time: 2020-12-15 14:44:07.929253
+duration: 2.024881
+
+id: 11
+command: go 96 1 4 100
+response: b'ok'
+start time: 2020-12-15 14:44:08.080378
+end_time: 2020-12-15 14:44:11.149151
+duration: 3.068773
+
+id: 12
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:11.310972
+end_time: 2020-12-15 14:44:14.268222
+duration: 2.95725
+
+id: 13
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:14.417168
+end_time: 2020-12-15 14:44:17.485159
+duration: 3.067991
+
+id: 14
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:17.631839
+end_time: 2020-12-15 14:44:20.689875
+duration: 3.058036
+
+id: 15
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:20.835593
+end_time: 2020-12-15 14:44:23.964307
+duration: 3.128714
+
+id: 16
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:24.122254
+end_time: 2020-12-15 14:44:27.457184
+duration: 3.33493
+
+id: 17
+command: ccw 90.0
+response: b'ok'
+start time: 2020-12-15 14:44:27.588383
+end_time: 2020-12-15 14:44:29.712438
+duration: 2.124055
+
+id: 18
+command: go 100 -1 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:29.883588
+end_time: 2020-12-15 14:44:32.796525
+duration: 2.912937
+
+id: 19
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:32.964433
+end_time: 2020-12-15 14:44:36.014560
+duration: 3.050127
+
+id: 20
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:36.149910
+end_time: 2020-12-15 14:44:39.067048
+duration: 2.917138
+
+id: 21
+command: ccw 90.0
+response: b'ok'
+start time: 2020-12-15 14:44:39.212618
+end_time: 2020-12-15 14:44:41.324224
+duration: 2.111606
+
+id: 22
+command: go 98 -1 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:41.473413
+end_time: 2020-12-15 14:44:44.832165
+duration: 3.358752
+
+id: 23
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:44.977016
+end_time: 2020-12-15 14:44:47.874746
+duration: 2.89773
+
+id: 24
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:48.033980
+end_time: 2020-12-15 14:44:50.885228
+duration: 2.851248
+
+id: 25
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:51.045727
+end_time: 2020-12-15 14:44:54.160892
+duration: 3.115165
+
+id: 26
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:54.292651
+end_time: 2020-12-15 14:44:57.738689
+duration: 3.446038
+
+id: 27
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:44:57.870017
+end_time: 2020-12-15 14:45:00.776356
+duration: 2.906339
+
+id: 28
+command: ccw -270.0
+response: b'ok'
+start time: 2020-12-15 14:45:00.928526
+end_time: 2020-12-15 14:45:05.976511
+duration: 5.047985
+
+id: 29
+command: go 99 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:06.144365
+end_time: 2020-12-15 14:45:09.118429
+duration: 2.974064
+
+id: 30
+command: go 177 -3 4 100
+response: b'ok'
+start time: 2020-12-15 14:45:12.000596
+end_time: 2020-12-15 14:45:15.207012
+duration: 3.206416
+
+id: 31
+command: go 90 27 36 100
+response: b'ok'
+start time: 2020-12-15 14:45:18.064866
+end_time: 2020-12-15 14:45:21.256593
+duration: 3.191727
+
+id: 32
+command: ccw 92
+response: b'ok'
+start time: 2020-12-15 14:45:24.114696
+end_time: 2020-12-15 14:45:26.248345
+duration: 2.133649
+
+id: 33
+command: go 103 1 2 100
+response: b'ok'
+start time: 2020-12-15 14:45:26.407257
+end_time: 2020-12-15 14:45:29.168476
+duration: 2.761219
+
+id: 34
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:29.314466
+end_time: 2020-12-15 14:45:32.076229
+duration: 2.761763
+
+id: 35
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:32.216723
+end_time: 2020-12-15 14:45:35.343352
+duration: 3.126629
+
+id: 36
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:35.493648
+end_time: 2020-12-15 14:45:38.506073
+duration: 3.012425
+
+id: 37
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:38.661304
+end_time: 2020-12-15 14:45:41.832907
+duration: 3.171603
+
+id: 38
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:41.978343
+end_time: 2020-12-15 14:45:45.805055
+duration: 3.826712
+
+id: 39
+command: ccw 90.0
+response: b'ok'
+start time: 2020-12-15 14:45:45.944335
+end_time: 2020-12-15 14:45:48.105680
+duration: 2.161345
+
+id: 40
+command: go 100 -1 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:48.279889
+end_time: 2020-12-15 14:45:50.980335
+duration: 2.700446
+
+id: 41
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:51.120767
+end_time: 2020-12-15 14:45:53.892661
+duration: 2.771894
+
+id: 42
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:54.035269
+end_time: 2020-12-15 14:45:56.978300
+duration: 2.943031
+
+id: 43
+command: ccw 90.0
+response: b'ok'
+start time: 2020-12-15 14:45:57.126051
+end_time: 2020-12-15 14:45:59.267574
+duration: 2.141523
+
+id: 44
+command: go 98 -1 0 100
+response: b'ok'
+start time: 2020-12-15 14:45:59.442507
+end_time: 2020-12-15 14:46:02.390979
+duration: 2.948472
+
+id: 45
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:46:02.521726
+end_time: 2020-12-15 14:46:05.708053
+duration: 3.186327
+
+id: 46
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:46:05.866929
+end_time: 2020-12-15 14:46:08.714509
+duration: 2.84758
+
+id: 47
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:46:08.855556
+end_time: 2020-12-15 14:46:11.781006
+duration: 2.92545
+
+id: 48
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:46:11.922916
+end_time: 2020-12-15 14:46:14.953204
+duration: 3.030288
+
+id: 49
+command: go 100 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:46:15.098513
+end_time: 2020-12-15 14:46:17.916865
+duration: 2.818352
+
+id: 50
+command: ccw -270.0
+response: b'ok'
+start time: 2020-12-15 14:46:18.046115
+end_time: 2020-12-15 14:46:23.167385
+duration: 5.12127
+
+id: 51
+command: go 99 0 0 100
+response: b'ok'
+start time: 2020-12-15 14:46:23.314409
+end_time: 2020-12-15 14:46:26.137626
+duration: 2.823217
+
+id: 52
+command: go 155 -7 -43 100
+response: b'ok'
+start time: 2020-12-15 14:46:29.011882
+end_time: 2020-12-15 14:46:32.218896
+duration: 3.207014
+
+id: 53
+command: go 96 46 56 100
+response: b'ok'
+start time: 2020-12-15 14:46:35.119362
+end_time: 2020-12-15 14:46:38.911180
+duration: 3.791818
+
+id: 54
+command: land
+response: b'ok'
+start time: 2020-12-15 14:46:44.787681
+end_time: 2020-12-15 14:46:50.217062
+duration: 5.429381
+
+id: 55
+command: streamoff
+response: b'ok'
+start time: 2020-12-15 14:46:50.258167
+end_time: 2020-12-15 14:46:50.317346
+duration: 0.059179
+

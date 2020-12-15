@@ -1,0 +1,73 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: None
+start time: 2020-12-15 13:58:56.315339
+end_time: None
+duration: None
+
+id: 1
+command: command
+response: None
+start time: 2020-12-15 13:58:58.318094
+end_time: None
+duration: None
+
+id: 2
+command: command
+response: b'ok'
+start time: 2020-12-15 13:59:00.321721
+end_time: 2020-12-15 13:59:00.930155
+duration: 0.608434
+
+id: 3
+command: battery?
+response: b'92\r\n'
+start time: 2020-12-15 13:59:02.339573
+end_time: 2020-12-15 13:59:02.370763
+duration: 0.03119
+
+id: 4
+command: sn?
+response: b'0TQDG43EDB8YQ9'
+start time: 2020-12-15 13:59:04.908609
+end_time: 2020-12-15 13:59:04.976275
+duration: 0.067666
+
+id: 5
+command: setfps high
+response: b'ok'
+start time: 2020-12-15 13:59:08.504333
+end_time: 2020-12-15 13:59:08.545976
+duration: 0.041643
+
+id: 6
+command: setresolution high
+response: b'ok'
+start time: 2020-12-15 13:59:09.546274
+end_time: 2020-12-15 13:59:09.566389
+duration: 0.020115
+
+id: 7
+command: setbitrate 5
+response: b'ok'
+start time: 2020-12-15 13:59:10.583021
+end_time: 2020-12-15 13:59:10.636733
+duration: 0.053712
+
+id: 8
+command: streamon
+response: b'ok'
+start time: 2020-12-15 13:59:11.629911
+end_time: 2020-12-15 13:59:11.655209
+duration: 0.025298
+
+id: 9
+command: go 100 0 0 100
+response: b'error Motor stop'
+start time: 2020-12-15 13:59:12.723207
+end_time: 2020-12-15 13:59:12.880516
+duration: 0.157309
+

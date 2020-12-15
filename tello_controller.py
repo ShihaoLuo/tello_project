@@ -100,7 +100,6 @@ class Tell_Controller:
                 action = str(_command.partition('>')[2])
                 for tello_id in id_list:
                     #rint(tello_id)
-                    #rint(self.id_sn_dict)
                     tmp_sn = self.id_sn_dict[tello_id]
                     reflec_ip = self.sn_ip_dict[tmp_sn]
                     fid = self.ip_fid_dict[reflec_ip]
@@ -156,7 +155,6 @@ class Tell_Controller:
                 print ('[IP_SN_FID]:Tello_IP:%s------Tello_SN:'
                        '%s------Tello_fid:%d\n'
                        % (self.sn_ip_dict[drone_sn], drone_sn, drone_id))
-                # print id_sn_dict[drone_id]
             elif 'sync' in _command:
                 timeout = float(_command.partition('sync')[2])
                 print ('[Sync_And_Waiting]Sync for %s seconds \n' % timeout)

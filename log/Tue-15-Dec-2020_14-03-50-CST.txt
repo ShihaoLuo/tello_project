@@ -1,0 +1,108 @@
+------
+Drone: 1
+
+id: 0
+command: command
+response: b'ok'
+start time: 2020-12-15 14:03:50.519537
+end_time: 2020-12-15 14:03:51.131364
+duration: 0.611827
+
+id: 1
+command: battery?
+response: b'85\r\n'
+start time: 2020-12-15 14:03:52.639496
+end_time: 2020-12-15 14:03:52.693010
+duration: 0.053514
+
+id: 2
+command: sn?
+response: b'0TQDG43EDB8YQ9'
+start time: 2020-12-15 14:03:55.178057
+end_time: 2020-12-15 14:03:55.201485
+duration: 0.023428
+
+id: 3
+command: setfps high
+response: b'ok'
+start time: 2020-12-15 14:03:58.955676
+end_time: 2020-12-15 14:03:58.981032
+duration: 0.025356
+
+id: 4
+command: setresolution high
+response: b'ok'
+start time: 2020-12-15 14:04:00.001826
+end_time: 2020-12-15 14:04:00.051801
+duration: 0.049975
+
+id: 5
+command: setbitrate 5
+response: b'ok'
+start time: 2020-12-15 14:04:01.058632
+end_time: 2020-12-15 14:04:01.128559
+duration: 0.069927
+
+id: 6
+command: streamon
+response: b'ok'
+start time: 2020-12-15 14:04:02.115750
+end_time: 2020-12-15 14:04:02.143059
+duration: 0.027309
+
+id: 7
+command: go 100 0 0 100
+response: b'error Motor stop'
+start time: 2020-12-15 14:04:03.188773
+end_time: 2020-12-15 14:04:03.316307
+duration: 0.127534
+
+id: 8
+command: go 100 0 0 100
+response: b'error Motor stop'
+start time: 2020-12-15 14:04:04.362125
+end_time: 2020-12-15 14:04:04.501716
+duration: 0.139591
+
+id: 9
+command: ccw 90.0
+response: b'error Motor stop'
+start time: 2020-12-15 14:04:05.429780
+end_time: 2020-12-15 14:04:05.465020
+duration: 0.03524
+
+id: 10
+command: go 99 0 0 100
+response: b'error Motor stop'
+start time: 2020-12-15 14:04:06.622426
+end_time: 2020-12-15 14:04:06.797268
+duration: 0.174842
+
+id: 11
+command: go 100 0 0 100
+response: b'error Motor stop'
+start time: 2020-12-15 14:04:07.768199
+end_time: 2020-12-15 14:04:07.928667
+duration: 0.160468
+
+id: 12
+command: go 100 0 0 100
+response: b'error Motor stop'
+start time: 2020-12-15 14:04:08.925243
+end_time: 2020-12-15 14:04:09.053021
+duration: 0.127778
+
+id: 13
+command: go 100 0 0 100
+response: b'error Motor stop'
+start time: 2020-12-15 14:04:10.065604
+end_time: 2020-12-15 14:04:10.217577
+duration: 0.151973
+
+id: 14
+command: go 100 0 0 100
+response: b'error Motor stop'
+start time: 2020-12-15 14:04:11.212430
+end_time: 2020-12-15 14:04:11.395538
+duration: 0.183108
+
