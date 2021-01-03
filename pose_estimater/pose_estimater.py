@@ -167,7 +167,7 @@ class PoseEstimater():
             RR, rvec, tvec, inliers = cv.solvePnPRansac(**pnppara)
             #print(rvec)
             #print(RR)
-            #print(inliers)
+            # print('inliers:{}'.format(inliers))
             #print('tvec/n{}'.format(tvec/2))
             if RR is True and len(inliers)>=7:
                 rotM = np.array(cv.Rodrigues(rvec)[0])

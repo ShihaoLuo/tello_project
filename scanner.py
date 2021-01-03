@@ -69,15 +69,18 @@ class Scanner:
                         self.socket.sendto('battery?'.encode('utf-8'), (ip, 8889))
                         self.response, _ = self.socket.recvfrom(1024)
                         res, _ = self.socket.recvfrom(1024)
-                        battery_value = int(res.decode())
-                        if battery_value >= 20:
-                            self.tello_ip_list.append(ip)
-                            self.tello_info.append((ip, c_port, v_port))
-                            print('[Found_Tello]Found Tello.The Tello ip is:%s, Control port is:%d, Video port is:%d'
-                                  % (ip, c_port, v_port))
-                            print(' Battery: ', battery_value)
-                        else:
-                            print('Battery low: ', battery_value)
+                        try:
+                            battery_value = int(res.decode())
+                            if battery_value >= 20:
+                                self.tello_ip_list.append(ip)
+                                self.tello_info.append((ip, c_port, v_port))
+                                print('[Found_Tello]Found Tello.The Tello ip is:%s, Control port is:%d, Video port is:%d'
+                                      % (ip, c_port, v_port))
+                                print(' Battery: ', battery_value)
+                            else:
+                                print('Battery low: ', battery_value)
+                        except Exception as e:
+                            pass
             except socket.error as exc:
                 print("[Exception_Error(rev)]Caught exception socket.error : %s\n" % exc)
 
