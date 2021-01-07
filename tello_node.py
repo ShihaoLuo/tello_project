@@ -144,20 +144,23 @@ class TelloNode:
         video_thread.start()
         cmd_thread = multiprocessing.Process(target=self.update_cmd, daemon=True)
         cmd_thread.start()
+        time.sleep(1)
         self.cmd.put('>command')
         while True:
             try:
                 # print("video thread is alive,", video_thread.is_alive())
                 # print("cmd thread is alive,", cmd_thread.is_alive())
-                while self.cmd.empty is True:
-                    time.sleep(0.1)
-                cmd = self.cmd.get()
-                self.send_command(cmd)
-                print('in run thread, send ', cmd)
+                if self.cmd.empty() is False:
+                    cmd = self.cmd.get()
+                    self.send_command(cmd)
+                    print('in run thread, send ', cmd)
+                if cmd_thread.is_alive() is False:
+                    print('update_cmd thread is died...')
                 if self.run_thread_flag.empty() is False:
                     time.sleep(1)
                     break
-            except KeyboardInterrupt as e:
+            except Exception as e:
+                print('run thread died...')
                 break
 
     def run(self):
@@ -226,11 +229,16 @@ class TelloNode:
 
     def update_cmd(self):
         print('update cmd thread start....')
+        old = time.time()
         pose = self.pose.get()
         self.pose.put(pose)
         if pose[2] == 0:
             while self.cmd_res.empty is True:
                 time.sleep(0.1)
+                if time.time() - old > 3:
+                    print('no res, re sending...')
+                    self.cmd.put('>command')
+                    old = time.time()
             self.cmd_res.get()
             self.cmd.put('>takeoff')
             print('update cmd, >takeoff')
@@ -238,6 +246,10 @@ class TelloNode:
             self.pose.put(self.update_pos('>takeoff', self.pose.get()))
             while self.cmd_res.empty is True:
                 time.sleep(0.1)
+                if time.time() - old > 3:
+                    print('no res, re sending...')
+                    self.cmd.put('>command')
+                    old = time.time()
             self.cmd_res.get()
             self.cmd.put('>up 170')
             print('update cmd, >up 170')
@@ -245,98 +257,126 @@ class TelloNode:
             self.pose.put(self.update_pos('>up 170', self.pose.get()))
             while self.cmd_res.empty is True:
                 time.sleep(0.1)
+                if time.time() - old > 3:
+                    print('no res, re sending...')
+                    self.cmd.put('>command')
+                    old = time.time()
             self.cmd_res.get()
             self.cmd.put('>streamon')
             print('update cmd, >streamon')
             time.sleep(0.1)
             self.pose.put(self.update_pos('>streamon', self.pose.get()))
         while True:
-            try:
-                pose = self.pose.get()
-                self.pose.put(pose)
-                self.path_lock.acquire()
-                print('path lock acquired by cmd')
+            pose = self.pose.get()
+            self.pose.put(pose)
+            self.path_lock.acquire()
+            print('path lock acquired by cmd')
+            if self.path.empty() is True:
+                print('in run thread, path queue is empty, wait for path updating..', self.tello_ip)
+                self.path_lock.release()
+                while self.cmd_res.empty is True:
+                    time.sleep(0.1)
+                    if time.time() - old > 3:
+                        print('no res, re sending...')
+                        self.cmd.put('>command')
+                        old = time.time()
+                self.cmd_res.get()
+                self.cmd.put('wait 10')
+                time.sleep(10)
                 if self.path.empty() is True:
-                    print('in run thread, path queue is empty, wait for path updating..', self.tello_ip)
-                    while self.cmd_res.empty is True:
-                        time.sleep(0.5)
-                    self.cmd_res.get()
-                    self.cmd.put('wait 15')
-                    # self.send_command('wait 15')
-                    if self.path.empty() is True:
-                        print('in run thread, no path updated, break...', self.tello_ip)
-                        break
-                target = self.path.get()
-                if self.video_flag == 0 and pose[1] < 100:
-                    while self.cmd_res.empty is True:
-                        time.sleep(0.1)
-                    self.cmd_res.get()
-                    self.cmd.put('>streamon')
-                    print('update cmd, >streamon')
-                    time.sleep(0.1)
-                    self.pose.put(self.update_pos('>streamon', self.pose.get()))
-                    self.video_flag = 1
-                if self.video_flag == 1 and pose[1] >= 100:
-                    while self.cmd_res.empty is True:
-                        time.sleep(0.1)
-                    self.cmd_res.get()
-                    self.cmd.put('>streamoff')
-                    print('update cmd, >streamoff')
-                    time.sleep(0.1)
-                    self.pose.put(self.update_pos('>streamoff', self.pose.get()))
-                    # self.send_command('>streamoff')
-                    self.video_flag = 0
-                print("--------------------------")
-                print("target:{}".format(target))
-                theta = target[3] - pose[3]
-                if abs(theta) > 30:
-                    if abs(theta) > 180:
-                        cmd = 'cw ' + str(theta + 180)
-                        while self.cmd_res.empty is True:
-                            time.sleep(0.5)
-                        self.cmd_res.get()
-                        self.cmd.put('>' + cmd)
-                        print('update cmd,>', cmd)
-                        time.sleep(0.1)
-                        self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
-                        # self.send_command(">" + cmd)
-                        cmd = 'ccw ' + str(theta)
-                    else:
-                        cmd = 'ccw ' + str(theta)
-                        while self.cmd_res.empty is True:
-                            time.sleep(0.1)
-                        self.cmd_res.get()
-                        self.cmd.put('>' + cmd)
-                        print('update cmd,>', cmd)
-                        time.sleep(0.1)
-                        self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
-                        # self.send_command(">" + cmd)
-                if np.linalg.norm(target[0:3] - pose[0:3]) < 50:
-                    pass
+                    print('in run thread, no path updated, break...', self.tello_ip)
+                    break
                 else:
-                    alpha = pose[3] * 3.1416 / 180
-                    m = np.array([[np.cos(alpha), np.sin(alpha), 0],
-                                  [-np.sin(alpha), np.cos(alpha), 0],
-                                  [0, 0, 1]])
-                    tmp = target[0:3] - pose[0:3]
-                    tmp = np.dot(m, tmp)
-                    tmp = np.append(tmp, 100)
-                    tmp = [int(i) for i in tmp]
-                    tmp = [str(i) for i in tmp]
-                    cmd = 'go ' + ' '.join(tmp)
+                    self.path_lock.acquire()
+            target = self.path.get()
+            if self.video_flag == 0 and pose[1] < 100:
+                while self.cmd_res.empty is True:
+                    time.sleep(0.1)
+                    if time.time() - old > 3:
+                        print('no res, re sending...')
+                        self.cmd.put('>command')
+                        old = time.time()
+                self.cmd_res.get()
+                self.cmd.put('>streamon')
+                print('update cmd, >streamon')
+                time.sleep(0.1)
+                self.pose.put(self.update_pos('>streamon', self.pose.get()))
+                self.video_flag = 1
+            if self.video_flag == 1 and pose[1] >= 100:
+                while self.cmd_res.empty is True:
+                    time.sleep(0.1)
+                    if time.time() - old > 3:
+                        print('no res, re sending...')
+                        self.cmd.put('>command')
+                        old = time.time()
+                self.cmd_res.get()
+                self.cmd.put('>streamoff')
+                print('update cmd, >streamoff')
+                time.sleep(0.1)
+                self.pose.put(self.update_pos('>streamoff', self.pose.get()))
+                # self.send_command('>streamoff')
+                self.video_flag = 0
+            print("--------------------------")
+            print("target:{}".format(target))
+            theta = target[3] - pose[3]
+            if abs(theta) > 30:
+                if abs(theta) > 180:
+                    cmd = 'cw ' + str(theta + 180)
                     while self.cmd_res.empty is True:
                         time.sleep(0.1)
+                        if time.time() - old > 3:
+                            print('no res, re sending...')
+                            self.cmd.put('>command')
+                            old = time.time()
                     self.cmd_res.get()
                     self.cmd.put('>' + cmd)
                     print('update cmd,>', cmd)
                     time.sleep(0.1)
                     self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
-                    # self.send_command('>' + cmd)
-                self.path_lock.release()
-                print('path lock released by cmd')
+                    # self.send_command(">" + cmd)
+                    cmd = 'ccw ' + str(theta)
+                else:
+                    cmd = 'ccw ' + str(theta)
+                    while self.cmd_res.empty is True:
+                        time.sleep(0.1)
+                        if time.time() - old > 3:
+                            print('no res, re sending...')
+                            self.cmd.put('>command')
+                            old = time.time()
+                    self.cmd_res.get()
+                    self.cmd.put('>' + cmd)
+                    print('update cmd,>', cmd)
+                    time.sleep(0.1)
+                    self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
+                    # self.send_command(">" + cmd)
+            if np.linalg.norm(target[0:3] - pose[0:3]) < 50:
+                pass
+            else:
+                alpha = pose[3] * 3.1416 / 180
+                m = np.array([[np.cos(alpha), np.sin(alpha), 0],
+                              [-np.sin(alpha), np.cos(alpha), 0],
+                              [0, 0, 1]])
+                tmp = target[0:3] - pose[0:3]
+                tmp = np.dot(m, tmp)
+                tmp = np.append(tmp, 100)
+                tmp = [int(i) for i in tmp]
+                tmp = [str(i) for i in tmp]
+                cmd = 'go ' + ' '.join(tmp)
+                while self.cmd_res.empty is True:
+                    time.sleep(0.1)
+                    if time.time() - old > 3:
+                        print('no res, re sending...')
+                        self.cmd.put('>command')
+                        old = time.time()
+                self.cmd_res.get()
+                self.cmd.put('>' + cmd)
+                print('update cmd,>', cmd)
                 time.sleep(0.1)
-            except KeyboardInterrupt as e:
-                break
+                self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
+                # self.send_command('>' + cmd)
+            self.path_lock.release()
+            print('path lock released by cmd')
+            time.sleep(0.1)
         while self.cmd_res.empty is True:
             time.sleep(0.1)
         self.cmd_res.get()
@@ -348,3 +388,4 @@ class TelloNode:
         print('run dying...', self.tello_ip)
         time.sleep(2)
         self.run_thread_flag.put(1)
+        print('update thread died...')

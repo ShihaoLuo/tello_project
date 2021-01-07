@@ -23,8 +23,10 @@ def received_ok():
             ip = ''.join(str(ip[0]))
             if response.decode(encoding='utf-8', errors='ignore').upper() == 'OK':
                 cmd_res.put(ip)
+            else:
+                print('RES from {}:{}'.format(ip, response.decode(encoding='utf-8', errors='ignore')))
             time.sleep(0.00)
-        except KeyboardInterrupt as e:
+        except Exception as e:
             break
 
 
@@ -49,10 +51,7 @@ path1 = [[-350, 0, 100, 0],
         [-550, 100, 100, 270],
         [-550, 0, 100, 270],
         [-550, 0, 100, 0],
-        [-450, 0, 100, 0],
-         [-350, 0, 100, 0],
-         [-250, 0, 100, 0]
-         ]
+        [-450, 0, 100, 0]]
 num = 1
 Node = {}
 cmd_res = multiprocessing.Queue()
