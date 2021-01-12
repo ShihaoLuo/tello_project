@@ -22,10 +22,10 @@ def received_ok(kwargs, main_flag):
             if response.decode(encoding='utf-8', errors='ignore').upper() == 'OK':
                 with kwargs[ip].get_lock():
                     kwargs[ip].value = 1
-                    print('in received ok, set res of {} from 0 to {}'.format(ip, kwargs[ip].value))
+                    # print('in received ok, set res of {} from 0 to {}'.format(ip, kwargs[ip].value))
             else:
                 print('RES from {}:{}'.format(ip, response.decode(encoding='utf-8', errors='ignore')))
-            print('in received ok, main alg {}'.format(main_flag.value))
+            # print('in received ok, main alg {}'.format(main_flag.value))
         except Exception:
             print('Exception occur in received_ok thread...')
 
@@ -51,7 +51,6 @@ path1 = [[-350, 0, 100, 0],
 num = 1
 Node = {}
 Res_flag = {}
-cmd_res = multiprocessing.Queue()
 scanner = Scanner()
 scanner.find_available_tello(num)
 tello_list = scanner.get_tello_info()

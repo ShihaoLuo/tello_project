@@ -187,7 +187,7 @@ class TelloNode:
                     return pose
         if '>ccw' in _last_cmd:
             angle = float(_last_cmd.partition(' ')[2])
-            print('angle:{}'.format(angle))
+            # print('angle:{}'.format(angle))
             pose[3] = angle + _last_pose[3]
             if pose[3] >= 360:
                 pose[3] -= 360
@@ -293,7 +293,6 @@ class TelloNode:
                     self.cmd.value = b'>streamon'
                 self.cmd_event.set()
                 print('update cmd, >streamon')
-                time.sleep(0.1)
                 self.pose.put(self.update_pos('>streamon', self.pose.get()))
                 self.video_flag = 1
             self.update_path_event.wait()
@@ -311,7 +310,6 @@ class TelloNode:
                     self.cmd.value = b'>streamoff'
                 self.cmd_event.set()
                 print('update cmd, >streamoff')
-                time.sleep(0.1)
                 self.pose.put(self.update_pos('>streamoff', self.pose.get()))
                 # self.send_command('>streamoff')
                 self.video_flag = 0
@@ -346,7 +344,6 @@ class TelloNode:
                     self.cmd.value = ('>' + cmd).encode()
                 self.cmd_event.set()
                 print('update cmd, >' + cmd)
-                time.sleep(0.1)
                 self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
                 # self.send_command('>' + cmd)
             # print('path lock released by cmd')
@@ -367,7 +364,6 @@ class TelloNode:
                         self.cmd.value = ('>' + cmd).encode()
                     self.cmd_event.set()
                     print('update cmd, >' + cmd)
-                    time.sleep(0.1)
                     self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
                     # self.send_command(">" + cmd)
                     cmd = 'ccw ' + str(theta)
@@ -382,7 +378,6 @@ class TelloNode:
                         self.cmd.value = ('>' + cmd).encode()
                     self.cmd_event.set()
                     print('update cmd, >' + cmd)
-                    time.sleep(0.1)
                     self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
                     # self.send_command(">" + cmd)
             time.sleep(0.1)
