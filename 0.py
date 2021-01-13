@@ -10,6 +10,7 @@ import socket
 from tello_node import *
 import multiprocessing
 import numpy as np
+import copy
 
 
 def scheduler(tello_node, permission_flag):
@@ -25,46 +26,49 @@ def scheduler(tello_node, permission_flag):
         var = 1
         for key in tello_node.keys():
             target[key] = tello_node[key].get_target()
-        print('target: \n', target)
+        # print('target: \n', target)
         while True:
-            for key in candidate_dict.keys():
-                print(len(candidate_dict[key]))
-            if len(candidate_list) == 1:
-                permission_list.append(candidate_list[0])
+            # for key in candidate_dict.keys():
+            #     print(len(candidate_dict[key]))
+            if len(candidate_list) == 0:
+                # permission_list.append(candidate_list[0])
                 break
-            for key in candidate_list:
-                print(' in shide, candidate list is ', candidate_list)
+            candidate_list2 = copy.deepcopy(candidate_list)
+            for key in candidate_list2:
+                # print(' in shide, candidate list2 is ', candidate_list2)
                 for key2 in candidate_list:
+                    # print(' in shide, candidate list is ', candidate_list)
                     if key == key2:
                         pass
                     else:
                         d = np.linalg.norm(np.array(target[key][0:2]) - np.array(target[key2][0:2]), 2)
-                        if d <= 150:
+                        if d <= 200:
                             tmp.append(key2)
                 if len(tmp) == 0:
                     permission_list.append(key)
                     candidate_list.remove(key)
                 else:
                     candidate_dict[key] = tmp
-                    print(' in shide, candidate dict is ', candidate_dict)
+                    # print(' in shide, candidate dict is ', candidate_dict)
                 tmp = []
             var = 1
             for key in candidate_list:
                 if len(candidate_dict[key]) >= var:
                     tmp2 = key
+                    # print('inside tmp2 is', tmp2)
                     var = len(candidate_dict[key])
-                    print('inside tmp2 is', tmp2)
-            print('outside tmp2 is', tmp2)
-            ban_list.append(tmp2)
-            if tmp2 in candidate_list:
-                candidate_list.remove(tmp2)
-            print('permission list', permission_list)
-            print('candidate list', candidate_list)
-            print('ban list', ban_list)
-            time.sleep(0.5)
-        print('permission list', permission_list)
-        print('candidate list', candidate_list)
-        print('ban list', ban_list)
+            # print('outside tmp2 is', tmp2)
+            if tmp2 is not None:
+                ban_list.append(tmp2)
+                if tmp2 in candidate_list:
+                    candidate_list.remove(tmp2)
+            # print('permission list', permission_list)
+            # print('candidate list', candidate_list)
+            # print('ban list', ban_list)
+            time.sleep(0.1)
+        # print('permission list', permission_list)
+        # print('candidate list', candidate_list)
+        # print('ban list', ban_list)
         for key in permission_list:
             permission_flag[key].value = 1
             # print('permission flag of {} is {}'.format(key, permission_flag[key].value))
@@ -162,6 +166,7 @@ try:
             main_thread_flag.value = 1
             break
         time.sleep(1)
+    print('main thread died!')
 except KeyboardInterrupt as e:
     for i in range(len(tello_list)):
         Node[tello_list[i][0]].send_command('>streamoff')

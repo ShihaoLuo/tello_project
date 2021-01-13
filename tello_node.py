@@ -33,6 +33,7 @@ class TelloNode:
         self.video_flag = 1
         self.run_thread_flag = multiprocessing.Value('i', 0)
         self.update_path_flag = multiprocessing.Value('i', 0)
+        self.takeoff_flag = multiprocessing.Value('i', 1)
         self.Res_flag = res_flag
         self.cmd = multiprocessing.Array('c', 20)
         self.cmd_event = multiprocessing.Event()
@@ -65,25 +66,28 @@ class TelloNode:
         update_path_thread.start()
 
     def _update_path(self, path):
-        self.update_path_event.clear()
-        print('updating the path______________________________________', self.tello_ip)
-        tmp = np.array(path)
-        d = np.array([])
-        pose = self.pose.get()
-        self.pose.put(pose)
-        for t in tmp:
-            d = np.append(d, np.linalg.norm(np.array(pose[0:3]) - t[0:3], 2))
-        a = np.argmin(d)
-        while self.path.empty() is False:
-            self.path.get()
-        if a == len(tmp)-1:
-            for t in tmp:
-                self.path.put(t)
+        if self.takeoff_flag.value == 1:
+            pass
         else:
-            for t in tmp[a + 1:]:
-                self.path.put(t)
-        print('finished updating the path_________________________________', self.tello_ip)
-        self.update_path_event.set()
+            self.update_path_event.clear()
+            print('updating the path______________________________________', self.tello_ip)
+            tmp = np.array(path)
+            d = np.array([])
+            pose = self.pose.get()
+            self.pose.put(pose)
+            for t in tmp:
+                d = np.append(d, np.linalg.norm(np.array(pose[0:3]) - t[0:3], 2))
+            a = np.argmin(d)
+            while self.path.empty() is False:
+                self.path.get()
+            if a == len(tmp)-1:
+                for t in tmp:
+                    self.path.put(t)
+            else:
+                for t in tmp[a + 1:]:
+                    self.path.put(t)
+            print('finished updating the path_________________________________', self.tello_ip)
+            self.update_path_event.set()
 
     def _h264_decode(self, packet_data):
         frames = self.h264decoder.decode(packet_data)
@@ -237,11 +241,18 @@ class TelloNode:
         print('update cmd thread start....')
         pose = self.pose.get()
         self.pose.put(pose)
+        old_time = time.time()
         if pose[2] == 0:
             self.target.value = b'450,0,-70,0'
             time.sleep(0.1)
             while self.permission_flag.value == 0:
+                old_time = time.time()
                 # print('wait for permission of ', self.tello_ip, self.permission_flag.value)
+                if time.time() - old_time >= 5:
+                    with self.cmd.get_lock():
+                        self.cmd.value = b'>command'
+                        print('update cmd, >command')
+                    self.cmd_event.set()
                 time.sleep(0.2)
             self.permission_flag.value = 0
             while self.Res_flag.value == 0:
@@ -256,10 +267,16 @@ class TelloNode:
             self.pose.put(self.update_pos('>takeoff', self.pose.get()))
             self.target.value = b'450,0,100,0'
             time.sleep(0.1)
-            while self.permission_flag.value == 0:
-                print('wait for permission 1.5,', self.permission_flag.value)
-                time.sleep(0.2)
-            self.permission_flag.value = 0
+            # while self.permission_flag.value == 0:
+            #     # print('wait for permission 1.5,', self.permission_flag.value)
+            #     old_time = time.time()
+            #     # print('wait for permission of ', self.tello_ip, self.permission_flag.value)
+            #     if time.time() - old_time >= 5:
+            #         with self.cmd.get_lock():
+            #             self.cmd.value = b'>command'
+            #         self.cmd_event.set()
+            #     time.sleep(0.2)
+            # self.permission_flag.value = 0
             while self.Res_flag.value == 0:
                 time.sleep(0.1)
             with self.Res_flag.get_lock():
@@ -281,6 +298,7 @@ class TelloNode:
             print('update cmd, >streamon')
             time.sleep(0.1)
             self.pose.put(self.update_pos('>streamon', self.pose.get()))
+            self.takeoff_flag.value = 0
         while True:
             # print('in update cmd, main alg {}'.format(self.main_flag.value))
             # print('in update cmd, permission {}'.format(self.permission_flag.value))
@@ -345,7 +363,14 @@ class TelloNode:
             self.update_path_event.wait()
             time.sleep(0.1)
             while self.permission_flag.value == 0:
-                print('wait for permission, 2', self.permission_flag.value)
+                # print('wait for permission, 2', self.permission_flag.value)
+                old_time = time.time()
+                # print('wait for permission of ', self.tello_ip, self.permission_flag.value)
+                if time.time() - old_time >= 5:
+                    with self.cmd.get_lock():
+                        self.cmd.value = b'>command'
+                        print('update cmd, >command')
+                    self.cmd_event.set()
                 time.sleep(0.2)
             self.permission_flag.value = 0
             if np.linalg.norm(target[0:3] - pose[0:3]) < 50:

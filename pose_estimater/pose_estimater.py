@@ -169,7 +169,7 @@ class PoseEstimater():
             #print(RR)
             # print('inliers:{}'.format(inliers))
             #print('tvec/n{}'.format(tvec/2))
-            if RR is True and len(inliers)>=7:
+            if RR is True and len(inliers) >= 6:
                 rotM = np.array(cv.Rodrigues(rvec)[0])
                 R = rotM
                 # print(R)
