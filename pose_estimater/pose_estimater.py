@@ -109,7 +109,7 @@ class PoseEstimater():
             if tmp < d:
                 d = tmp
                 obj = _obj
-        print("choose {}".format(obj))
+        # print("choose {}".format(obj))
         des_query = self.dataset[obj]['des']
         kp_query = self.dataset[obj]['kp']
         try:
@@ -140,33 +140,35 @@ class PoseEstimater():
             M, mask = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
             matchesMask = mask.ravel().tolist()
             if M is not None and mask is not None:
-                pxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
-                pxel = cv.perspectiveTransform(pxel, M)
-                if self.showmatchflag == 1:
-                    img_query = self.img_query[obj]
-                    h, w = img_query.shape[0:2]
-                    pts = np.float32([[0, 0], [0, h - 1], [w - 1, h - 1], [w - 1, 0]]).reshape(-1, 1, 2)
-                    dst = cv.perspectiveTransform(pts, M)
-                    #print('sss {}'.format(wpxel))
-                    img_test = cv.polylines(img_test, [np.int32(dst)], True, 255, 1, cv.LINE_AA)
-                    draw_params = dict(matchColor=(0, 255, 0),
-                                       singlePointColor=None,
-                                       matchesMask=matchesMask,
-                                       flags=2)
-                    mimg = cv.drawMatches(img_query, kp_query, img_test, kp_test, good, None, **draw_params)
-                    tmppoint = pxel.reshape(-1, 1)
-                    point = []
-                    for i in range(0, len(tmppoint), 2):
-                        point.append((int(tmppoint[i]+img_query.shape[1]), int(tmppoint[i + 1])))
-                    img = mimg
-                    for p in point:
-                        img = cv.circle(img, p, 4, (255, 0, 0), -1)
-                    # self.queue.put(img)
-                    # plt.imshow(img)
-                    # plt.show()
-                    # cv.imwrite(str(self.index)+'.jpg', img)
-                    self.match_img = img
-                return obj, pxel
+                det = np.linalg.det(M)
+                if det < 1.35 and det > 0.65:
+                    pxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
+                    pxel = cv.perspectiveTransform(pxel, M)
+                    if self.showmatchflag == 1:
+                        img_query = self.img_query[obj]
+                        h, w = img_query.shape[0:2]
+                        pts = np.float32([[0, 0], [0, h - 1], [w - 1, h - 1], [w - 1, 0]]).reshape(-1, 1, 2)
+                        dst = cv.perspectiveTransform(pts, M)
+                        #print('sss {}'.format(wpxel))
+                        img_test = cv.polylines(img_test, [np.int32(dst)], True, 255, 1, cv.LINE_AA)
+                        draw_params = dict(matchColor=(0, 255, 0),
+                                           singlePointColor=None,
+                                           matchesMask=matchesMask,
+                                           flags=2)
+                        mimg = cv.drawMatches(img_query, kp_query, img_test, kp_test, good, None, **draw_params)
+                        tmppoint = pxel.reshape(-1, 1)
+                        point = []
+                        for i in range(0, len(tmppoint), 2):
+                            point.append((int(tmppoint[i]+img_query.shape[1]), int(tmppoint[i + 1])))
+                        img = mimg
+                        for p in point:
+                            img = cv.circle(img, p, 4, (255, 0, 0), -1)
+                        # self.queue.put(img)
+                        # plt.imshow(img)
+                        # plt.show()
+                        # cv.imwrite(str(self.index)+'.jpg', img)
+                        self.match_img = img
+                    return obj, pxel
         return None, None
 
     def estimate_pose(self, _img, estimater_pose):
@@ -218,10 +220,10 @@ class PoseEstimater():
             pose_x = tail_w[0] + d[2]
             # print(self.camera_matrix)
           # print(self.transformpxel)
-            pose_z = self.camera_matrix[0][0] * np.linalg.norm(head_w - tail_w, 2)/np.linalg.norm(self.transformpxel[0]-self.transformpxel[1]) + tail_w[2]
+            pose_z = self.camera_matrix[0][0] * 1.1 * np.linalg.norm(head_w - tail_w, 2)/np.linalg.norm(self.transformpxel[0]-self.transformpxel[1]) + tail_w[2]
             # print(pose_z)
             pose = np.array([pose_x, pose_y,pose_z])
-            print('a:{}'.format(a))
+            # print('a:{}'.format(a))
             if self.showmatchflag == 1:
                 cv.imwrite('/home/jakeluo/tello_project/log/match_img/'+str(pose_x)+'-'+str(pose_y)+'-'+str(pose_z)+'-'+str(a)+'.jpg', self.match_img)
             return pose, -a
