@@ -141,7 +141,7 @@ class PoseEstimater():
             matchesMask = mask.ravel().tolist()
             if M is not None and mask is not None:
                 det = np.linalg.det(M)
-                if det < 1.35 and det > 0.65:
+                if det > 0.65:
                     pxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
                     pxel = cv.perspectiveTransform(pxel, M)
                     if self.showmatchflag == 1:

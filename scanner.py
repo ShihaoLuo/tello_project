@@ -41,8 +41,8 @@ class Scanner:
     def find_available_tello(self, num):
         print('[Start_Searching]Searching for %s available Tello...\n' % num)
         possible_addr = []
-        for i in range(2, 100, 1):
-            possible_addr.append('192.168.50.'+str(i))
+        for i in range(2, 150, 1):
+            possible_addr.append('192.168.1.'+str(i))
         while len(self.tello_ip_list) < num:
             print('[Still_Searching]Trying to find Tello in subnets...\n')
             for tello_ip in self.tello_ip_list:

@@ -42,7 +42,7 @@ def scheduler(tello_node, permission_flag):
                         pass
                     else:
                         d = np.linalg.norm(np.array(target[key][0:2]) - np.array(target[key2][0:2]), 2)
-                        if d <= 150:
+                        if d <= 200:
                             tmp.append(key2)
                 if len(tmp) == 0:
                     permission_list.append(key)
@@ -90,7 +90,8 @@ def received_ok(kwargs):
         try:
             response, ip = soc_res.recvfrom(1024)
             ip = ''.join(str(ip[0]))
-            if response.decode(encoding='utf-8', errors='ignore').upper() == 'OK':
+            res = response.decode(encoding='utf-8', errors='ignore').upper()
+            if res == 'OK' or res == 'out of range':
                 with kwargs[ip].get_lock():
                     kwargs[ip].value = 1
                     # print('in received ok, set res of {} from 0 to {}'.format(ip, kwargs[ip].value))
@@ -102,8 +103,8 @@ def received_ok(kwargs):
 
 
 path1 = [[240, 80, 240, 0],
-         [240, 800, 240, 0],
-         [500, 800, 240, 0],
+         [240, 650, 240, 0],
+         [500, 650, 240, 0],
          [500, 80, 240, 0]]
 
 num = 2
@@ -129,6 +130,8 @@ per_thread = multiprocessing.Process(target=scheduler, args=(Node, Permission_fl
 per_thread.start()
 old = time.time()
 old1 = time.time()
+old2 = time.time()
+face_flag = 0
 try:
     while True:
         # print('in main, target:', Node[tello_list[0][0]].get_target())
@@ -140,16 +143,98 @@ try:
             main_thread_flag.Value = 1
             time.sleep(1)
             break
-        if time.time() - old >= 10:
-            for i in range(len(tello_list)):
-                if Node[tello_list[i][0]].get_path_status() == 1:
-                    Node[tello_list[i][0]].update_path(path1)
-                # tmp = Node[tello_list[i][0]].get_up_camera_image()
-                # if tmp is not None:
-                #     pose = [str(i) for i in tmp['pose']]
-                #     pose = '-'.join(pose)
-                #     cv.imwrite('./'+pose+'.jpg', tmp['image'])
-            old = time.time()
+        if face_flag == 0:
+            if time.time() - old >= 5:
+                for i in range(len(tello_list)):
+                    if Node[tello_list[i][0]].get_path_status() == 1:
+                        Node[tello_list[i][0]].update_path(path1)
+                    # tmp = Node[tello_list[i][0]].get_up_camera_image()
+                    # if tmp is not None:
+                    #     pose = [str(i) for i in tmp['pose']]
+                    #     pose = '-'.join(pose)
+                    #     cv.imwrite('./'+pose+'.jpg', tmp['image'])
+                old = time.time()
+            if time.time() - old2 >= 1:
+                for i in range(len(tello_list)):
+                    f_point, pose = Node[tello_list[i][0]].get_face_point()
+                    if f_point is not None:
+                        print("get a face. f_point:{}, pose:{}".format(f_point, pose))
+                        face_flag = 1
+                        print("drone {} monitoring.".format(tello_list[i][0]))
+                        old2 = time.time()
+        else:
+            if time.time() - old2 >= 1:
+                for i in range(len(tello_list)):
+                    f_point, pose = Node[tello_list[i][0]].get_face_point()
+                    if f_point is not None:
+                        print("get a face. f_point:{}, pose:{}".format(f_point, pose))
+                        path = [pose]
+                        path[0][0] = path[0][0] + 50
+                        path[0][2] = path[0][2] - 75
+                        x = path[0][0]
+                        z = path[0][2]
+                        Node[tello_list[i][0]].update_path(path)
+                        c_point = [f_point[1]/2+f_point[3]/2, f_point[0]/2+f_point[2]/2]
+                        while abs(c_point[0] - 324) > 50:
+                            print("in y:", c_point[0] - 324)
+                            f_point, pose = Node[tello_list[i][0]].get_face_point()
+                            if f_point is not None:
+                                print("get a face. f_point:{}, pose:{}".format(f_point, pose))
+                                path = [pose]
+                                path[0][2] = z
+                                path[0][0] = x
+                                if c_point[0] - 324 > 0:
+                                    path[0][1] = path[0][1] - 30
+                                else:
+                                    path[0][1] = path[0][1] + 30
+                                print("update path:", path)
+                                Node[tello_list[i][0]].update_path(path)
+                                c_point = [f_point[1] / 2 + f_point[3] / 2, f_point[0] / 2 + f_point[2] / 2]
+                            time.sleep(3)
+                        # x = path[0][0]
+                        y = path[0][1]
+                        z = path[0][2]
+                        # d = 921.17 * 22.5 / np.linalg.norm([f_point[1] - f_point[3], f_point[0] - f_point[2]])
+                        d = np.linalg.norm([f_point[1] - f_point[3], f_point[0] - f_point[2]])
+                        print(d)
+                        while d < 50:
+                            print("in x, d:", d)
+                            f_point, pose = Node[tello_list[i][0]].get_face_point()
+                            if f_point is not None:
+                                print("get a face. f_point:{}, pose:{}".format(f_point, pose))
+                                path = [pose]
+                                # path[0][0] = x
+                                path[0][1] = y
+                                path[0][2] = z
+                                d = np.linalg.norm([f_point[1] - f_point[3], f_point[0] - f_point[2]])
+                                print("D:", d)
+                                if d < 50:
+                                    path[0][0] = path[0][0] + 30
+                                else:
+                                    path[0][0] = path[0][0] - 30
+                                print("update path:", path)
+                                Node[tello_list[i][0]].update_path(path)
+                                c_point = [f_point[1] / 2 + f_point[3] / 2, f_point[0] / 2 + f_point[2] / 2]
+                            time.sleep(3)
+                        print("drone {} at {} locking target.".format(tello_list[i][0], path[0]))
+                        tmp = Node[tello_list[i][0]].get_up_camera_image()
+                        if tmp is not None:
+                            pose = [str(i) for i in path]
+                            pose = '-'.join(pose)
+                            cv.imwrite('./'+pose+'.jpg', tmp['image'])
+                        f_point, pose = Node[tello_list[i][0]].get_face_point()
+                        if f_point is not None:
+                            d = 921.17 * 22.5 / np.linalg.norm([f_point[1]-f_point[3], f_point[0] - f_point[2]])
+                            print("D:", d)
+                        time.sleep(20)
+                        for i in range(len(tello_list)):
+                            Node[tello_list[i][0]].send_command('>streamoff')
+                            time.sleep(0.5)
+                            Node[tello_list[i][0]].send_command('>land')
+                        print('landing....')
+                        main_thread_flag.value = 1
+                        break
+                old2 = time.time()
         if time.time() - old1 >= 300:
             for i in range(len(tello_list)):
                 Node[tello_list[i][0]].send_command('>streamoff')
