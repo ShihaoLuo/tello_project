@@ -10,6 +10,7 @@ import time
 import multiprocessing
 import h264decoder
 from pose_estimater.pose_estimater import *
+import face_recognition
 import psutil
 import os
 import signal
@@ -27,6 +28,7 @@ class TelloNode:
         self.video_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.video_socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 512 * 1024)
         self.video_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        # self.video_socket.settimeout(0.5)
         self.video_socket.bind(('', self.video_port))
         self.h264decoder = h264decoder.H264Decoder()
         self.queue = multiprocessing.Queue()
@@ -42,17 +44,44 @@ class TelloNode:
         self.update_path_flag = multiprocessing.Value('i', 0)
         self.takeoff_flag = multiprocessing.Value('i', 1)
         self.Res_flag = res_flag
-        self.cmd = multiprocessing.Array('c', 20)
+        self.cmd = multiprocessing.Array('c', 30)
         self.cmd_event = multiprocessing.Event()
         self.update_path_event = multiprocessing.Event()
         self.main_flag = main_flag
         self.permission_flag = p_flag
-        self.target = multiprocessing.Array('c', 20)
+        self.target = multiprocessing.Array('c', 40)
         self.init_pose = []
         self.show_video_thread = multiprocessing.Process(target=self.show_pic)
         self.show_video_thread.start()
         self.switch_count = 3
         self.thread_list = []
+        self.scan_face_flag = multiprocessing.Value('i', 0)
+        self.face_point = multiprocessing.Array('c', 30)
+        self.face_detected_pose = multiprocessing.Array('c', 40)
+
+    def scan_face(self):
+        while True:
+            if self.queue_up_camera.empty() is False:
+                img = self.queue_up_camera.get()
+                img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+                time1 = time.time()
+                pose = self.pose.get()
+                self.pose.put(pose)
+                for i in range(len(pose)):
+                    pose[i] = int(pose[i])
+                self.face_detected_pose.value = ','.join(map(str, pose)).encode()
+                locate = face_recognition.face_locations(img, number_of_times_to_upsample=2, model='hog')
+                print("face recognition needs {}s.".format(time.time()-time1))
+                print(locate)
+                try:
+                    if len(locate) != 0:
+                        # c_point = np.array([int(locate[0][0]/2+locate[0][2]/2), int(locate[0][1]/2+locate[0][3]/2)])
+                        self.face_point.value = ','.join(map(str, locate[0])).encode()
+                    else:
+                        self.face_point.value = ''.encode()
+                except ValueError as e:
+                    self.face_point.value = ''.encode()
+            time.sleep(1)
 
     def get_up_camera_image(self):
         if self.queue_up_camera.empty() is True:
@@ -89,12 +118,12 @@ class TelloNode:
                 f = self.queue.get()
                 self.queue.put(f)
                 cv.imshow(self.tello_ip, f)
-                time.sleep(0.01)
-            if self.queue_up_camera.empty() is False:
-                f = self.queue_up_camera.get()
-                self.queue_up_camera.put(f)
-                cv.imshow(self.tello_ip+'-up-camera', f)
-                time.sleep(0.01)
+                time.sleep(0.04)
+            # if self.queue_up_camera.empty() is False:
+            #     f = self.queue_up_camera.get()
+            #     self.queue_up_camera.put(f)
+            #     cv.imshow(self.tello_ip+'-up-camera', f)
+            #     time.sleep(0.01)
 
     def get_target(self):
         if self.target.value.decode() == '':
@@ -102,8 +131,24 @@ class TelloNode:
         else:
             tmp = self.target.value
             tmp = tmp.decode().split(',')
-            tmp = list(map(int, tmp))
+            try:
+                tmp = list(map(int, tmp))
+            except ValueError as e:
+                return None
             return tmp
+
+    def get_face_point(self):
+        if self.face_point.value.decode() == '':
+            return None, None
+        else:
+            tmp = self.face_point.value
+            tmp = tmp.decode().split(',')
+            tmp = list(map(int, tmp))
+            tmp2 = self.face_detected_pose.value
+            tmp2 = tmp2.decode().split(',')
+            tmp2 = list(map(float, tmp2))
+            self.face_point.value = ''.encode()
+            return tmp, tmp2
 
     def get_thread_flag(self):
         return self.run_thread_flag
@@ -148,11 +193,19 @@ class TelloNode:
         if self.takeoff_flag.value == 1:
             pass
         else:
+            pose = self.pose.get()
+            self.pose.put(pose)
             path = np.array(path1)
+            path = np.insert(path, 0, pose, axis=0)
             path_x = path[:, 0]
             path_y = path[:, 1]
             path_z = path[:, 2]
             path_theta = path[:, 3]
+            for i in range(len(path_x)):
+                path_x[i] = int(path_x[i])
+                path_y[i] = int(path_y[i])
+                path_z[i] = int(path_z[i])
+                path_theta[i] = int(path_theta[i])
             for i in range(5):
                 path_x = path_x.repeat(2)[:-1]
                 path_y = path_y.repeat(2)[:-1]
@@ -201,43 +254,30 @@ class TelloNode:
                 frame = np.fromstring(frame, dtype=np.ubyte, count=len(frame), sep='')
                 frame = (frame.reshape((h, ls // 3, 3)))
                 frame = frame[:, :w, :]
-                if h == 240 and ls == 960:
-                    while self.queue.empty() is False:
-                        self.queue.get()
-                    self.queue.put(frame)
-                else:
-                    while self.queue_up_camera.empty() is False:
-                        self.queue_up_camera.get()
-                    self.queue_up_camera.put(frame)
+                # if h == 240:
+                while self.queue.qsize() > 1:
+                    self.queue.get()
+                self.queue.put(frame)
+                # else:
+                #     while self.queue_up_camera.empty() is False:
+                #         self.queue_up_camera.get()
+                #     self.queue_up_camera.put(frame)
 
     def _receive_video_thread(self):
         pack_data = ''
         print("receive video thread start....")
         while True:
-            res_string, ip = self.video_socket.recvfrom(1500)
-            pack_data += res_string.hex()
-            if len(res_string) != 1460:
-                try:
+            try:
+                # print("in the receive video thread while loop...")
+                res_string, ip = self.video_socket.recvfrom(2000)
+                pack_data += res_string.hex()
+                if len(res_string) != 1460:
+                    # print("The size of packet data is %d.\n" % len(pack_data))
                     self._h264_decode(bytes.fromhex(pack_data))
-                except:
-                    print("decode error.")
-                    time.sleep(2)
-                pack_data = ''
-                # if time.time() - oldtime > 5:
-                #     print("get video data from", self.tello_ip)
-                #     oldtime = time.time()
-            if self.run_thread_flag.value == 1 or self.main_flag.value == 1:
-                time.sleep(1)
-                # self.video_socket.close()
-                print('video thread die..')
-                break
-            # except:
-            #     print("Caught exception socket.error(video_thread): %s in node" % exc)
-            #     break
-        print('video thread died...')
-
-    # def update_res(self):
-    #     self.cmd_res.put(1)
+                    # self.Queue_res_buf.put(self.res_string)
+                    pack_data = ''
+            except socket.error as exc:
+                print("Caught exception socket.error(video_thread): %s" % exc)
 
     def send_command(self, command):
         if command != '' and command != '\n':
@@ -262,15 +302,6 @@ class TelloNode:
                     wait_time = cnt
 
     def run_thread(self):
-        # last_per = 1
-        print('run thread start....')
-        video_thread = multiprocessing.Process(target=self._receive_video_thread)
-        video_thread.start()
-        print("video pid of {} is {}".format(self.tello_ip, video_thread.pid))
-        cmd_thread = multiprocessing.Process(target=self.update_cmd)
-        cmd_thread.start()
-        print("cmd thread of {} is {}".format(self.tello_ip, cmd_thread.pid))
-        time.sleep(1)
         old_time = time.time()
         with self.cmd.get_lock():
             self.cmd.value = b'>command'
@@ -293,7 +324,7 @@ class TelloNode:
             #     per = sum(test_list)/len(test_list)
             #     if last_per == 0 and per == 0:
             #         print("Kill the video thread.")
-            #         os.kill(video_thread.pid, signal.SIGKILL)
+            #         os.kill(video_thread.pid, signal.SIGKILL)1
             #         print("restart video thread.")
             #         video_thread = multiprocessing.Process(target=self._receive_video_thread)
             #         video_thread.start()
@@ -325,9 +356,21 @@ class TelloNode:
         run_thread = multiprocessing.Process(target=self.run_thread)
         run_thread.start()
         print("run pid of {} is {}".format(self.tello_ip, run_thread.pid))
+        # last_per = 1
+        print('run thread start....')
+        video_thread = multiprocessing.Process(target=self._receive_video_thread)
+        video_thread.start()
+        print("video pid of {} is {}".format(self.tello_ip, video_thread.pid))
+        cmd_thread = multiprocessing.Process(target=self.update_cmd)
+        cmd_thread.start()
+        print("cmd thread of {} is {}".format(self.tello_ip, cmd_thread.pid))
+        time.sleep(1)
+        scan_face_thread = multiprocessing.Process(target=self.scan_face)
+        scan_face_thread.start()
+        print("scan_face thread of {} is {}".format(self.tello_ip, scan_face_thread.pid))
 
     def update_pos(self, _last_cmd, _last_pose):
-        time.sleep(0.3)
+        time.sleep(0.1)
         # img = None
         pose = np.array([0, 0, 0, 0])
         if '>ccw' in _last_cmd:
@@ -374,19 +417,24 @@ class TelloNode:
                 #     img = self.queue.get()
                 #     _pose, yaw = self.pose_estimater.estimate_pose(img)
                 if _pose is not None:
-                    print('in img2')
-                    pose[0] = int(_pose[0])
-                    pose[1] = int(_pose[1])
-                    # if _pose[2] == 0:
-                    #     pose[2] = _last_pose[2]
-                    # else:
-                    #     pose[2] = _pose[2]
-                    pose[2] = int(_pose[2])
-                    if yaw < 0:
-                        yaw += 360
-                    pose[3] = int(yaw)
-                    # print('update pose of:', self.tello_ip, pose)
-                    # return pose
+                    _pose = _pose.reshape(1, -1)[0]
+                    if np.linalg.norm(pose[0:2]-_pose[0:2]) < 150:
+                        print('in img2')
+                        pose[0] = int(_pose[0])
+                        pose[1] = int(_pose[1])
+                        # if _pose[2] == 0:
+                        #     pose[2] = _last_pose[2]
+                        # else:
+                        #     pose[2] = _pose[2]
+                        pose[2] = int(_pose[2])
+                        if yaw < 0:
+                            yaw += 360
+                        pose[3] = int(yaw)
+                        # print('update pose of:', self.tello_ip, pose)
+                        # return pose
+                    else:
+                        print("error:", np.linalg.norm(pose[0:2]-_pose[0:2]))
+                        print("_pose: ", _pose)
         print('update pose of:', self.tello_ip, pose)
         return pose
 
@@ -455,36 +503,32 @@ class TelloNode:
             with self.cmd.get_lock():
                 self.cmd.value = b'>streamon'
             self.cmd_event.set()
-            while self.Res_flag.value == 0:
-                time.sleep(0.1)
-            with self.Res_flag.get_lock():
-                self.Res_flag.value = 0
-            # self.cmd_res.get()
-            self.pose.put(self.update_pos('>setersolution low', self.pose.get()))
-            with self.cmd.get_lock():
-                self.cmd.value = b'>setresolution low'
-            self.cmd_event.set()
+            # old_time = time.time()
+            # while self.Res_flag.value == 0:
+            #     if time.time() - old_time > 5:
+            #         with self.cmd.get_lock():
+            #             self.cmd.value = ('>' + cmd).encode()
+            #         self.cmd_event.set()
+            #         old_time = time.time()
+            #     time.sleep(0.1)
+            # with self.Res_flag.get_lock():
+            #     self.Res_flag.value = 0
+            # # self.cmd_res.get()
+            # self.pose.put(self.update_pos('>setersolution low', self.pose.get()))
+            # with self.cmd.get_lock():
+            #     self.cmd.value = b'>setresolution low'
+            # self.cmd_event.set()
             # print('update cmd, >setresolution low')
-            while self.Res_flag.value == 0:
-                time.sleep(0.1)
-            with self.Res_flag.get_lock():
-                self.Res_flag.value = 0
-            # self.cmd_res.get()
-            self.pose.put(self.update_pos('>setfps high', self.pose.get()))
-            with self.cmd.get_lock():
-                self.cmd.value = b'>setfps high'
-            self.cmd_event.set()
-            # print('update cmd, >setfps high')
-            while self.Res_flag.value == 0:
-                time.sleep(0.1)
-            with self.Res_flag.get_lock():
-                self.Res_flag.value = 0
-            # self.cmd_res.get()
-            self.pose.put(self.update_pos('>downvision 1', self.pose.get()))
-            with self.cmd.get_lock():
-                self.cmd.value = b'>downvision 1'
-            self.cmd_event.set()
-            # print('update cmd, >downvision 1')
+            # while self.Res_flag.value == 0:
+            #     time.sleep(0.1)
+            # with self.Res_flag.get_lock():
+            #     self.Res_flag.value = 0
+            # # self.cmd_res.get()
+            # self.pose.put(self.update_pos('>setfps high', self.pose.get()))
+            # with self.cmd.get_lock():
+            #     self.cmd.value = b'>setfps high'
+            # self.cmd_event.set()
+            # # print('update cmd, >setfps high')
             self.takeoff_flag.value = 0
         while True:
             # print('in update cmd, main alg {}'.format(self.main_flag.value))
@@ -521,31 +565,32 @@ class TelloNode:
             print("target:{}".format(target))
             count = count + 1
             # time.sleep(0.1)
+            old_time = time.time()
             while self.permission_flag.value == 0:
                 # print('wait for permission, 2', self.permission_flag.value)
-                old_time = time.time()
                 # print('wait for permission of ', self.tello_ip, self.permission_flag.value)
                 if time.time() - old_time >= 5:
                     with self.cmd.get_lock():
                         self.cmd.value = b'>command'
                         # print('update cmd, >command')
                     self.cmd_event.set()
+                    old_time = time.time()
                 time.sleep(0.2)
             self.permission_flag.value = 0
+            old_time = time.time()
             while self.Res_flag.value == 0:
+                if time.time() - old_time > 5:
+                    with self.cmd.get_lock():
+                        self.cmd.value = ('>' + cmd).encode()
+                    self.cmd_event.set()
+                    old_time = time.time()
                 time.sleep(0.1)
             with self.Res_flag.get_lock():
                 self.Res_flag.value = 0
-            # with self.cmd.get_lock():
-            #     self.cmd.value = b'>downvision 1'
-            # self.cmd_event.set()
             self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
-            # with self.cmd.get_lock():
-            #     self.cmd.value = b'>downvision 0'
-            # self.cmd_event.set()
             pose = self.pose.get()
             self.pose.put(pose)
-            if np.linalg.norm(target[0:3] - pose[0:3]) < 25:
+            if np.linalg.norm(target[0:3] - pose[0:3]) < 50:
                 cmd = 'command'
                 with self.cmd.get_lock():
                     self.cmd.value = ('>' + cmd).encode()
@@ -557,10 +602,11 @@ class TelloNode:
                               [0, 0, 1]])
                 tmp = target[0:3] - pose[0:3]
                 tmp = np.dot(m, tmp)
-                if tmp[2] > 10:
-                    tmp[2] = 10
-                elif tmp[2] < -10:
-                    tmp[2] = -10
+                if abs(tmp[0]) + abs(tmp[1]) > 50:
+                    if tmp[2] > 15:
+                        tmp[2] = 15
+                    elif tmp[2] < -15:
+                        tmp[2] = -15
                 tmp = np.append(tmp, 100)
                 tmp = [int(i) for i in tmp]
                 tmp = [str(i) for i in tmp]
@@ -576,6 +622,9 @@ class TelloNode:
                     self.cmd_event.set()
                 except ValueError:
                     print(cmd)
+                    with self.cmd.get_lock():
+                        self.cmd.value = b'>command'
+                    self.cmd_event.set()
                 # print('update cmd, >' + cmd)
                 # self.send_command('>' + cmd)
             # print('path lock released by cmd')
@@ -583,35 +632,49 @@ class TelloNode:
                 while self.path.empty() is False:
                     self.path.get()
                 break
+            old_time = time.time()
             while self.Res_flag.value == 0:
+                if time.time() - old_time > 5:
+                    with self.cmd.get_lock():
+                        self.cmd.value = ('>' + cmd).encode()
+                    self.cmd_event.set()
+                    old_time = time.time()
                 time.sleep(0.1)
             with self.Res_flag.get_lock():
                 self.Res_flag.value = 0
             self.pose.put(self.update_pos('>' + cmd, self.pose.get()))
             pose = self.pose.get()
             self.pose.put(pose)
-            if camera_flag == 1 and count == self.switch_count:
-                with self.cmd.get_lock():
-                    self.cmd.value = b'>downvision 1'
-                self.cmd_event.set()
-                camera_flag = 0
-                count = 0
-                time.sleep(0.2)
-            if camera_flag == 0 and count == self.switch_count:
-                with self.cmd.get_lock():
-                    self.cmd.value = b'>downvision 0'
-                self.cmd_event.set()
-                camera_flag = 1
-                count = 0
-                time.sleep(0.2)
-            else:
-                with self.cmd.get_lock():
-                    self.cmd.value = b'>command'
-                self.cmd_event.set()
-            while self.Res_flag.value == 0:
-                time.sleep(0.1)
-            with self.Res_flag.get_lock():
-                self.Res_flag.value = 0
+            # if camera_flag == 1 and count == self.switch_count:
+            #     with self.cmd.get_lock():
+            #         self.cmd.value = b'>downvision 1'
+            #     self.cmd_event.set()
+            #     camera_flag = 0
+            #     count = 0
+            #     time.sleep(0.2)
+            # if camera_flag == 0 and count == self.switch_count:
+            #     with self.cmd.get_lock():
+            #         self.cmd.value = b'>downvision 0'
+            #     self.cmd_event.set()
+            #     camera_flag = 1
+            #     count = 0
+            #     time.sleep(0.2)
+            # else:
+            #     cmd = 'command'
+            #     with self.cmd.get_lock():
+            #         self.cmd.value = ('>' + cmd).encode()
+            #     self.cmd_event.set()
+            #     time.sleep(0.1)
+            # old_time = time.time()
+            # while self.Res_flag.value == 0:
+            #     if time.time() - old_time > 5:
+            #         with self.cmd.get_lock():
+            #             self.cmd.value = ('>' + cmd).encode()
+            #         self.cmd_event.set()
+            #         old_time = time.time()
+            #     time.sleep(0.1)
+            # with self.Res_flag.get_lock():
+            #     self.Res_flag.value = 0
             theta = target[3] - pose[3]
             if abs(theta) > 5:
                 if theta < 0:
