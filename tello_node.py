@@ -26,7 +26,7 @@ class TelloNode:
         self.ctr_socket.bind(('', self.ctr_port))
         self.pose = multiprocessing.Queue()
         self.video_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.video_socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 512 * 1024)
+        self.video_socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 10 * 1024)
         self.video_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         # self.video_socket.settimeout(0.5)
         self.video_socket.bind(('', self.video_port))
@@ -159,6 +159,11 @@ class TelloNode:
         path_y = path[:, 1]
         path_z = path[:, 2]
         path_theta = path[:, 3]
+        for i in range(len(path_x)):
+            path_x[i] = int(path_x[i])
+            path_y[i] = int(path_y[i])
+            path_z[i] = int(path_z[i])
+            path_theta[i] = int(path_theta[i])
         for i in range(5):
             path_x = path_x.repeat(2)[:-1]
             path_y = path_y.repeat(2)[:-1]
@@ -167,7 +172,7 @@ class TelloNode:
             path_x[1::2] = (path_x[2::2] - path_x[1::2]) / 2 + path_x[1::2]
             path_y[1::2] = (path_y[2::2] - path_y[1::2]) / 2 + path_y[1::2]
             path_z[1::2] = (path_z[2::2] - path_z[1::2]) / 2 + path_z[1::2]
-            path_theta[1::2] = (path_theta[2::2] - path_theta[1::2]) / 2 + path_theta[1::2]
+            # path_theta[1::2] = (path_theta[2::2] - path_theta[1::2]) / 2 + path_theta[1::2]
         distance = np.sqrt(np.ediff1d(path_x) ** 2 + np.ediff1d(path_y) ** 2 + np.ediff1d(path_z) ** 2)
         d = 0.0
         equdist_waypoint = [[path_x[0]], [path_y[0]], [path_z[0]], [path_theta[0]]]
@@ -179,8 +184,21 @@ class TelloNode:
                 d = 0.0
         equdist_waypoint = np.append(equdist_waypoint, path[-1])
         path = equdist_waypoint.reshape((-1, 4))
-        for t in path:
-            self.path.put(t)
+        self.update_path_event.clear()
+        # print('updating the path______________________________________', self.tello_ip)
+        tmp = np.array(path)
+        d = np.array([])
+        for t in tmp:
+            d = np.append(d, np.linalg.norm(np.array(pose[0:3]) - t[0:3], 2))
+        a = np.argmin(d)
+        while self.path.empty() is False:
+            self.path.get()
+        if a >= len(tmp) - 2:
+            for t in tmp:
+                self.path.put(t)
+        else:
+            for t in tmp[a + 1:]:
+                self.path.put(t)
         self.pose.put(pose)
         self.target.value = ','.join(map(str, pose)).encode()
         self.init_pose = pose
@@ -214,7 +232,7 @@ class TelloNode:
                 path_x[1::2] = (path_x[2::2] - path_x[1::2]) / 2 + path_x[1::2]
                 path_y[1::2] = (path_y[2::2] - path_y[1::2]) / 2 + path_y[1::2]
                 path_z[1::2] = (path_z[2::2] - path_z[1::2]) / 2 + path_z[1::2]
-                path_theta[1::2] = (path_theta[2::2] - path_theta[1::2]) / 2 + path_theta[1::2]
+                # path_theta[1::2] = (path_theta[2::2] - path_theta[1::2]) / 2 + path_theta[1::2]
             distance = np.sqrt(np.ediff1d(path_x) ** 2 + np.ediff1d(path_y) ** 2 + np.ediff1d(path_z) ** 2)
             d = 0.0
             equdist_waypoint = [[path_x[0]], [path_y[0]], [path_z[0]], [path_theta[0]]]
@@ -229,6 +247,7 @@ class TelloNode:
             self.update_path_event.clear()
             print('updating the path______________________________________', self.tello_ip)
             tmp = np.array(path)
+            print("update path:", tmp)
             d = np.array([])
             pose = self.pose.get()
             self.pose.put(pose)
@@ -269,7 +288,7 @@ class TelloNode:
         while True:
             try:
                 # print("in the receive video thread while loop...")
-                res_string, ip = self.video_socket.recvfrom(2000)
+                res_string, ip = self.video_socket.recvfrom(2048)
                 pack_data += res_string.hex()
                 if len(res_string) != 1460:
                     # print("The size of packet data is %d.\n" % len(pack_data))
@@ -360,6 +379,7 @@ class TelloNode:
         print('run thread start....')
         video_thread = multiprocessing.Process(target=self._receive_video_thread)
         video_thread.start()
+        os.system("taskset -cp 12,15 " + str(video_thread.pid))
         print("video pid of {} is {}".format(self.tello_ip, video_thread.pid))
         cmd_thread = multiprocessing.Process(target=self.update_cmd)
         cmd_thread.start()
@@ -491,7 +511,7 @@ class TelloNode:
                 self.Res_flag.value = 0
             self.pose.put(self.update_pos('>up 130', self.pose.get()))
             with self.cmd.get_lock():
-                self.cmd.value = b'>up 130'
+                self.cmd.value = b'>up 100'
             self.cmd_event.set()
             # print('update cmd, >up 130')
             while self.Res_flag.value == 0:
@@ -502,6 +522,15 @@ class TelloNode:
             self.pose.put(self.update_pos('>streamon', self.pose.get()))
             with self.cmd.get_lock():
                 self.cmd.value = b'>streamon'
+            self.cmd_event.set()
+            while self.Res_flag.value == 0:
+                time.sleep(0.1)
+            with self.Res_flag.get_lock():
+                self.Res_flag.value = 0
+            # self.cmd_res.get()
+            self.pose.put(self.update_pos('>streamon', self.pose.get()))
+            with self.cmd.get_lock():
+                self.cmd.value = b'>command'
             self.cmd_event.set()
             # old_time = time.time()
             # while self.Res_flag.value == 0:

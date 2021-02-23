@@ -92,7 +92,7 @@ class PoseEstimater():
 
     def pic_match(self, _img, _estimater_pose):
         img_test = _img
-        d = 10000
+        d = 600
         obj = ''
         #img_test = cv.filter2D(img_test, -1, self.kernel)
         #img_query = _img_query
@@ -104,10 +104,15 @@ class PoseEstimater():
         for _obj in self.dataset.keys():
             tmp_list = np.array(self.dataset[_obj]['flag_point'])
             tmp = np.linalg.norm(tmp_list-np.array(_estimater_pose[0:3]), 2)
+            # print("tmp list:", tmp_list)
+            # print("estimater_pose:",_estimater_pose)
+            # print("d:", tmp)
             # print('obj:{}, distance:{}'.format(_obj, tmp))
             if tmp < d:
                 d = tmp
                 obj = _obj
+        if obj == '':
+            return None, None
         # print("choose {}".format(obj))
         des_query = self.dataset[obj]['des']
         kp_query = self.dataset[obj]['kp']
@@ -140,7 +145,7 @@ class PoseEstimater():
             matchesMask = mask.ravel().tolist()
             if M is not None and mask is not None:
                 det = np.linalg.det(M)
-                print("det:", det)
+                # print("det:", det)
                 if det > 0.4:
                     pxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
                     pxel = cv.perspectiveTransform(pxel, M)

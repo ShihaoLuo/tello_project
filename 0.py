@@ -102,12 +102,13 @@ def received_ok(kwargs):
             print('Exception occur in received_ok thread...')
 
 
-path1 = [[240, 0, 240, 270],
-         [400, 0, 240, 270],
-         [400, 400, 240, 270],
-         [240, 400, 240, 270]]
+path1 = [[240, 0, 240, 0],
+         [500, 0, 240, 90],
+         [500, 700, 240, 180],
+         [240, 700, 240, 270],
+         [240, 600, 240, 270]]
 
-num = 1
+num = 4
 Node = {}
 Res_flag = {}
 Permission_flag = {}
