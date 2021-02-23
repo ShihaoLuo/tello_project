@@ -213,6 +213,9 @@ class TelloNode:
         else:
             pose = self.pose.get()
             self.pose.put(pose)
+            last_path = self.path.get()
+            self.path.put(last_path)
+            pose[3] = last_path[3]
             path = np.array(path1)
             path = np.insert(path, 0, pose, axis=0)
             path_x = path[:, 0]
