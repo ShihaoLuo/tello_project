@@ -124,7 +124,7 @@ class TelloNode:
                 if self.queue.empty():
                     self.queue.put(f)
                 cv.imshow(self.tello_ip, f)
-                time.sleep(0.04)
+            time.sleep(0.02)
             # if self.queue_up_camera.empty() is False:
             #     f = self.queue_up_camera.get()
             #     self.queue_up_camera.put(f)
@@ -193,6 +193,7 @@ class TelloNode:
         self.update_path_event.clear()
         # print('updating the path______________________________________', self.tello_ip)
         tmp = np.array(path)
+        tmp[-2][3] = tmp[-1][3]
         d = np.array([])
         for t in tmp:
             d = np.append(d, np.linalg.norm(np.array(pose[0:3]) - t[0:3], 2))
@@ -256,6 +257,7 @@ class TelloNode:
             self.update_path_event.clear()
             print('updating the path______________________________________', self.tello_ip)
             tmp = np.array(path)
+            tmp[-2][3] = tmp[-1][3]
             print("update path:", tmp)
             d = np.array([])
             for t in tmp:
@@ -290,22 +292,22 @@ class TelloNode:
                 queue.put(frame)
 
     def _receive_video_thread(self, queue):
-        # pack_data = ''
-        buffer = BytesIO()
+        pack_data = ''
+        # buffer = BytesIO()
         print("receive video thread start....")
         while True:
             try:
                 # print("in the receive video thread while loop...")
                 res_string, ip = self.video_socket.recvfrom(2048)
-                buffer.write(res_string)
-                # pack_data += res_string.hex()
+                # buffer.write(res_string)
+                pack_data += res_string.hex()
                 if len(res_string) != 1460:
                     # print("The size of packet data is %d.\n" % len(pack_data))
-                    # tmp = bytes.fromhex(pack_data)
-                    buffer.seek(0)
-                    self._h264_decode(buffer.getvalue(), queue)
+                    tmp = bytes.fromhex(pack_data)
+                    # buffer.seek(0)
+                    self._h264_decode(tmp, queue)
                     # self.Queue_res_buf.put(self.res_string)
-                    # pack_data = ''
+                    pack_data = ''
                     # buffer.seek(0)
                     # p = av.open(buffer)
                     # print(type(p))

@@ -16,7 +16,7 @@ import numpy as np
 # import joblib
 #import set_world_point
 
-object_name = 'post1'
+object_name = 'post2'
 
 def save_2_jason(_file, arr):
     data = {}
@@ -100,8 +100,8 @@ def draw_roi(event, x, y, flags, param):
 MIN_MATH_COUNT = 20
 kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
 
-img_test = cv.imread('./dataset/'+object_name+'/images/'+object_name+'7.jpg')
-img_query = cv.imread('./dataset/'+object_name+'/images/'+object_name+'1.jpg')
+img_test = cv.imread('./dataset/'+object_name+'/images/'+object_name+'6.jpg')
+img_query = cv.imread('./dataset/'+object_name+'/images/'+object_name+'0.jpg')
 #img_test = cv.filter2D(img_test, -1, kernel)
 #img_query = cv.filter2D(img_query, -1, kernel)
 img_query = get_ROI(img_query)

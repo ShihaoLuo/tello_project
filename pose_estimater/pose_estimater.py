@@ -92,7 +92,7 @@ class PoseEstimater():
 
     def pic_match(self, _img, _estimater_pose):
         img_test = _img
-        d = 600
+        d = 700
         obj = ''
         #img_test = cv.filter2D(img_test, -1, self.kernel)
         #img_query = _img_query
@@ -104,6 +104,7 @@ class PoseEstimater():
         for _obj in self.dataset.keys():
             tmp_list = np.array(self.dataset[_obj]['flag_point'])
             tmp = np.linalg.norm(tmp_list-np.array(_estimater_pose[0:3]), 2)
+            # print("D:", tmp)
             # print("tmp list:", tmp_list)
             # print("estimater_pose:",_estimater_pose)
             # print("d:", tmp)
@@ -146,7 +147,7 @@ class PoseEstimater():
             if M is not None and mask is not None:
                 det = np.linalg.det(M)
                 # print("det:", det)
-                if det > 0.4:
+                if det > 0.3:
                     pxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
                     pxel = cv.perspectiveTransform(pxel, M)
                     if self.showmatchflag == 1:
@@ -195,7 +196,7 @@ class PoseEstimater():
             RR, rvec, tvec, inliers = cv.solvePnPRansac(**pnppara)
             # print(rvec)
             # print(RR)
-            print('inliers:{}'.format(inliers))
+            # print('inliers:{}'.format(inliers))
             # print('tvec/n{}'.format(tvec/2))
             if RR is True and len(inliers) >= 5:
                 rotM = np.array(cv.Rodrigues(rvec)[0])
