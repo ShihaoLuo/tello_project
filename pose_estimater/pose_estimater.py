@@ -147,7 +147,7 @@ class PoseEstimater():
             if M is not None and mask is not None:
                 det = np.linalg.det(M)
                 # print("det:", det)
-                if det > 0.3:
+                if det > 0.4:
                     pxel = self.dataset[obj]['wpixel'].reshape(-1, 1, 2)
                     pxel = cv.perspectiveTransform(pxel, M)
                     if self.showmatchflag == 1:

@@ -107,16 +107,16 @@ def received_ok(kwargs):
 #          [500, 700, 240, 180],
 #          [240, 700, 240, 270]]
 
-path1 = [[240, 0, 240, 0],
+path2 = [[240, 0, 240, 0],
          [500, 0, 240, 90],
-         [500, 400, 240, 180],
-         [240, 400, 240, 270]]
+         [500, 350, 240, 180],
+         [240, 350, 240, 270]]
 
-path2 = [[500, 700, 240, 90],
-         [500, 800, 240, 180],
+path1 = [[600, 700, 240, 90],
+         [600, 800, 240, 180],
          [240, 800, 240, 270],
          [240, 500, 240, 0],
-         [500, 500, 240, 90]]
+         [600, 500, 240, 90]]
 
 path = []
 path.append(path1)
@@ -138,7 +138,9 @@ rec_thread.start()
 for i in range(num):
     Node[tello_list[i][0]] = TelloNode(tello_list[i], Res_flag[tello_list[i][0]],
                                        main_thread_flag, Permission_flag[tello_list[i][0]], 0)
-    Node[tello_list[i][0]].init_path(path[i], [240, 80, 85, 270])
+    ini_pose = path[i][0].copy()
+    ini_pose[2] = 85
+    Node[tello_list[i][0]].init_path(path[i], ini_pose)
     Node[tello_list[i][0]].run()
 per_thread = multiprocessing.Process(target=scheduler, args=(Node, Permission_flag), daemon=True)
 per_thread.start()

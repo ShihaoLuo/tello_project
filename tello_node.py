@@ -11,12 +11,12 @@ import multiprocessing
 import h264decoder
 from pose_estimater.pose_estimater import *
 import face_recognition
-import psutil
+# import psutil
 import os
-import av
-import av.datasets
-from io import BytesIO
-import signal
+# import av
+# import av.datasets
+# from io import BytesIO
+# import signal
 # from memory_profiler import profile
 # from guppy import hpy
 # import gc
@@ -216,10 +216,10 @@ class TelloNode:
                     f[tello.tello_ip] = self.queue[tello.tello_ip].get()
                     cv2.imshow(tello.tello_ip, f[tello.tello_ip])
             flag = []'''
-            if self.queue.empty() is False:
+            if self.queue_face.empty() is False:
                 f = self.queue_face.get()
-                if self.queue_face.empty():
-                    self.queue_face.put(f)
+                # if self.queue_face.empty():
+                #     self.queue_face.put(f)
                 cv.imshow(self.tello_ip, f)
             time.sleep(0.01)
             # if self.queue_up_camera.empty() is False:
@@ -257,6 +257,9 @@ class TelloNode:
         return self.run_thread_flag
 
     def init_path(self, _path, pose):
+        self.pose.put(pose)
+        self.target.value = ','.join(map(str, pose)).encode()
+        self.init_pose = pose
         path = np.array(_path)
         path_x = path[:, 0]
         path_y = path[:, 1]
@@ -291,6 +294,7 @@ class TelloNode:
         # print('updating the path______________________________________', self.tello_ip)
         tmp = np.array(path)
         tmp[-2][3] = tmp[-1][3]
+        print(tmp)
         d = np.array([])
         for t in tmp:
             d = np.append(d, np.linalg.norm(np.array(pose[0:3]) - t[0:3], 2))
@@ -303,9 +307,6 @@ class TelloNode:
         else:
             for t in tmp[a + 1:]:
                 self.path.put(t)
-        self.pose.put(pose)
-        self.target.value = ','.join(map(str, pose)).encode()
-        self.init_pose = pose
 
     def update_path(self, path):
         update_path_thread = multiprocessing.Process(target=self._update_path, args=(path,))
@@ -565,7 +566,7 @@ class TelloNode:
                 #     _pose, yaw = self.pose_estimater.estimate_pose(img)
                 if _pose is not None:
                     _pose = _pose.reshape(1, -1)[0]
-                    if np.linalg.norm(pose[0:2]-_pose[0:2]) < 150:
+                    if np.linalg.norm(pose[0:2]-_pose[0:2]) < 200:
                         print('in img2')
                         pose[0] = int(_pose[0])
                         pose[1] = int(_pose[1])
