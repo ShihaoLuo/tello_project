@@ -42,7 +42,7 @@ def scheduler(tello_node, permission_flag):
                         pass
                     else:
                         d = np.linalg.norm(np.array(target[key][0:2]) - np.array(target[key2][0:2]), 2)
-                        if d <= 200:
+                        if d <= 160:
                             tmp.append(key2)
                 if len(tmp) == 0:
                     permission_list.append(key)
@@ -102,12 +102,18 @@ def received_ok(kwargs):
             print('Exception occur in received_ok thread...')
 
 
-path1 = [[240, 0, 240, 0],
-         [500, 0, 240, 90],
-         [500, 700, 240, 180],
-         [240, 700, 240, 270]]
+# path1 = [[240, 0, 240, 0],
+#          [500, 0, 240, 90],
+#          [500, 700, 240, 180],
+#          [240, 700, 240, 270]]
 
-num = 1
+path1 = [[220, 0, 240, 0],
+         [450, 0, 240, 0],
+         [450, 400, 240, 0],
+         [240, 400, 240, 270]]
+
+
+num = 2
 Node = {}
 Res_flag = {}
 Permission_flag = {}

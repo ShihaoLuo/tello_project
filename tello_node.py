@@ -37,7 +37,7 @@ class TelloNode:
         self.video_socket.bind(('', self.video_port))
         self.h264decoder = h264decoder.H264Decoder()
         self.queue = multiprocessing.Queue(2)
-        self.queue_up_camera = multiprocessing.Queue()
+        self.queue_face = multiprocessing.Queue()
         self.pose_estimater = PoseEstimater('SIFT', 25)
         self.pose_estimater.loaddata('pose_estimater/dataset/')
         if show_match_flag == 1:
@@ -66,8 +66,8 @@ class TelloNode:
 
     def scan_face(self):
         while True:
-            if self.queue_up_camera.empty() is False:
-                img = self.queue_up_camera.get()
+            if self.queue.empty() is False:
+                img = self.queue.get()
                 img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
                 time1 = time.time()
                 pose = self.pose.get()
@@ -75,18 +75,48 @@ class TelloNode:
                 for i in range(len(pose)):
                     pose[i] = int(pose[i])
                 self.face_detected_pose.value = ','.join(map(str, pose)).encode()
-                locate = face_recognition.face_locations(img, number_of_times_to_upsample=2, model='hog')
-                print("face recognition needs {}s.".format(time.time()-time1))
-                print(locate)
+                locate = face_recognition.face_locations(img, number_of_times_to_upsample=1, model='hog')
+                # print("face recognition needs {}s.".format(time.time()-time1))
+                # print(locate)
                 try:
                     if len(locate) != 0:
+                        p1 = (locate[0][3], locate[0][0])
+                        p2 = (locate[0][1], locate[0][2])
+                        print(p1, p2)
+                        w = p2[0] - p1[0]
+                        h = p2[1] - p1[1]
+                        p1 = (int(p1[0]-1.25*w), p1[1]-h)
+                        p2 = (int(p2[0]+1.25*w), p2[1]+4*h)
+                        cv.rectangle(img, p1, p2, (0, 255, 0))
+                        self.queue_face.put(img)
                         # c_point = np.array([int(locate[0][0]/2+locate[0][2]/2), int(locate[0][1]/2+locate[0][3]/2)])
                         self.face_point.value = ','.join(map(str, locate[0])).encode()
+                        tracker = cv.TrackerCSRT_create()
+                        ok = tracker.init(img, (p1[0], p1[1], p2[0]-p1[0], p2[1]-p1[1]))
+                        if ok:
+                            while True:
+                                # old = time.time()
+                                if self.queue.empty() is False:
+                                    img = self.queue.get()
+                                    img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+                                    ok, bbox = tracker.update(img)
+                                    p1 = (int(bbox[0]), int(bbox[1]))
+                                    p2 = (int(bbox[0] + bbox[2]), int(bbox[1] + bbox[3]))
+                                    # print("tracker need {}s".format(time.time()-old))
+                                    if ok and p2[0]<960 and p2[1]<720+4*h and p1[0]>0 and p1[1]>0:
+                                        cv.rectangle(img, p1, p2, (0, 255, 0))
+                                        self.queue_face.put(img)
+                                    else:
+                                        del tracker
+                                        break
+                                time.sleep(0.01)
                     else:
+                        self.queue_face.put(img)
                         self.face_point.value = ''.encode()
                 except ValueError as e:
+                    self.queue_face.put(img)
                     self.face_point.value = ''.encode()
-            time.sleep(1)
+            time.sleep(0.02)
 
     def get_up_camera_image(self):
         if self.queue_up_camera.empty() is True:
@@ -120,11 +150,11 @@ class TelloNode:
                     cv2.imshow(tello.tello_ip, f[tello.tello_ip])
             flag = []'''
             if self.queue.empty() is False:
-                f = self.queue.get()
-                if self.queue.empty():
-                    self.queue.put(f)
+                f = self.queue_face.get()
+                if self.queue_face.empty():
+                    self.queue_face.put(f)
                 cv.imshow(self.tello_ip, f)
-            time.sleep(0.02)
+            time.sleep(0.01)
             # if self.queue_up_camera.empty() is False:
             #     f = self.queue_up_camera.get()
             #     self.queue_up_camera.put(f)
