@@ -6,7 +6,6 @@
 # @Software: PyCharm
 
 from scanner import *
-import socket
 from tello_node import *
 import multiprocessing
 import numpy as np
@@ -23,7 +22,6 @@ def scheduler(tello_node, permission_flag):
         candidate_list = list(tello_node.keys())
         candidate_dict = {}
         tmp2 = None
-        var = 1
         for key in tello_node.keys():
             target[key] = tello_node[key].get_target()
         # print('target: \n', target)
@@ -35,9 +33,7 @@ def scheduler(tello_node, permission_flag):
                 break
             candidate_list2 = copy.deepcopy(candidate_list)
             for key in candidate_list2:
-                # print(' in shide, candidate list2 is ', candidate_list2)
                 for key2 in candidate_list:
-                    # print(' in shide, candidate list is ', candidate_list)
                     if key == key2:
                         pass
                     else:
@@ -49,7 +45,6 @@ def scheduler(tello_node, permission_flag):
                     candidate_list.remove(key)
                 else:
                     candidate_dict[key] = tmp
-                    # print(' in shide, candidate dict is ', candidate_dict)
                 tmp = []
             var = 1
             for key in candidate_list:
@@ -118,9 +113,7 @@ path1 = [[600, 700, 240, 90],
          [240, 500, 240, 0],
          [600, 500, 240, 90]]
 
-path = []
-path.append(path1)
-path.append(path2)
+path = [path1, path2]
 num = 2
 Node = {}
 Res_flag = {}
@@ -149,31 +142,37 @@ old1 = time.time()
 old2 = time.time()
 face_flag = 0
 target_pose = None
+lock_flag = np.zeros(num)
 try:
     while True:
         # print('in main, target:', Node[tello_list[0][0]].get_target())
         face_flag = 0
+        lock_flag = np.zeros(num)
         for i in range(len(tello_list)):
             # print("face flag:", Node[tello_list[i][0]].get_face_flag())
             if Node[tello_list[i][0]].get_thread_flag() == 1:
                 del tello_list[i]
             if Node[tello_list[i][0]].get_face_flag() == 1:
                 face_flag = 1
+                lock_flag[i] = 1
                 target_pose = Node[tello_list[i][0]].get_target_pose()
                 print("in main thread, get target pose:", target_pose)
                 print("call other drone.")
                 if target_pose is not None:
                     while True:
                         face_flag = 0
+                        lock_flag = np.zeros(num)
                         for j in range(len(tello_list)):
                             if Node[tello_list[j][0]].get_face_flag() == 1:
                                 path2 = []
                                 face_flag = 1
+                                lock_flag[j] = 1
                                 target_pose = Node[tello_list[i][0]].get_target_pose()
                                 print("in main thread, update target pose:", target_pose)
                         if time.time() - old > 10 and target_pose is not None:
                             for k in range(len(tello_list)):
-                                Node[tello_list[k][0]].update_path2([target_pose])
+                                if lock_flag[k] == 0:
+                                    Node[tello_list[k][0]].update_path2([target_pose])
                             old = time.time()
                         if face_flag == 0:
                             break
@@ -207,6 +206,3 @@ except KeyboardInterrupt as e:
     for i in range(len(tello_list)):
         time.sleep(0.5)
         Node[tello_list[i][0]].send_command('>land')
-
-
-

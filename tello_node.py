@@ -108,7 +108,7 @@ class TelloNode:
                         # print(p1, p2)
                         w = p2[0] - p1[0]
                         h = p2[1] - p1[1]
-                        p1 = (int(p1[0]-1.25*w), p1[1]-h)
+                        p1 = (int(p1[0]-1.25*w), int(p1[1]-h))
                         p2 = (int(p2[0]+1.25*w), p2[1]+4*h)
                         cv.rectangle(img, p1, p2, (0, 255, 0))
                         self.queue_face.put(img)
@@ -193,7 +193,7 @@ class TelloNode:
                                                     #     # print(tmp)
                                                     #     _pose = _pose + tmp
                                                     # else:
-                                                    tmp = np.array([300, 0, 0])
+                                                    tmp = np.array([350, 0, 0])
                                                     alpha = _pose[3] * 3.1416 / 180
                                                     m = np.array([[np.cos(alpha), np.sin(alpha), 0],
                                                                   [-np.sin(alpha), np.cos(alpha), 0],
@@ -467,12 +467,11 @@ class TelloNode:
             path = equdist_waypoint.reshape((-1, 4))
             self.update_path_event.clear()
             print('updating the path______________________________________', self.tello_ip)
-            try:
-                tmp = np.array(path[:-3])
-                tmp[-2][3] = tmp[-1][3]
-            except IndexError:
-                tmp = np.array(path)
+            tmp = np.array(path)
             print("update path:", tmp)
+            for t in range(len(tmp)):
+                if np.linalg.norm(np.array(tmp[t][0:3]) - tmp[-1][0:3]) < 250 and t > 0:
+                    np.delete(tmp, t, axis=0)
             d = np.array([])
             for t in tmp:
                 d = np.append(d, np.linalg.norm(np.array(pose[0:3]) - t[0:3], 2))
