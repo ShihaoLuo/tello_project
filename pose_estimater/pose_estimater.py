@@ -26,7 +26,6 @@ class PoseEstimater():
         #self.queue = multiprocessing.Queue()
         #self.show_match = multiprocessing.Process(target=self.show_match)
 
-
     def loaddata(self, _dataset_path):
         self.camera_matrix = np.load(_dataset_path+'camera_matrix_tello.npy')
         self.distor_matrix = np.load(_dataset_path+'distor_matrix_tello.npy')

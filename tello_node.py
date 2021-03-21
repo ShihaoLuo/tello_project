@@ -85,6 +85,7 @@ class TelloNode:
         return tmp
 
     def scan_face(self):
+        print('scan face thread start....')
         while True:
             if self.main_flag.value == 1:
                 break
@@ -109,15 +110,19 @@ class TelloNode:
                         w = p2[0] - p1[0]
                         h = p2[1] - p1[1]
                         p1 = (int(p1[0]-1.25*w), int(p1[1]-h))
-                        p2 = (int(p2[0]+1.25*w), p2[1]+4*h)
+                        p2 = (int(p2[0]+1.25*w), int(p2[1]+4*h))
                         cv.rectangle(img, p1, p2, (0, 255, 0))
                         self.queue_face.put(img)
                         # c_point = np.array([int(locate[0][0]/2+locate[0][2]/2), int(locate[0][1]/2+locate[0][3]/2)])
                         # self.face_point.value = ','.join(map(str, locate[0])).encode()
                         tracker1 = cv.TrackerCSRT_create()
+                        # print("create tracker:", tracker1)
                         # tracker2 = cv.TrackerCSRT_create()
                         try:
-                            ok1 = tracker1.init(img, (p1[0], p1[1], p2[0]-p1[0], p2[1]-p1[1]))
+                            bbox = (p1[0], p1[1], p2[0]-p1[0], p2[1]-p1[1])
+                            # print(bbox)
+                            ok1 = tracker1.init(img, bbox)
+                            # print("ok1:", ok1)
                             # ok2 = tracker2.init(img, (p1[0], p1[1], p2[0] - p1[0], p2[1] - p1[1]))
                             if ok1:
                                 while True:
@@ -221,7 +226,8 @@ class TelloNode:
                                             # del tracker2
                                             break
                                     time.sleep(0.01)
-                        except cv.error as e:
+                        except Exception as e:
+                            print("get img, but not into tracker thread.")
                             self.queue_face.put(img)
                             self.face_point.value = ''.encode()
                             self.scan_face_flag.value = 0
@@ -233,6 +239,7 @@ class TelloNode:
                         self.face_point.value = ''.encode()
                         self.estimate_target_pose.value = b''
                 except ValueError as e:
+                    print(e)
                     self.queue_face.put(img)
                     self.face_point.value = ''.encode()
                     self.scan_face_flag.value = 0
@@ -242,6 +249,7 @@ class TelloNode:
     def show_pic(self):
         # frame_dict = {}.fromkeys(self.tello_ip_list,bytes())
         print("show pic thread start.\n")
+        # cv.namedWindow(self.tello_ip, cv.WINDOW_NORMAL)
         while True:
             if self.main_flag.value == 1:
                 while self.path.empty() is False:
@@ -263,6 +271,7 @@ class TelloNode:
                 f = self.queue_face.get()
                 # if self.queue_face.empty():
                 #     self.queue_face.put(f)
+                # tmp = cv.resize(f, (480, 360))
                 cv.imshow(self.tello_ip, f)
             time.sleep(0.01)
             # if self.queue_up_camera.empty() is False:
@@ -368,6 +377,7 @@ class TelloNode:
         else:
             pose = self.pose.get()
             self.pose.put(pose)
+            pose[2] = 240
             path = np.array(path1)
             path = np.insert(path, 0, pose, axis=0)
             path_x = path[:, 0]
@@ -434,6 +444,7 @@ class TelloNode:
                 a += 360
             print("a:", a)
             path = np.array(path1)
+            pose[2] = 240
             path = np.insert(path, 0, pose, axis=0)
             path_x = path[:, 0]
             path_y = path[:, 1]
@@ -766,7 +777,7 @@ class TelloNode:
                 self.Res_flag.value = 0
             with self.cmd.get_lock():
                 # self.cmd.value = b'>takeoff'
-                self.cmd.value = b'>command'
+                self.cmd.value = b'>takeoff'
             self.cmd_event.set()
             # print('update cmd, >takeoff')
             while self.Res_flag.value == 0:

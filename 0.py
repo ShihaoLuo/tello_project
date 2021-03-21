@@ -113,13 +113,24 @@ path1 = [[600, 700, 240, 90],
          [240, 500, 240, 0],
          [600, 500, 240, 90]]
 
-path = [path1, path2]
-num = 1
+path3 = [[240, 0, 240, 0],
+         [500, 0, 240, 90],
+         [500, 350, 240, 180],
+         [240, 350, 240, 270]]
+
+path4 = [[600, 700, 240, 90],
+         [600, 800, 240, 180],
+         [240, 800, 240, 270],
+         [240, 500, 240, 0],
+         [600, 500, 240, 90]]
+
+path = [path1, path2, path3, path4]
+num = 2
 Node = {}
 Res_flag = {}
 Permission_flag = {}
 Target = {}
-scanner = Scanner('192.168.1.')
+scanner = Scanner('192.168.50.')
 scanner.find_available_tello(num)
 tello_list = scanner.get_tello_info()
 main_thread_flag = multiprocessing.Value('i', 0)

@@ -42,7 +42,7 @@ class Scanner:
     def find_available_tello(self, num):
         print('[Start_Searching]Searching for %s available Tello...\n' % num)
         possible_addr = []
-        for i in range(100, 200, 1):
+        for i in range(100, 250, 1):
             possible_addr.append(self.subnet+str(i))
         while len(self.tello_ip_list) < num:
             print('[Still_Searching]Trying to find Tello in subnets...\n')
