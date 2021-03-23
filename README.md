@@ -18,7 +18,7 @@ An operational multi-drone monitoring system of the following features:\
 ![image](https://user-images.githubusercontent.com/63446825/112161031-b4354280-8c25-11eb-8b26-92a87f084d20.png)
 ![image](https://user-images.githubusercontent.com/63446825/112161082-beefd780-8c25-11eb-848b-d070d57b3334.png)
 ## **system structure**:
-![image](https://user-images.githubusercontent.com/63446825/112161234-e8106800-8c25-11eb-829c-6b3fefc900b7.png)
+![image](https://user-images.githubusercontent.com/63446825/112161644-4c332c00-8c26-11eb-8ab8-501bd2f32fb4.png)
 ## **future work**:
 Expand the application scenes to outdoors;\
 Explore more accurate positioning methods;\
