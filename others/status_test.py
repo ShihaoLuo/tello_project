@@ -2,7 +2,7 @@
 # @Time    : 2021/1/1 下午4:50
 # @Author  : JakeShihao Luo
 # @Email   : jakeshihaoluo@gmail.com
-# @File    : 0.py
+# @File    : main.py
 # @Software: PyCharm
 
 from scanner import *
@@ -10,6 +10,7 @@ from tello_node import *
 import multiprocessing
 import numpy as np
 import copy
+import re
 
 
 def scheduler(tello_node, permission_flag):
@@ -90,6 +91,9 @@ def received_ok(kwargs):
                 with kwargs[ip].get_lock():
                     kwargs[ip].value = 1
                     # print('in received ok, set res of {} from 0 to {}'.format(ip, kwargs[ip].value))
+            elif 'A' in res and 'G' in res and 'X' in res:
+                t = re.split(':|;', res)
+                print(t[1:-1:2])
             else:
                 print('RES from {}:{}'.format(ip, response.decode(encoding='utf-8', errors='ignore')))
             # print('in received ok, main alg {}'.format(main_flag.value))
@@ -155,66 +159,8 @@ old2 = time.time()
 face_flag = 0
 target_pose = None
 lock_flag = np.zeros(num)
-try:
-    while True:
-        # print('in main, target:', Node[tello_list[0][0]].get_target())
-        face_flag = 0
-        lock_flag = np.zeros(num)
-        for i in range(len(tello_list)):
-            # print("face flag:", Node[tello_list[i][0]].get_face_flag())
-            if Node[tello_list[i][0]].get_thread_flag() == 1:
-                del tello_list[i]
-            if Node[tello_list[i][0]].get_face_flag() == 1:
-                face_flag = 1
-                lock_flag[i] = 1
-                target_pose = Node[tello_list[i][0]].get_target_pose()
-                print("in main thread, get target pose:", target_pose)
-                print("call other drone.")
-                if target_pose is not None:
-                    while True:
-                        face_flag = 0
-                        lock_flag = np.zeros(num)
-                        for j in range(len(tello_list)):
-                            if Node[tello_list[j][0]].get_face_flag() == 1:
-                                path2 = []
-                                face_flag = 1
-                                lock_flag[j] = 1
-                                target_pose = Node[tello_list[i][0]].get_target_pose()
-                                print("in main thread, update target pose:", target_pose)
-                        if time.time() - old > 10 and target_pose is not None:
-                            for k in range(len(tello_list)):
-                                if lock_flag[k] == 0:
-                                    Node[tello_list[k][0]].update_path2([target_pose])
-                            old = time.time()
-                        if face_flag == 0:
-                            break
-                        time.sleep(1)
-        if len(tello_list) == 0:
-            print('no node alive, stop the program.')
-            main_thread_flag.Value = 1
-            time.sleep(1)
-            break
-        if face_flag == 0:
-            if time.time() - old >= 5:
-                for i in range(len(tello_list)):
-                    if Node[tello_list[i][0]].get_path_status() == 1:
-                        Node[tello_list[i][0]].update_path(path[i])
-                old = time.time()
-        if time.time() - old1 >= 300:
-            for i in range(len(tello_list)):
-                Node[tello_list[i][0]].send_command('>streamoff')
-                time.sleep(0.5)
-                Node[tello_list[i][0]].send_command('>land')
-            print('landing....')
-            main_thread_flag.value = 1
-            break
-        time.sleep(1)
-    print('main thread died!')
-except KeyboardInterrupt as e:
-    for i in range(len(tello_list)):
-        Node[tello_list[i][0]].send_command('>streamoff')
-        time.sleep(0.5)
-        Node[tello_list[i][0]].send_command('>land')
-    for i in range(len(tello_list)):
-        time.sleep(0.5)
-        Node[tello_list[i][0]].send_command('>land')
+# Node[tello_list[0][0]].send_command('>streamon')
+while True:
+    Node[tello_list[0][0]].send_command('>acceleration?')
+    # Node[tello_list[0][0]].send_command('>attitude?')
+    time.sleep(0.1)
