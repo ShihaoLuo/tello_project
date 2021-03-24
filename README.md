@@ -2,14 +2,15 @@
 ## **OpenCV version**:
   pip install opencv-contrib-python==3.4.13.47
 ## **new feature of v3.1**:
-  target identification;
+  target identification;\
+  ![20210322_180700_1](https://user-images.githubusercontent.com/63446825/112295704-1dbd5b80-8ccf-11eb-9b6d-cbb0490de076.gif)
 ## **summary of project**:
 An operational multi-drone monitoring system of the following features:\
   1.One terminal controls multiple drones to complete collaborative work;\
   2.Sub-meter high-speed UAV positioning method with a single camera;\
   3.Recognition and monitoring character stably and smoothly;  \
   4.Highly scalable, can be easily extended to more drones;
-## **demostration**:
+## **demostration(v3.0)**:
 ![image](https://user-images.githubusercontent.com/63446825/112160721-68829900-8c25-11eb-8c30-c96fd9acddac.png)
 ![image](https://user-images.githubusercontent.com/63446825/112160860-8bad4880-8c25-11eb-96bb-f390700317b2.png)
 ![image](https://user-images.githubusercontent.com/63446825/112160886-923bc000-8c25-11eb-8782-047c65acc12c.png)
